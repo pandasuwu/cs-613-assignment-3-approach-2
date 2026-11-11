@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COAST — Text Embedding Post-Processing & Compression Explorer</title>
+
+  <!-- Google Fonts: Lato (text) and JetBrains Mono (monospace) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" />
+
+  <!-- KaTeX for crisp LaTeX math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+  <style>
+    /* Lete Sans Math font face (sans-serif math designed for Lato) */
+    @font-face {
+      font-family: 'Lete Sans Math';
+      src: url('fonts/LeteSansMath.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Lete Sans Math';
+      src: url('fonts/LeteSansMath-Bold.otf') format('opentype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    :root[data-theme="light"] {
+      --bg: #ffffff;
+      --bg-subtle: #fbfbfb;
+      --surface: #ffffff;
+      --border: #e4e4e7;
+      --border-dark: #18181b;
+      --text: #18181b;
+      --text-muted: #52525b;
+      --text-faint: #a1a1aa;
+      --row-highlight: #f4f4f5;
+      --row-hover: #fafafa;
+      --input-bg: #ffffff;
+      --seg-bg: #f4f4f5;
+      --seg-active-bg: #18181b;
+      --seg-active-text: #ffffff;
+      --chip-bg: #ffffff;
+      --chip-active-bg: #f4f4f5;
+      --chip-active-border: #71717a;
+      --best-color: #000000;
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #09090b;
+      --bg-subtle: #121215;
+      --surface: #121215;
+      --border: #27272a;
+      --border-dark: #fafafa;
+      --text: #fafafa;
+      --text-muted: #a1a1aa;
+      --text-faint: #52525b;
+      --row-highlight: #1c1c21;
+      --row-hover: #18181b;
+      --input-bg: #18181b;
+      --seg-bg: #1e1e24;
+      --seg-active-bg: #fafafa;
+      --seg-active-text: #09090b;
+      --chip-bg: #121215;
+      --chip-active-bg: #27272a;
+      --chip-active-border: #a1a1aa;
+      --best-color: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.4;
+      padding: 24px 28px 48px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    /* Math typography uses Lete Sans Math */
+    .katex, .katex-html, .math {
+      font-family: 'Lete Sans Math', 'Lato', sans-serif !important;
+    }
+
+    .container {
+      max-width: 1480px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .title-group {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      font-size: 1.22rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    .subtitle {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Minimal buttons */
+    .btn {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 5px 12px;
+      font-size: 0.78rem;
+      font-family: inherit;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.1s ease;
+    }
+
+    .btn:hover {
+      border-color: var(--text-muted);
+    }
+
+    .btn-primary {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    /* Single-Line Minimal Toolbar */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    .toolbar-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .toolbar-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-right: 2px;
+    }
+
+    .divider {
+      width: 1px;
+      height: 20px;
+      background: var(--border);
+      margin: 0 2px;
+    }
+
+    /* Segmented Controls */
+    .segmented {
+      display: inline-flex;
+      background: var(--seg-bg);
+      border-radius: 4px;
+      padding: 2px;
+      border: 1px solid var(--border);
+    }
+
+    .segmented button {
+      background: transparent;
+      border: none;
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      font-family: inherit;
+      font-weight: 500;
+      color: var(--text-muted);
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.1s ease;
+      white-space: nowrap;
+    }
+
+    .segmented button.active {
+      background: var(--seg-active-bg);
+      color: var(--seg-active-text);
+      font-weight: 600;
+    }
+
+    /* Dropdown */
+    select {
+      background: var(--input-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      color: var(--text);
+      font-family: inherit;
+      cursor: pointer;
+      outline: none;
+    }
+
+    select:focus {
+      border-color: var(--text-muted);
+    }
+
+    /* Search input */
+    .search-input {
+      background: var(--input-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      color: var(--text);
+      font-family: inherit;
+      outline: none;
+      width: 160px;
+    }
+
+    .search-input:focus {
+      border-color: var(--text-muted);
+      width: 220px;
+    }
+
+    /* Filter Row */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .chip-section {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      background: var(--chip-bg);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 2px 8px;
+      font-size: 0.74rem;
+      font-family: inherit;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+
+    .chip.active {
+      background: var(--chip-active-bg);
+      color: var(--text);
+      border-color: var(--chip-active-border);
+      font-weight: 600;
+    }
+
+    .chip:hover {
+      border-color: var(--text-muted);
+    }
+
+    /* Status Bar */
+    .status-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      padding: 0 2px;
+    }
+
+    .status-summary strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    /* Table */
+    .table-container {
+      border-top: 2px solid var(--border-dark);
+      border-bottom: 2px solid var(--border-dark);
+      overflow-x: auto;
+      max-height: 72vh;
+      background: var(--surface);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    thead {
+      position: sticky;
+      top: 0;
+      background: var(--surface);
+      z-index: 2;
+    }
+
+    thead tr.super-header th {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 700;
+      padding: 6px 12px 4px;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+
+    thead tr.sub-header th {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text);
+      font-weight: 700;
+      padding: 6px 12px 8px;
+      border-bottom: 1px solid var(--border-dark);
+      text-align: right;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    thead tr.sub-header th:hover {
+      color: var(--text-muted);
+    }
+
+    thead tr.sub-header th.left,
+    thead tr.super-header th.left {
+      text-align: left;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    tbody tr:hover {
+      background: var(--row-hover);
+    }
+
+    tbody tr.coast-row {
+      background: var(--row-highlight);
+    }
+
+    tbody tr.group-boundary td {
+      border-top: 1px solid var(--border-dark);
+    }
+
+    td {
+      padding: 5px 12px;
+      text-align: right;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.78rem;
+      font-variant-numeric: tabular-nums;
+      color: var(--text);
+    }
+
+    td.left {
+      text-align: left;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.79rem;
+      color: var(--text);
+    }
+
+    td.method-coast {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    td.best-score {
+      font-weight: 700;
+      color: var(--best-color);
+    }
+
+    /* Modal / Drawer for Granular Method Picker */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 580px;
+      max-width: 92vw;
+      max-height: 80vh;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .modal-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .modal-body {
+      overflow-y: auto;
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+      padding-right: 4px;
+    }
+
+    .method-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .method-item:hover {
+      background: var(--row-hover);
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="title-group">
+        <h1>COAST</h1>
+        <div class="subtitle">Crowding-Orthogonal Adaptive Spectral Tempering Benchmark</div>
+      </div>
+      <div class="header-actions">
+        <button class="btn" id="themeToggleBtn">
+          <span id="themeIcon">◑</span>
+          <span id="themeLabel">Dark Mode</span>
+        </button>
+        <button class="btn btn-primary" id="exportBtn">Export CSV</button>
+      </div>
+    </header>
+
+    <!-- Toolbar: Primary Controls -->
+    <div class="toolbar">
+      <div class="toolbar-group">
+        <span class="toolbar-label">View</span>
+        <div class="segmented" id="segEvalView">
+          <button class="active" data-val="Task Performance">Task Performance</button>
+          <button data-val="Intrinsic Geometry">Geometry</button>
+          <button data-val="Spectral Parameters">Parameters</button>
+        </div>
+      </div>
+
+      <div class="divider" id="divTrack"></div>
+
+      <div class="toolbar-group" id="groupTrack">
+        <span class="toolbar-label">Track</span>
+        <div class="segmented" id="segTrack">
+          <button class="active" data-val="Primary Metrics">Primary (IR + STS)</button>
+          <button data-val="Retrieval (IR)">Retrieval (IR)</button>
+          <button data-val="Similarity (STS)">Similarity (STS)</button>
+        </div>
+      </div>
+
+      <div class="divider" id="divMetric"></div>
+
+      <div class="toolbar-group" id="groupMetric">
+        <span class="toolbar-label" id="labelMetric">Metric</span>
+        <select id="selectMetric"></select>
+      </div>
+
+      <div class="divider" id="divDim"></div>
+
+      <div class="toolbar-group" id="groupDim">
+        <span class="toolbar-label">Dim</span>
+        <div class="segmented" id="segDim">
+          <button class="active" data-val="Full (k = d)">Full ($k = d$)</button>
+          <button data-val="Compression">Compressed</button>
+        </div>
+      </div>
+
+      <div class="divider" id="divMethodSet"></div>
+
+      <div class="toolbar-group" id="groupMethodSet">
+        <span class="toolbar-label">Methods</span>
+        <div class="segmented" id="segMethodSet">
+          <button class="active" data-val="Main Methods">Main (9)</button>
+          <button data-val="Component Ablations">Ablations (8)</button>
+          <button data-val="All">All (17)</button>
+        </div>
+        <button class="btn" id="openMethodPickerBtn" style="padding: 2px 7px; font-size: 0.72rem;">Custom...</button>
+      </div>
+
+      <div class="divider hidden" id="divFormat"></div>
+
+      <div class="toolbar-group hidden" id="groupFormat">
+        <span class="toolbar-label">Format</span>
+        <div class="segmented" id="segFormat">
+          <button class="active" data-val="Score (Retention %)">Score (Ret%)</button>
+          <button data-val="Absolute Score">Score</button>
+          <button data-val="Retention %">Ret%</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Bar: Chips & Search -->
+    <div class="filter-bar">
+      <div class="chip-section">
+        <span class="toolbar-label">Benchmarks:</span>
+        <button class="chip active" id="chipDsAll">All</button>
+        <span id="chipsDataset"></span>
+      </div>
+
+      <div class="chip-section hidden" id="sectionK">
+        <span class="toolbar-label">Dimensions ($k$):</span>
+        <button class="chip active" id="chipKAll">All $k$</button>
+        <span id="chipsK"></span>
+      </div>
+
+      <div class="chip-section">
+        <span class="toolbar-label">Cols:</span>
+        <button class="chip active" id="chipColsAll">All</button>
+        <button class="chip" id="chipColsModels">Models (6)</button>
+        <button class="chip" id="chipColsMeans">Means (3)</button>
+      </div>
+
+      <div class="chip-section">
+        <input type="text" class="search-input" id="tableSearch" placeholder="Filter rows..." />
+      </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-summary">
+      <div id="statusInfo">Loading data...</div>
+      <div id="statusDims"></div>
+    </div>
+
+    <!-- Table -->
+    <div class="table-container">
+      <table id="dataTable">
+        <thead id="tableHead"></thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Custom Method Picker Modal -->
+  <div class="modal-backdrop hidden" id="methodModal">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">Select Methods / Operators</div>
+        <button class="btn" id="closeMethodModalBtn" style="padding: 2px 8px;">✕</button>
+      </div>
+      <div class="modal-body" id="modalMethodList"></div>
+      <div class="modal-footer">
+        <div>
+          <button class="btn" id="modalSelectAllBtn">Select All</button>
+          <button class="btn" id="modalClearBtn">Clear</button>
+        </div>
+        <button class="btn btn-primary" id="modalApplyBtn">Apply</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let DATA = null;
+    let exportRows = [];
+    let exportCols = [];
+    let sortCol = null;
+    let sortAsc = true;
+
+    // LaTeX mapping for method and metric labels
+    const LATEX_MAP = {
+      "Baseline": "Baseline",
+      "Standardization": "Standardization ($z$)",
+      "R1": "R1 ($x - \\mu$)",
+      "R2": "R2 ($P_\\perp$)",
+      "Soft-ZCA": "Soft-ZCA ($\\Sigma, \\gamma=1, 10^{-4}$)",
+      "COAST (Ours)": "$\\mathbf{COAST}\\text{ (Ours)}$",
+      "ABTT (D=1)": "ABTT ($D=1$)",
+      "ABTT (D=2)": "ABTT ($D=2$)",
+      "ABTT (D=3)": "ABTT ($D=3$)",
+      "Prefix (MRL)": "Prefix (MRL)",
+      "PCA-k": "PCA-$k$",
+      "Whitening-k": "Whitening-$k$ ($\\Sigma, \\gamma=1, 10^{-6}$)",
+      "SpecTemp": "SpecTemp ($\\Sigma, \\gamma_{\\text{SNR}}, 10^{-6}$)",
+      "Unreg. ZCA (Σ, γ=1, ε=1e-6)": "Unreg. ZCA ($\\Sigma, \\gamma=1, 10^{-6}$)",
+      "Centered + ε* (Σ, γ=1, ε*)": "Centered + $\\epsilon^*$ ($\\Sigma, \\gamma=1, \\epsilon^*$)",
+      "Centered + γ_crowd (Σ, γ_crowd, 1e-4)": "Centered + $\\gamma_{\\text{crowd}}$ ($\\Sigma, \\gamma_{\\text{crowd}}, 10^{-4}$)",
+      "w/o Orth. Proj. (Σ, γ_crowd, ε*)": "w/o Orth. Proj. ($\\Sigma, \\gamma_{\\text{crowd}}, \\epsilon^*$)",
+      "Orth. Soft-ZCA (Σ_⊥, γ=1, 1e-4)": "Orth. Soft-ZCA ($\\Sigma_\\perp, \\gamma=1, 10^{-4}$)",
+      "w/o Crowd. Exp. (Σ_⊥, γ=1, ε*)": "w/o Crowd. Exp. ($\\Sigma_\\perp, \\gamma=1, \\epsilon^*$)",
+      "Fixed γ=0.5 (Σ_⊥, γ=0.5, 1e-4)": "Fixed $\\gamma=0.5$ ($\\Sigma_\\perp, \\gamma=0.5, 10^{-4}$)",
+      "w/o Adaptive ε* (Σ_⊥, γ_crowd, 1e-4)": "w/o Adaptive $\\epsilon^*$ ($\\Sigma_\\perp, \\gamma_{\\text{crowd}}, 10^{-4}$)",
+      "Orth. PCA (Σ_⊥, γ=0, ε=0)": "Orth. PCA ($\\Sigma_\\perp, \\gamma=0, \\epsilon=0$)",
+      "Orth. SpecTemp (Σ_⊥, γ_SNR, 1e-6)": "Orth. SpecTemp ($\\Sigma_\\perp, \\gamma_{\\text{SNR}}, 10^{-6}$)",
+      "w/o Crowd. Floor (Σ_⊥, γ_SNR, ε*)": "w/o Crowd. Floor ($\\Sigma_\\perp, \\gamma_{\\text{SNR}}, \\epsilon^*$)",
+      "Fixed γ=0.5 (Σ_⊥, γ=0.5, ε*)": "Fixed $\\gamma=0.5$ ($\\Sigma_\\perp, \\gamma=0.5, \\epsilon^*$)",
+      "w/o SNR Sched. (Σ_⊥, γ_crowd, ε*)": "w/o SNR Sched. ($\\Sigma_\\perp, \\gamma_{\\text{crowd}}, \\epsilon^*$)",
+      "w/o Adaptive ε* (Σ_⊥, γ*, 1e-6)": "w/o Adaptive $\\epsilon^*$ ($\\Sigma_\\perp, \\gamma^*, 10^{-6}$)",
+      "w/o Rank Scale τ² (Σ_⊥, γ*, ε*(d))": "w/o Rank Scale $\\tau^2$ ($\\Sigma_\\perp, \\gamma^*, \\epsilon^*(d)$)",
+      "w/o Orth. Proj. (Σ, γ*, ε*)": "w/o Orth. Proj. ($\\Sigma, \\gamma^*, \\epsilon^*$)",
+    };
+
+    const state = {
+      evalView: "Task Performance",
+      track: "Primary Metrics",
+      metric: "Primary Metrics (Table 4 View)",
+      dimMode: "Full (k = d)",
+      methodSet: "Main Methods",
+      compFormat: "Score (Retention %)",
+      activeDatasets: new Set(),
+      activeK: new Set(["512", "256", "128", "64"]),
+      colMode: "all",
+      searchQuery: "",
+      customMethods: null, // null means use methodSet
+    };
+
+    function getDatasetPool() {
+      if (state.evalView === "Task Performance") {
+        if (state.track === "Retrieval (IR)") return DATA.ir_datasets;
+        if (state.track === "Similarity (STS)") return DATA.sts_datasets;
+        return DATA.all_datasets;
+      }
+      return DATA.all_datasets;
+    }
+
+    function getMetricPool() {
+      if (state.evalView === "Task Performance") {
+        if (state.track === "Primary Metrics") return ["Primary Metrics (Table 4 View)"];
+        return state.track === "Retrieval (IR)" ? DATA.ir_metrics : DATA.sts_metrics;
+      }
+      if (state.evalView === "Intrinsic Geometry") {
+        return DATA.geom_options;
+      }
+      return DATA.param_options;
+    }
+
+    function getAllowedMethods() {
+      if (state.customMethods !== null) return state.customMethods;
+      const isFull = state.dimMode === "Full (k = d)";
+      const main = isFull ? DATA.full_main_methods : DATA.comp_main_methods;
+      const abl = isFull ? DATA.full_ablation_methods : DATA.comp_ablation_methods;
+      if (state.methodSet === "Main Methods") return new Set(main);
+      if (state.methodSet === "Component Ablations") return new Set(abl);
+      return new Set([...main, ...abl]);
+    }
+
+    function syncState() {
+      const metrics = getMetricPool();
+      if (!metrics.includes(state.metric)) {
+        state.metric = metrics[0];
+      }
+      const dsPool = getDatasetPool();
+      const valid = [...state.activeDatasets].filter(d => dsPool.includes(d));
+      state.activeDatasets = new Set(valid.length ? valid : dsPool);
+    }
+
+    function renderToolbarControls() {
+      const isTask = state.evalView === "Task Performance";
+      const isGeom = state.evalView === "Intrinsic Geometry";
+      const isParam = state.evalView === "Spectral Parameters";
+      const isComp = state.dimMode === "Compression";
+
+      // Track controls
+      document.getElementById("divTrack").classList.toggle("hidden", !isTask);
+      document.getElementById("groupTrack").classList.toggle("hidden", !isTask);
+
+      // Metric controls
+      const isPrimaryTrack = isTask && state.track === "Primary Metrics";
+      document.getElementById("divMetric").classList.toggle("hidden", isPrimaryTrack);
+      document.getElementById("groupMetric").classList.toggle("hidden", isPrimaryTrack);
+      document.getElementById("labelMetric").textContent = isParam ? "Table" : "Metric";
+
+      const selMetric = document.getElementById("selectMetric");
+      selMetric.innerHTML = "";
+      getMetricPool().forEach(m => {
+        const opt = document.createElement("option");
+        opt.value = m;
+        opt.textContent = m;
+        if (m === state.metric) opt.selected = true;
+        selMetric.appendChild(opt);
+      });
+
+      // Dim controls
+      document.getElementById("divDim").classList.toggle("hidden", isParam);
+      document.getElementById("groupDim").classList.toggle("hidden", isParam);
+
+      // Method Set controls
+      document.getElementById("divMethodSet").classList.toggle("hidden", isParam);
+      document.getElementById("groupMethodSet").classList.toggle("hidden", isParam);
+
+      // Format controls
+      document.getElementById("divFormat").classList.toggle("hidden", !isTask || !isComp);
+      document.getElementById("groupFormat").classList.toggle("hidden", !isTask || !isComp);
+
+      // Compression K section
+      document.getElementById("sectionK").classList.toggle("hidden", isParam || !isComp);
+
+      // Dataset chips
+      const chipsDs = document.getElementById("chipsDataset");
+      chipsDs.innerHTML = "";
+      getDatasetPool().forEach(ds => {
+        const btn = document.createElement("button");
+        btn.className = "chip" + (state.activeDatasets.has(ds) ? " active" : "");
+        btn.textContent = ds;
+        btn.onclick = () => {
+          if (state.activeDatasets.has(ds) && state.activeDatasets.size > 1) {
+            state.activeDatasets.delete(ds);
+          } else {
+            state.activeDatasets.add(ds);
+          }
+          renderChips();
+          renderTable();
+        };
+        chipsDs.appendChild(btn);
+      });
+
+      // K chips
+      const chipsK = document.getElementById("chipsK");
+      chipsK.innerHTML = "";
+      ["512", "256", "128", "64"].forEach(k => {
+        const btn = document.createElement("button");
+        btn.className = "chip" + (state.activeK.has(k) ? " active" : "");
+        btn.textContent = k;
+        btn.onclick = () => {
+          if (state.activeK.has(k) && state.activeK.size > 1) {
+            state.activeK.delete(k);
+          } else {
+            state.activeK.add(k);
+          }
+          renderChips();
+          renderTable();
+        };
+        chipsK.appendChild(btn);
+      });
+
+      renderChips();
+    }
+
+    function renderChips() {
+      const allDs = getDatasetPool();
+      document.getElementById("chipDsAll").classList.toggle("active", state.activeDatasets.size === allDs.length);
+      document.querySelectorAll("#chipsDataset .chip").forEach(btn => {
+        btn.classList.toggle("active", state.activeDatasets.has(btn.textContent));
+      });
+
+      document.getElementById("chipKAll").classList.toggle("active", state.activeK.size === 4);
+      document.querySelectorAll("#chipsK .chip").forEach(btn => {
+        btn.classList.toggle("active", state.activeK.has(btn.textContent));
+      });
+
+      document.getElementById("chipColsAll").classList.toggle("active", state.colMode === "all");
+      document.getElementById("chipColsModels").classList.toggle("active", state.colMode === "models");
+      document.getElementById("chipColsMeans").classList.toggle("active", state.colMode === "means");
+    }
+
+    function parseNumeric(val) {
+      if (val === undefined || val === null) return NaN;
+      const m = String(val).match(/^[-+]?\d*\.?\d+/);
+      return m ? parseFloat(m[0]) : NaN;
+    }
+
+    function formatLatex(text) {
+      if (!text) return "";
+      return LATEX_MAP[text] || text;
+    }
+
+    function triggerMath() {
+      if (window.renderMathInElement) {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      }
+    }
+
+    function renderTable() {
+      const isTask = state.evalView === "Task Performance";
+      const isGeom = state.evalView === "Intrinsic Geometry";
+      const isParam = state.evalView === "Spectral Parameters";
+      const isFull = state.dimMode === "Full (k = d)";
+
+      let raw = [];
+      if (isTask) {
+        if (state.track === "Primary Metrics") {
+          // Unified cross-benchmark view (Table 4 style: IR nDCG@10 + STS Spearman)
+          const irKey = isFull
+            ? "task_full::Retrieval (IR)::nDCG@10"
+            : `task_comp::Retrieval (IR)::nDCG@10::${state.compFormat}`;
+          const stsKey = isFull
+            ? "task_full::Similarity (STS)::Spearman (ρ × 100)"
+            : `task_comp::Similarity (STS)::Spearman (ρ × 100)::${state.compFormat}`;
+          raw = [...(DATA.tables[irKey] || []), ...(DATA.tables[stsKey] || [])];
+        } else {
+          const key = isFull
+            ? `task_full::${state.track}::${state.metric}`
+            : `task_comp::${state.track}::${state.metric}::${state.compFormat}`;
+          raw = DATA.tables[key] || [];
+        }
+      } else if (isGeom) {
+        const key = isFull ? `geom_full::${state.metric}` : `geom_comp::${state.metric}`;
+        raw = DATA.tables[key] || [];
+      } else {
+        raw = DATA.tables[`param::${state.metric}`] || [];
+      }
+
+      const allowedMethods = getAllowedMethods();
+      const q = state.searchQuery.trim().toLowerCase();
+
+      // Filter rows
+      let rows = raw.filter(r => {
+        if (r.Dataset && !state.activeDatasets.has(r.Dataset)) return false;
+        if (!isParam && !isFull && r.k && !state.activeK.has(String(r.k))) return false;
+        if (!isParam && allowedMethods && r.Method && !allowedMethods.has(r.Method)) return false;
+        if (q) {
+          const combined = [r.Dataset, r.k, r.Model, r.Method].filter(Boolean).join(" ").toLowerCase();
+          if (!combined.includes(q)) return false;
+        }
+        return true;
+      });
+
+      // Filter columns
+      let cols = [];
+      if (isParam) {
+        cols = raw.length ? Object.keys(raw[0]) : [];
+      } else if (isGeom && state.metric === "All 5 Geometry Metrics") {
+        cols = ["Dataset", "k", "Model", "Method", "||μ||₂", "AvgCos", "MEV", "NID", "IsoScore"];
+      } else {
+        const baseCols = ["Dataset", "k", "Method"];
+        let metricCols = [];
+        if (state.colMode === "all") metricCols = DATA.all_display_cols;
+        else if (state.colMode === "models") metricCols = DATA.model_cols;
+        else metricCols = DATA.cat_cols;
+        cols = [...baseCols, ...metricCols];
+      }
+
+      // Column sort if active
+      if (sortCol && cols.includes(sortCol)) {
+        rows.sort((a, b) => {
+          const na = parseNumeric(a[sortCol]);
+          const nb = parseNumeric(b[sortCol]);
+          if (!isNaN(na) && !isNaN(nb)) {
+            return sortAsc ? na - nb : nb - na;
+          }
+          const sa = String(a[sortCol] || "");
+          const sb = String(b[sortCol] || "");
+          return sortAsc ? sa.localeCompare(sb) : sb.localeCompare(sa);
+        });
+      }
+
+      exportRows = rows;
+      exportCols = cols;
+
+      // Best score computation per (Dataset, k) group
+      const bestMap = {};
+      if (isTask || (isGeom && state.metric !== "All 5 Geometry Metrics")) {
+        const lowerIsBetter = isGeom && ["Centroid Norm ||μ||₂", "Average Cosine", "MEV (Top-1)"].includes(state.metric);
+        const dataCols = cols.slice(3);
+        rows.forEach(r => {
+          const gKey = `${r.Dataset}||${r.k}`;
+          if (!bestMap[gKey]) bestMap[gKey] = {};
+          dataCols.forEach(c => {
+            const num = parseNumeric(r[c]);
+            if (!isNaN(num)) {
+              if (bestMap[gKey][c] === undefined || (lowerIsBetter ? num < bestMap[gKey][c] : num > bestMap[gKey][c])) {
+                bestMap[gKey][c] = num;
+              }
+            }
+          });
+        });
+      }
+
+      // Build Headers
+      const thead = document.getElementById("tableHead");
+      const leftCols = new Set(["Dataset", "k", "Model", "Method"]);
+
+      if (isTask || (isGeom && state.metric !== "All 5 Geometry Metrics")) {
+        let superHtml = '<tr class="super-header"><th colspan="3" class="left">Specification</th>';
+        if (state.colMode === "all") {
+          superHtml += '<th colspan="2">Dedicated Encoders</th><th colspan="2">Gemma-3-1B-pt</th><th colspan="2">Qwen3.5-0.8B-Base</th><th colspan="3">Category Means</th>';
+        } else if (state.colMode === "models") {
+          superHtml += '<th colspan="2">Dedicated Encoders</th><th colspan="2">Gemma-3-1B-pt</th><th colspan="2">Qwen3.5-0.8B-Base</th>';
+        } else {
+          superHtml += '<th colspan="3">Category Means</th>';
+        }
+        superHtml += '</tr>';
+
+        let subHtml = '<tr class="sub-header">';
+        cols.forEach(c => {
+          let label = c;
+          if (c === "Gemma3-Mean" || c === "Qwen3.5-Mean") label = "Mean";
+          if (c === "Gemma3-Last" || c === "Qwen3.5-Last") label = "Last";
+          if (c === "Dedicated Mean") label = "Ded.";
+          if (c === "Base-Mean") label = "Base-M";
+          if (c === "Base-Last") label = "Base-L";
+          const sortIndicator = sortCol === c ? (sortAsc ? " ↑" : " ↓") : "";
+          subHtml += `<th class="${leftCols.has(c) ? 'left' : ''}" data-col="${c}">${label}${sortIndicator}</th>`;
+        });
+        subHtml += '</tr>';
+        thead.innerHTML = superHtml + subHtml;
+      } else {
+        let subHtml = '<tr class="sub-header">';
+        cols.forEach(c => {
+          let headerMath = c;
+          if (c === "E_∥ (||μ||₂²)") headerMath = "$E_\\parallel = \\|\\mu\\|_2^2$";
+          if (c === "σ²_∥") headerMath = "$\\sigma_\\parallel^2$";
+          if (c === "E_⊥ (Tr(Σ_⊥))") headerMath = "$E_\\perp = \\operatorname{Tr}(\\Sigma_\\perp)$";
+          if (c === "E_∥ / E_⊥") headerMath = "$E_\\parallel / E_\\perp$";
+          if (c === "γ_crowd") headerMath = "$\\gamma_{\\text{crowd}}$";
+          if (c === "cos_unc") headerMath = "$\\cos_{\\text{unc}}$";
+          if (c === "cos_cen") headerMath = "$\\cos_{\\text{cen}}$";
+          if (c === "||U_tail^T μ̂||₂") headerMath = "$\\|U_{\\text{tail}}^\\top \\hat{\\mu}\\|_2$";
+          if (c === "k_knee (Σ_⊥)") headerMath = "$k_{\\text{knee}}(\\Sigma_\\perp)$";
+          if (c === "λ_knee [×1e-3]") headerMath = "$\\lambda_{\\text{knee}} [\\times 10^{-3}]$";
+          if (c === "k_knee (Σ)") headerMath = "$k_{\\text{knee}}(\\Sigma)$";
+          if (c.startsWith("γ_SNR")) headerMath = `$\\gamma_{\\text{SNR}}(${c.replace('γ_SNR(', '').replace(')', '')})$`;
+          if (c.startsWith("ε*")) headerMath = `$\\epsilon^*(${c.replace('ε*(', '').replace(')', '').replace(' [×1e-3]', '')}) [\\times 10^{-3}]$`;
+          if (c.startsWith("γ*")) headerMath = `$\\gamma^*(${c.replace('γ*(', '').replace(')', '')})$`;
+          if (c === "||μ||₂") headerMath = "$\\|\\mu\\|_2$";
+          if (c === "AvgCos") headerMath = "$\\text{AvgCos}$";
+          if (c === "MEV") headerMath = "$\\text{MEV}$";
+          if (c === "NID") headerMath = "$\\text{NID}$";
+          if (c === "IsoScore") headerMath = "$\\text{IsoScore}$";
+
+          const sortIndicator = sortCol === c ? (sortAsc ? " ↑" : " ↓") : "";
+          subHtml += `<th class="${leftCols.has(c) ? 'left' : ''}" data-col="${c}">${headerMath}${sortIndicator}</th>`;
+        });
+        subHtml += '</tr>';
+        thead.innerHTML = subHtml;
+      }
+
+      // Header click-to-sort listeners
+      thead.querySelectorAll("tr.sub-header th").forEach(th => {
+        th.onclick = () => {
+          const colName = th.dataset.col;
+          if (sortCol === colName) {
+            sortAsc = !sortAsc;
+          } else {
+            sortCol = colName;
+            sortAsc = true;
+          }
+          renderTable();
+        };
+      });
+
+      // Build Body
+      const tbody = document.getElementById("tableBody");
+      let prevGroup = null;
+      const htmlRows = rows.map(r => {
+        const groupId = `${r.Dataset}||${r.k || ""}||${r.Model || ""}`;
+        const isBoundary = prevGroup !== null && prevGroup !== groupId;
+        prevGroup = groupId;
+
+        const isCoast = r.Method === "COAST (Ours)";
+        const trCls = [];
+        if (isCoast) trCls.push("coast-row");
+        if (isBoundary) trCls.push("group-boundary");
+
+        const gKey = `${r.Dataset}||${r.k}`;
+        const tds = cols.map(c => {
+          let val = r[c] !== undefined ? r[c] : "";
+          const cls = [];
+          if (leftCols.has(c)) cls.push("left");
+          if (c === "Method" && isCoast) cls.push("method-coast");
+          if (!leftCols.has(c) && bestMap[gKey] && bestMap[gKey][c] !== undefined) {
+            const num = parseNumeric(val);
+            if (!isNaN(num) && Math.abs(num - bestMap[gKey][c]) < 1e-6) {
+              cls.push("best-score");
+            }
+          }
+          let displayVal = val;
+          if (c === "Method") {
+            displayVal = formatLatex(val);
+          }
+          return `<td class="${cls.join(' ')}">${displayVal}</td>`;
+        }).join("");
+
+        return `<tr class="${trCls.join(' ')}">${tds}</tr>`;
+      });
+      tbody.innerHTML = htmlRows.join("");
+
+      // Status text
+      document.getElementById("statusInfo").innerHTML = `
+        <strong>${state.evalView}</strong> &nbsp;—&nbsp;
+        ${isTask ? `${state.track} &nbsp;|&nbsp; ` : ""}${state.metric}
+        ${!isParam ? ` &nbsp;|&nbsp; ${state.dimMode}` : ""}
+      `;
+      document.getElementById("statusDims").textContent = `${rows.length} rows × ${cols.length} cols`;
+
+      // Trigger KaTeX math rendering
+      triggerMath();
+    }
+
+    function openMethodModal() {
+      const isFull = state.dimMode === "Full (k = d)";
+      const main = isFull ? DATA.full_main_methods : DATA.comp_main_methods;
+      const abl = isFull ? DATA.full_ablation_methods : DATA.comp_ablation_methods;
+      const allList = [...main, ...abl];
+
+      const currentAllowed = getAllowedMethods();
+      const modalBody = document.getElementById("modalMethodList");
+      modalBody.innerHTML = "";
+
+      allList.forEach(m => {
+        const item = document.createElement("label");
+        item.className = "method-item";
+        const chk = document.createElement("input");
+        chk.type = "checkbox";
+        chk.value = m;
+        chk.checked = currentAllowed.has(m);
+        item.appendChild(chk);
+
+        const span = document.createElement("span");
+        span.innerHTML = formatLatex(m);
+        item.appendChild(span);
+
+        modalBody.appendChild(item);
+      });
+
+      document.getElementById("methodModal").classList.remove("hidden");
+
+      if (window.renderMathInElement) {
+        renderMathInElement(modalBody, {
+          delimiters: [{ left: "$", right: "$", display: false }],
+          throwOnError: false,
+        });
+      }
+    }
+
+    function initEvents() {
+      // Theme Toggle (Light / Dark)
+      const themeBtn = document.getElementById("themeToggleBtn");
+      const rootHtml = document.documentElement;
+      const savedTheme = localStorage.getItem("coast_theme") || "light";
+      rootHtml.dataset.theme = savedTheme;
+      updateThemeBtn(savedTheme);
+
+      themeBtn.onclick = () => {
+        const nextTheme = rootHtml.dataset.theme === "light" ? "dark" : "light";
+        rootHtml.dataset.theme = nextTheme;
+        localStorage.setItem("coast_theme", nextTheme);
+        updateThemeBtn(nextTheme);
+      };
+
+      function updateThemeBtn(th) {
+        document.getElementById("themeIcon").textContent = th === "light" ? "◑" : "☼";
+        document.getElementById("themeLabel").textContent = th === "light" ? "Dark Mode" : "Light Mode";
+      }
+
+      // Segmented control binds
+      document.querySelectorAll("#segEvalView button").forEach(btn => {
+        btn.onclick = () => {
+          document.querySelectorAll("#segEvalView button").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          state.evalView = btn.dataset.val;
+          state.customMethods = null;
+          syncState();
+          renderToolbarControls();
+          renderTable();
+        };
+      });
+
+      document.querySelectorAll("#segTrack button").forEach(btn => {
+        btn.onclick = () => {
+          document.querySelectorAll("#segTrack button").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          state.track = btn.dataset.val;
+          syncState();
+          renderToolbarControls();
+          renderTable();
+        };
+      });
+
+      document.getElementById("selectMetric").onchange = e => {
+        state.metric = e.target.value;
+        renderTable();
+      };
+
+      document.querySelectorAll("#segDim button").forEach(btn => {
+        btn.onclick = () => {
+          document.querySelectorAll("#segDim button").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          state.dimMode = btn.dataset.val;
+          state.customMethods = null;
+          renderToolbarControls();
+          renderTable();
+        };
+      });
+
+      document.querySelectorAll("#segMethodSet button").forEach(btn => {
+        btn.onclick = () => {
+          document.querySelectorAll("#segMethodSet button").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          state.methodSet = btn.dataset.val;
+          state.customMethods = null;
+          renderTable();
+        };
+      });
+
+      document.querySelectorAll("#segFormat button").forEach(btn => {
+        btn.onclick = () => {
+          document.querySelectorAll("#segFormat button").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          state.compFormat = btn.dataset.val;
+          renderTable();
+        };
+      });
+
+      // Quick filter chips
+      document.getElementById("chipDsAll").onclick = () => {
+        state.activeDatasets = new Set(getDatasetPool());
+        renderChips();
+        renderTable();
+      };
+
+      document.getElementById("chipKAll").onclick = () => {
+        state.activeK = new Set(["512", "256", "128", "64"]);
+        renderChips();
+        renderTable();
+      };
+
+      document.getElementById("chipColsAll").onclick = () => {
+        state.colMode = "all";
+        renderChips();
+        renderTable();
+      };
+      document.getElementById("chipColsModels").onclick = () => {
+        state.colMode = "models";
+        renderChips();
+        renderTable();
+      };
+      document.getElementById("chipColsMeans").onclick = () => {
+        state.colMode = "means";
+        renderChips();
+        renderTable();
+      };
+
+      // Search box
+      document.getElementById("tableSearch").oninput = e => {
+        state.searchQuery = e.target.value;
+        renderTable();
+      };
+
+      // Custom method modal
+      document.getElementById("openMethodPickerBtn").onclick = openMethodModal;
+      document.getElementById("closeMethodModalBtn").onclick = () => {
+        document.getElementById("methodModal").classList.add("hidden");
+      };
+      document.getElementById("modalSelectAllBtn").onclick = () => {
+        document.querySelectorAll("#modalMethodList input").forEach(chk => (chk.checked = true));
+      };
+      document.getElementById("modalClearBtn").onclick = () => {
+        document.querySelectorAll("#modalMethodList input").forEach(chk => (chk.checked = false));
+      };
+      document.getElementById("modalApplyBtn").onclick = () => {
+        const checked = [...document.querySelectorAll("#modalMethodList input:checked")].map(c => c.value);
+        if (checked.length > 0) {
+          state.customMethods = new Set(checked);
+          document.querySelectorAll("#segMethodSet button").forEach(b => b.classList.remove("active"));
+        }
+        document.getElementById("methodModal").classList.add("hidden");
+        renderTable();
+      };
+
+      // CSV Export
+      document.getElementById("exportBtn").onclick = () => {
+        if (!exportRows.length || !exportCols.length) return;
+        const esc = v => {
+          const s = String(v ?? "");
+          return s.includes(",") || s.includes('"') ? `"${s.replace(/"/g, '""')}"` : s;
+        };
+        const lines = [
+          exportCols.map(esc).join(","),
+          ...exportRows.map(r => exportCols.map(c => esc(r[c])).join(",")),
+        ];
+        const blob = new Blob([lines.join("\n")], { type: "text/csv;charset=utf-8;" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `coast_${state.evalView.toLowerCase().replace(/[^a-z0-9]/g, "_")}.csv`;
+        a.click();
+        URL.revokeObjectURL(url);
+      };
+    }
+
+    fetch("data.json")
+      .then(r => r.json())
+      .then(d => {
+        DATA = d;
+        state.activeDatasets = new Set(DATA.all_datasets);
+        initEvents();
+        syncState();
+        renderToolbarControls();
+        renderTable();
+      });
+  </script>
+</body>
+</html>

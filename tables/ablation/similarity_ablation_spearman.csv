@@ -1,0 +1,25 @@
+dataset,method,variant,google/embeddinggemma-300m,Qwen/Qwen3-Embedding-0.6B,google/gemma-3-1b-pt (mean_pooling),google/gemma-3-1b-pt (last_token_pooling),Qwen/Qwen3.5-0.8B-Base (mean_pooling),Qwen/Qwen3.5-0.8B-Base (last_token_pooling),mean_dedicated,mean_base_mean,mean_base_last
+STSBenchmark,ablation_o0_c0_e2,"Unregularized ZCA (Sigma, gamma=1, eps=1e-6)",80.47,76.97,61.28,64.13,59.97,59.03,78.72,60.63,61.58
+STSBenchmark,ablation_o0_c0_e1,"Centered + Adaptive eps* (Sigma, gamma=1, eps*)",85.32,83.12,61.12,65.31,60.4,60.46,84.22,60.76,62.88
+STSBenchmark,ablation_o0_c1_e0,"Centered + Crowding gamma (Sigma, gamma_crowd, 1e-4)",85.73,84.58,60.68,65.49,60.4,60.62,85.16,60.54,63.05
+STSBenchmark,ablation_o0_c1_e1,"w/o Orthogonal Projection (Sigma, gamma_crowd, eps*)",85.54,84.73,61.12,65.31,60.4,60.46,85.14,60.76,62.88
+STSBenchmark,ablation_o1_c0_e0,"Orthogonal Soft-ZCA (Sigma_perp, gamma=1, 1e-4)",81.78,79.24,60.69,65.53,60.4,60.63,80.51,60.54,63.08
+STSBenchmark,ablation_o1_c0_e1,"w/o Crowding Exponent (Sigma_perp, gamma=1, eps*)",85.42,83.12,61.13,65.4,60.4,60.51,84.27,60.77,62.95
+STSBenchmark,ablation_o1_c2_e0,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, 1e-4)",85.25,83.0,56.39,61.13,56.7,55.2,84.12,56.55,58.17
+STSBenchmark,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma_crowd, 1e-4)",85.85,84.61,60.69,65.53,60.4,60.63,85.23,60.54,63.08
+SICK-R,ablation_o0_c0_e2,"Unregularized ZCA (Sigma, gamma=1, eps=1e-6)",69.23,69.27,58.94,57.15,58.93,54.46,69.25,58.94,55.81
+SICK-R,ablation_o0_c0_e1,"Centered + Adaptive eps* (Sigma, gamma=1, eps*)",75.65,74.36,59.85,58.45,60.1,56.4,75.01,59.98,57.42
+SICK-R,ablation_o0_c1_e0,"Centered + Crowding gamma (Sigma, gamma_crowd, 1e-4)",78.06,78.09,59.75,58.43,60.16,56.2,78.07,59.95,57.32
+SICK-R,ablation_o0_c1_e1,"w/o Orthogonal Projection (Sigma, gamma_crowd, eps*)",79.44,79.29,59.85,58.45,60.1,56.4,79.37,59.98,57.42
+SICK-R,ablation_o1_c0_e0,"Orthogonal Soft-ZCA (Sigma_perp, gamma=1, 1e-4)",71.09,70.94,59.76,58.44,60.16,56.2,71.01,59.96,57.32
+SICK-R,ablation_o1_c0_e1,"w/o Crowding Exponent (Sigma_perp, gamma=1, eps*)",75.64,74.34,59.85,58.45,60.1,56.39,74.99,59.98,57.42
+SICK-R,ablation_o1_c2_e0,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, 1e-4)",76.45,75.9,58.75,57.54,59.8,55.9,76.17,59.28,56.72
+SICK-R,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma_crowd, 1e-4)",78.03,78.06,59.76,58.44,60.16,56.2,78.05,59.96,57.32
+STS22.v2,ablation_o0_c0_e2,"Unregularized ZCA (Sigma, gamma=1, eps=1e-6)",68.08,67.39,65.03,22.96,63.93,34.7,67.73,64.48,28.83
+STS22.v2,ablation_o0_c0_e1,"Centered + Adaptive eps* (Sigma, gamma=1, eps*)",67.33,67.74,64.28,22.38,64.0,34.49,67.53,64.14,28.43
+STS22.v2,ablation_o0_c1_e0,"Centered + Crowding gamma (Sigma, gamma_crowd, 1e-4)",65.92,67.73,63.75,19.89,63.99,34.2,66.83,63.87,27.04
+STS22.v2,ablation_o0_c1_e1,"w/o Orthogonal Projection (Sigma, gamma_crowd, eps*)",65.9,67.67,64.28,19.48,64.0,34.49,66.78,64.14,26.99
+STS22.v2,ablation_o1_c0_e0,"Orthogonal Soft-ZCA (Sigma_perp, gamma=1, 1e-4)",68.0,67.56,63.7,23.08,63.96,34.24,67.78,63.83,28.66
+STS22.v2,ablation_o1_c0_e1,"w/o Crowding Exponent (Sigma_perp, gamma=1, eps*)",67.42,67.57,64.31,22.52,64.03,34.94,67.49,64.17,28.73
+STS22.v2,ablation_o1_c2_e0,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, 1e-4)",67.03,67.49,60.33,19.64,61.91,28.51,67.26,61.12,24.08
+STS22.v2,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma_crowd, 1e-4)",66.05,67.6,63.7,20.87,63.96,34.24,66.83,63.83,27.56

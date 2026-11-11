@@ -1,0 +1,4 @@
+metric,value
+ndcg_at_10,0.453260
+recall_at_100,0.785477
+mrr_at_10,0.532540

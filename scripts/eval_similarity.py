@@ -13,12 +13,12 @@ import torch
 from src.config import get_device, logger
 from src.metrics import compute_similarity_metrics
 from src.registry import (
+    ALL_COMPRESSION_METHODS,
+    ALL_FULL_METHODS,
     BASE_MODELS,
     BASE_POOLING_MODES,
     COMPRESSION_LADDER_K,
-    COMPRESSION_METHODS,
     EMBEDDING_MODELS,
-    FULL_METHODS,
     SIMILARITY_TASKS,
     get_raw_cache_dir,
     get_result_dir,
@@ -62,7 +62,7 @@ def evaluate_similarity_combination(
     gold_scores = meta["scores"]
 
     # 1. Full-Dimension Transforms
-    for method in FULL_METHODS:
+    for method in ALL_FULL_METHODS:
         csv_path = (
             get_result_dir("similarity", task_name, model_id, "full", pooling=pooling)
             / f"{method}.csv"
@@ -92,7 +92,7 @@ def evaluate_similarity_combination(
         )
 
     # 2. Compression Transforms
-    for method in COMPRESSION_METHODS:
+    for method in ALL_COMPRESSION_METHODS:
         for k in COMPRESSION_LADDER_K:
             sub_name = f"{method}_k{k}"
             csv_path = (

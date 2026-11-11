@@ -13,15 +13,15 @@ from src.tables import (
     build_suite_2_similarity,
     build_suite_3_compression,
     build_suite_4_geometry,
-    build_suite_5_ablation,
-    build_suite_6_analysis,
+    build_suite_5_parameters,
+    build_suite_6_ablation,
     load_master_lazy,
 )
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Compile granular, publication-ready CSV research tables from atomic evaluation results."
+        description="Compile non-redundant, publication-ready CSV research tables from atomic evaluation results."
     )
     parser.add_argument(
         "--suite",
@@ -42,7 +42,7 @@ def main() -> None:
 
     t0 = time.time()
     logger.info(
-        "Starting granular table generation pipeline (suite=%s, out_dir=%s)",
+        "Starting non-redundant table generation pipeline (suite=%s, out_dir=%s)",
         args.suite,
         tables_dir,
     )
@@ -64,9 +64,9 @@ def main() -> None:
         elif s == "4":
             build_suite_4_geometry(master_lf, tables_dir)
         elif s == "5":
-            build_suite_5_ablation(master_lf, tables_dir)
+            build_suite_5_parameters(tables_dir)
         elif s == "6":
-            build_suite_6_analysis(master_lf, tables_dir)
+            build_suite_6_ablation(master_lf, tables_dir)
         else:
             logger.warning("Unknown table suite: %s (skipping)", s)
 

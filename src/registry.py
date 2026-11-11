@@ -47,20 +47,47 @@ FULL_METHODS: list[str] = [
     "r1",
     "r2",
     "soft_zca",
+    "coast",
     "abtt_1",
     "abtt_2",
     "abtt_3",
-    "rand",
-    "mc",
 ]
 
 COMPRESSION_METHODS: list[str] = [
     "prefix",
-    "random_truncation",
     "pca",
     "whitening",
     "spectemp",
+    "coast",
 ]
+
+# 5. Component Ablation Method Identifiers (8 full-dimension and 8 compression variants per k)
+ABLATION_FULL_SPECS: dict[str, tuple[bool, int, int]] = {
+    "ablation_o0_c0_e2": (False, 0, 2),
+    "ablation_o0_c0_e1": (False, 0, 1),
+    "ablation_o0_c1_e0": (False, 1, 0),
+    "ablation_o0_c1_e1": (False, 1, 1),
+    "ablation_o1_c0_e0": (True, 0, 0),
+    "ablation_o1_c0_e1": (True, 0, 1),
+    "ablation_o1_c2_e0": (True, 2, 0),
+    "ablation_o1_c1_e0": (True, 1, 0),
+}
+ABLATION_FULL_METHODS: list[str] = list(ABLATION_FULL_SPECS.keys())
+
+ABLATION_COMPRESSION_SPECS: dict[str, tuple[bool, int, int]] = {
+    "ablation_o1_pca": (True, -1, 0),
+    "ablation_o1_c0_e0": (True, 0, 0),
+    "ablation_o1_c0_e2": (True, 0, 2),
+    "ablation_o1_c4_e2": (True, 4, 2),
+    "ablation_o1_c2_e2": (True, 2, 2),
+    "ablation_o1_c1_e0": (True, 1, 0),
+    "ablation_o1_c1_e1": (True, 1, 1),
+    "ablation_o0_c1_e2": (False, 1, 2),
+}
+ABLATION_COMPRESSION_METHODS: list[str] = list(ABLATION_COMPRESSION_SPECS.keys())
+
+ALL_FULL_METHODS: list[str] = FULL_METHODS + ABLATION_FULL_METHODS
+ALL_COMPRESSION_METHODS: list[str] = COMPRESSION_METHODS + ABLATION_COMPRESSION_METHODS
 
 
 def sanitize_model_id(model_id: str) -> str:

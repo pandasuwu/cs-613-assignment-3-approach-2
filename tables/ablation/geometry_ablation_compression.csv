@@ -1,0 +1,1153 @@
+dataset,k,model,method,variant,centroid_norm,average_cosine,mev_top1,nid_spectral_entropy,isoscore
+FiQA2018,512,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0056,0.0001,0.0465,0.8862,0.225
+FiQA2018,512,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0061,0.0001,0.0397,0.9023,0.2689
+FiQA2018,512,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0059,0.0001,0.0419,0.8945,0.2497
+FiQA2018,512,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0069,0.0001,0.0203,0.9365,0.4403
+FiQA2018,512,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.006,0.0001,0.04,0.8979,0.261
+FiQA2018,512,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0063,0.0001,0.037,0.9089,0.2902
+FiQA2018,512,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.006,0.0001,0.0401,0.8976,0.26
+FiQA2018,512,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.008,0.0002,0.0405,0.8953,0.2536
+FiQA2018,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0028,-0.0,0.0419,0.8758,0.2218
+FiQA2018,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.003,-0.0,0.0375,0.8885,0.2519
+FiQA2018,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0029,-0.0,0.0388,0.8826,0.2398
+FiQA2018,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.004,-0.0,0.0184,0.9303,0.4324
+FiQA2018,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.003,-0.0,0.0362,0.8883,0.2564
+FiQA2018,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0031,-0.0,0.0339,0.8991,0.2815
+FiQA2018,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.003,-0.0,0.0364,0.8877,0.2548
+FiQA2018,512,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0046,-0.0,0.036,0.8882,0.2566
+FiQA2018,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0445,0.0027,0.1176,0.7401,0.0626
+FiQA2018,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0433,0.0026,0.1126,0.7498,0.0669
+FiQA2018,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0433,0.0026,0.1126,0.7497,0.0669
+FiQA2018,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0209,0.0006,0.0257,0.9388,0.4127
+FiQA2018,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.01,0.0001,0.0039,0.9948,0.9429
+FiQA2018,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0098,0.0001,0.0037,0.9952,0.9488
+FiQA2018,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0109,0.0001,0.0046,0.9909,0.8974
+FiQA2018,512,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0101,0.0001,0.0039,0.9947,0.9421
+FiQA2018,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0347,0.0016,0.1899,0.7359,0.0392
+FiQA2018,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0324,0.0015,0.1825,0.7459,0.0421
+FiQA2018,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0324,0.0015,0.1826,0.7457,0.0421
+FiQA2018,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0196,0.0004,0.0405,0.942,0.3808
+FiQA2018,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0113,0.0001,0.0049,0.9945,0.9331
+FiQA2018,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0108,0.0001,0.0045,0.9957,0.9488
+FiQA2018,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0126,0.0001,0.0065,0.987,0.8493
+FiQA2018,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0114,0.0001,0.0049,0.9944,0.9321
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0277,0.001,0.1135,0.7311,0.0633
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0273,0.0009,0.1088,0.7407,0.0674
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0273,0.0009,0.1088,0.7405,0.0673
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0172,0.0004,0.0259,0.9341,0.3959
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0089,0.0001,0.0036,0.9956,0.9523
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0085,0.0001,0.0033,0.9966,0.9645
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0098,0.0001,0.0045,0.9901,0.8893
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.009,0.0001,0.0036,0.9956,0.9514
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0479,0.003,0.2309,0.6976,0.0284
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0446,0.0027,0.2217,0.7091,0.0307
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0446,0.0027,0.2218,0.7088,0.0307
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0178,0.0003,0.0448,0.9348,0.3422
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0102,0.0001,0.0044,0.9943,0.9334
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0097,0.0001,0.0039,0.9962,0.9566
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0114,0.0002,0.0056,0.9863,0.8461
+FiQA2018,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0106,0.0001,0.0044,0.9942,0.9319
+FiQA2018,256,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0044,0.0,0.054,0.9098,0.334
+FiQA2018,256,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0055,0.0001,0.037,0.9424,0.4807
+FiQA2018,256,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0051,0.0,0.0411,0.9305,0.4263
+FiQA2018,256,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.006,0.0001,0.0244,0.9583,0.6039
+FiQA2018,256,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0048,0.0,0.0468,0.9213,0.3818
+FiQA2018,256,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0055,0.0001,0.037,0.9424,0.4807
+FiQA2018,256,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0051,0.0,0.0416,0.9291,0.4201
+FiQA2018,256,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0065,0.0001,0.043,0.9257,0.4037
+FiQA2018,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0032,-0.0001,0.0473,0.9097,0.3479
+FiQA2018,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.003,-0.0,0.0329,0.9421,0.4918
+FiQA2018,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0029,-0.0001,0.036,0.9312,0.4427
+FiQA2018,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0035,-0.0,0.0216,0.9597,0.6227
+FiQA2018,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0029,-0.0001,0.0411,0.9214,0.3959
+FiQA2018,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.003,-0.0,0.0329,0.9421,0.4918
+FiQA2018,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0029,-0.0001,0.0366,0.9295,0.4353
+FiQA2018,256,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0045,-0.0,0.0349,0.9331,0.4531
+FiQA2018,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0466,0.003,0.1254,0.7749,0.1096
+FiQA2018,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0428,0.0025,0.1104,0.8016,0.132
+FiQA2018,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0428,0.0025,0.1104,0.8015,0.132
+FiQA2018,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0229,0.0007,0.0334,0.9462,0.5106
+FiQA2018,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0125,0.0001,0.0067,0.9939,0.9457
+FiQA2018,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0125,0.0001,0.0067,0.9939,0.9458
+FiQA2018,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0131,0.0001,0.0073,0.9926,0.9313
+FiQA2018,256,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0126,0.0001,0.0067,0.9939,0.9454
+FiQA2018,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.039,0.002,0.2018,0.7616,0.0681
+FiQA2018,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0319,0.0014,0.1798,0.7896,0.0837
+FiQA2018,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0319,0.0014,0.1798,0.7896,0.0836
+FiQA2018,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0194,0.0004,0.0509,0.9505,0.476
+FiQA2018,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0132,0.0002,0.0081,0.996,0.9569
+FiQA2018,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0132,0.0002,0.008,0.996,0.9577
+FiQA2018,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0141,0.0002,0.0096,0.9931,0.9244
+FiQA2018,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0134,0.0002,0.0081,0.9959,0.9567
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0286,0.001,0.12,0.7702,0.1127
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0273,0.0009,0.106,0.7962,0.1342
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0273,0.0009,0.106,0.7962,0.1342
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0189,0.0004,0.0329,0.9444,0.5038
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0113,0.0001,0.0062,0.9956,0.9606
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0113,0.0001,0.0061,0.9956,0.961
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.012,0.0001,0.007,0.9937,0.9401
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0116,0.0001,0.0062,0.9955,0.9599
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0524,0.0036,0.2439,0.7244,0.0502
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0427,0.0024,0.2181,0.7551,0.0619
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0427,0.0024,0.2182,0.755,0.0619
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0188,0.0004,0.0572,0.9439,0.4311
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0123,0.0002,0.007,0.9961,0.9603
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0122,0.0002,0.0069,0.9962,0.9614
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0133,0.0002,0.0086,0.9928,0.924
+FiQA2018,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0127,0.0002,0.007,0.996,0.9599
+FiQA2018,128,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0046,-0.0,0.0662,0.9259,0.4512
+FiQA2018,128,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0049,0.0,0.0348,0.9717,0.7297
+FiQA2018,128,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0047,0.0,0.0401,0.9605,0.6525
+FiQA2018,128,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0049,0.0,0.0321,0.9709,0.7326
+FiQA2018,128,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0044,-0.0,0.0581,0.9367,0.5045
+FiQA2018,128,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0049,0.0,0.0348,0.9717,0.7297
+FiQA2018,128,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0046,0.0,0.0416,0.9576,0.6343
+FiQA2018,128,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0052,0.0,0.0435,0.9547,0.6135
+FiQA2018,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0054,-0.0001,0.0574,0.93,0.4791
+FiQA2018,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0032,-0.0001,0.0277,0.9786,0.7911
+FiQA2018,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0033,-0.0001,0.0321,0.9687,0.7163
+FiQA2018,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0033,-0.0001,0.0284,0.974,0.7594
+FiQA2018,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0046,-0.0001,0.0506,0.9405,0.5321
+FiQA2018,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0032,-0.0001,0.0277,0.9786,0.7911
+FiQA2018,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0033,-0.0001,0.0336,0.9655,0.6939
+FiQA2018,128,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0046,-0.0001,0.0301,0.9716,0.7393
+FiQA2018,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0498,0.0033,0.137,0.8078,0.1829
+FiQA2018,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0412,0.0023,0.1036,0.8601,0.2652
+FiQA2018,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0412,0.0023,0.1036,0.8601,0.2652
+FiQA2018,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.026,0.0009,0.0454,0.9506,0.5979
+FiQA2018,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0155,0.0002,0.0118,0.9928,0.9455
+FiQA2018,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0155,0.0002,0.0118,0.9927,0.9455
+FiQA2018,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0158,0.0002,0.0124,0.9923,0.941
+FiQA2018,128,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0156,0.0002,0.0118,0.9928,0.9454
+FiQA2018,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.047,0.0028,0.2192,0.7812,0.1126
+FiQA2018,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0323,0.0015,0.1754,0.8328,0.164
+FiQA2018,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0323,0.0015,0.1754,0.8327,0.164
+FiQA2018,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0188,0.0004,0.067,0.9524,0.5498
+FiQA2018,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.015,0.0002,0.0137,0.9962,0.9653
+FiQA2018,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.015,0.0002,0.0137,0.9962,0.9653
+FiQA2018,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0155,0.0002,0.0151,0.995,0.9534
+FiQA2018,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0153,0.0002,0.0137,0.9961,0.9648
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0299,0.0011,0.1296,0.809,0.1919
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.027,0.0009,0.0984,0.8598,0.273
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.027,0.0009,0.0984,0.8599,0.273
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0211,0.0005,0.044,0.9505,0.599
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0146,0.0002,0.0113,0.9949,0.9607
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0146,0.0002,0.0113,0.9949,0.9606
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.015,0.0003,0.012,0.9942,0.9543
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0153,0.0003,0.0114,0.9947,0.9597
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0601,0.0046,0.2625,0.7468,0.0851
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0402,0.0022,0.2104,0.8047,0.1268
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0402,0.0022,0.2104,0.8047,0.1268
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0201,0.0005,0.0773,0.9443,0.494
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0153,0.0004,0.0129,0.9953,0.9604
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0153,0.0004,0.0129,0.9953,0.9604
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.016,0.0004,0.0144,0.994,0.9472
+FiQA2018,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0162,0.0004,0.0129,0.9953,0.9599
+FiQA2018,64,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0082,-0.0001,0.085,0.9391,0.5706
+FiQA2018,64,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0056,-0.0001,0.0319,0.9927,0.9358
+FiQA2018,64,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0057,-0.0001,0.0378,0.9858,0.8799
+FiQA2018,64,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0059,-0.0001,0.0457,0.9789,0.8244
+FiQA2018,64,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0075,-0.0001,0.076,0.9487,0.622
+FiQA2018,64,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0056,-0.0001,0.0319,0.9927,0.9358
+FiQA2018,64,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0058,-0.0001,0.0406,0.9825,0.8542
+FiQA2018,64,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0056,-0.0001,0.0429,0.9805,0.8378
+FiQA2018,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0105,-0.0001,0.074,0.9438,0.6036
+FiQA2018,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0044,-0.0001,0.024,0.9972,0.9759
+FiQA2018,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0048,-0.0001,0.0286,0.9927,0.9372
+FiQA2018,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0058,-0.0001,0.0409,0.9814,0.8452
+FiQA2018,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0093,-0.0001,0.0665,0.9528,0.6524
+FiQA2018,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0044,-0.0001,0.024,0.9972,0.9759
+FiQA2018,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.005,-0.0001,0.0311,0.9897,0.9132
+FiQA2018,64,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0054,-0.0001,0.0255,0.995,0.9574
+FiQA2018,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0546,0.0039,0.1532,0.8431,0.2918
+FiQA2018,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0372,0.0019,0.0863,0.9299,0.5454
+FiQA2018,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0372,0.0019,0.0863,0.9299,0.5456
+FiQA2018,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.031,0.0013,0.0629,0.9575,0.6905
+FiQA2018,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0192,0.0004,0.0215,0.9933,0.9551
+FiQA2018,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0192,0.0004,0.0215,0.9933,0.955
+FiQA2018,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0194,0.0004,0.0219,0.9931,0.9537
+FiQA2018,64,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0199,0.0004,0.0216,0.9928,0.9523
+FiQA2018,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.058,0.0041,0.2421,0.8028,0.1797
+FiQA2018,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0311,0.0014,0.1606,0.8886,0.3351
+FiQA2018,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0311,0.0014,0.1606,0.8886,0.3351
+FiQA2018,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0207,0.0006,0.09,0.9546,0.6232
+FiQA2018,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0174,0.0003,0.024,0.9967,0.9739
+FiQA2018,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0174,0.0003,0.024,0.9967,0.9739
+FiQA2018,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0177,0.0003,0.0252,0.9962,0.9696
+FiQA2018,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0182,0.0003,0.024,0.9965,0.9724
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0321,0.0012,0.1434,0.8504,0.3117
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0262,0.0008,0.0776,0.9376,0.5848
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0262,0.0008,0.0776,0.9377,0.585
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0244,0.0007,0.0602,0.959,0.7004
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0188,0.0004,0.021,0.9951,0.9664
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0188,0.0004,0.021,0.9951,0.9663
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.019,0.0004,0.0215,0.9948,0.9643
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0201,0.0004,0.021,0.9947,0.9643
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0706,0.0062,0.2862,0.7722,0.1402
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0348,0.0016,0.1914,0.8679,0.2735
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0347,0.0016,0.1914,0.8679,0.2735
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0224,0.0007,0.1057,0.945,0.5589
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0196,0.0006,0.0246,0.9948,0.961
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0196,0.0006,0.0246,0.9948,0.9609
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0201,0.0006,0.026,0.9942,0.9562
+FiQA2018,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0216,0.0007,0.0246,0.9946,0.9595
+ArguAna,512,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0036,-0.0001,0.0361,0.8776,0.2385
+ArguAna,512,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0036,-0.0001,0.034,0.8844,0.2545
+ArguAna,512,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0036,-0.0001,0.0349,0.8803,0.2458
+ArguAna,512,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0039,-0.0001,0.0194,0.9174,0.3834
+ArguAna,512,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0036,-0.0001,0.0332,0.8842,0.2572
+ArguAna,512,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0037,-0.0001,0.031,0.8945,0.2811
+ArguAna,512,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0036,-0.0001,0.0332,0.884,0.2568
+ArguAna,512,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0045,-0.0001,0.0325,0.8854,0.2604
+ArguAna,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.003,-0.0,0.0405,0.8624,0.2113
+ArguAna,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.003,-0.0,0.0387,0.868,0.2223
+ArguAna,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.003,-0.0,0.0395,0.8647,0.2167
+ArguAna,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0032,-0.0001,0.0209,0.9077,0.3563
+ArguAna,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.003,-0.0,0.0366,0.871,0.2324
+ArguAna,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.003,-0.0001,0.034,0.8832,0.2566
+ArguAna,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.003,-0.0,0.0367,0.8705,0.2314
+ArguAna,512,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0044,-0.0001,0.0363,0.8712,0.2335
+ArguAna,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0181,0.0003,0.0955,0.7483,0.0734
+ArguAna,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0178,0.0003,0.0911,0.7582,0.0786
+ArguAna,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0178,0.0003,0.0911,0.7581,0.0786
+ArguAna,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0118,0.0,0.0216,0.9412,0.4398
+ArguAna,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0063,-0.0001,0.0029,0.9981,0.9768
+ArguAna,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0062,-0.0001,0.0028,0.9983,0.9802
+ArguAna,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0069,-0.0001,0.0034,0.9947,0.9372
+ArguAna,512,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0065,-0.0001,0.0029,0.9981,0.9768
+ArguAna,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0141,-0.0,0.247,0.7095,0.0261
+ArguAna,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.014,-0.0001,0.2351,0.7223,0.0287
+ArguAna,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.014,-0.0001,0.2352,0.7221,0.0287
+ArguAna,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.016,-0.0001,0.0403,0.943,0.3883
+ArguAna,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0094,-0.0001,0.0051,0.995,0.9397
+ArguAna,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.009,-0.0001,0.0047,0.9962,0.955
+ArguAna,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0104,-0.0001,0.0066,0.9869,0.8535
+ArguAna,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0095,-0.0001,0.0051,0.9949,0.9392
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0142,0.0002,0.108,0.7158,0.0604
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0141,0.0002,0.1042,0.7244,0.0638
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0141,0.0002,0.1042,0.7242,0.0638
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0105,-0.0,0.025,0.9289,0.3802
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0059,-0.0001,0.0029,0.9975,0.97
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0056,-0.0001,0.0026,0.9987,0.9851
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0066,-0.0001,0.0037,0.9902,0.8899
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0062,-0.0001,0.0029,0.9975,0.97
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0218,0.0007,0.2706,0.6552,0.0204
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0214,0.0006,0.2648,0.6619,0.0213
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0214,0.0006,0.2648,0.6617,0.0213
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0175,-0.0001,0.0477,0.927,0.3047
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0105,-0.0001,0.0057,0.993,0.9184
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0097,-0.0001,0.0049,0.9952,0.9457
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0119,-0.0001,0.0076,0.9831,0.8169
+ArguAna,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0107,-0.0001,0.0057,0.9929,0.9176
+ArguAna,256,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0036,-0.0001,0.0407,0.9133,0.3752
+ArguAna,256,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0036,-0.0001,0.0337,0.9311,0.4489
+ArguAna,256,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0035,-0.0001,0.0362,0.9222,0.4136
+ArguAna,256,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0037,-0.0001,0.0224,0.9505,0.5719
+ArguAna,256,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0035,-0.0001,0.0375,0.9196,0.4019
+ArguAna,256,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0036,-0.0001,0.0337,0.9311,0.4489
+ArguAna,256,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0035,-0.0001,0.0364,0.9216,0.4112
+ArguAna,256,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0043,-0.0001,0.0314,0.9325,0.4626
+ArguAna,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0033,-0.0,0.0448,0.9044,0.3462
+ArguAna,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0032,-0.0,0.0379,0.9213,0.4086
+ArguAna,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0032,-0.0,0.0402,0.9133,0.381
+ArguAna,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0033,-0.0,0.0234,0.9467,0.5549
+ArguAna,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0032,-0.0,0.0405,0.9125,0.378
+ArguAna,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0032,-0.0,0.0379,0.9213,0.4086
+ArguAna,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0032,-0.0,0.0405,0.9125,0.378
+ArguAna,256,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0046,-0.0,0.039,0.9152,0.3896
+ArguAna,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0187,0.0004,0.1008,0.7918,0.131
+ArguAna,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0179,0.0003,0.086,0.8228,0.1633
+ArguAna,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0179,0.0003,0.086,0.8228,0.1633
+ArguAna,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0135,0.0001,0.0277,0.9529,0.5546
+ArguAna,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0085,-0.0001,0.0053,0.9984,0.9825
+ArguAna,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0085,-0.0001,0.0053,0.9984,0.9825
+ArguAna,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0089,-0.0001,0.0057,0.9976,0.974
+ArguAna,256,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0088,-0.0001,0.0053,0.9983,0.9823
+ArguAna,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0139,-0.0,0.2635,0.735,0.0454
+ArguAna,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0134,-0.0001,0.225,0.7748,0.0613
+ArguAna,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0134,-0.0001,0.225,0.7747,0.0612
+ArguAna,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0161,-0.0001,0.0512,0.9544,0.4896
+ArguAna,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0108,-0.0001,0.008,0.9978,0.9745
+ArguAna,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0107,-0.0001,0.0079,0.9978,0.9751
+ArguAna,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0115,-0.0001,0.0094,0.9953,0.9469
+ArguAna,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0111,-0.0001,0.008,0.9977,0.9741
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0145,0.0002,0.1127,0.7626,0.1105
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0143,0.0002,0.099,0.7909,0.1329
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0143,0.0002,0.099,0.7909,0.1329
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0117,0.0,0.0309,0.9447,0.5055
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0077,-0.0,0.005,0.9988,0.987
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0077,-0.0,0.005,0.9988,0.9872
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0082,-0.0,0.0058,0.9969,0.9658
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0081,-0.0,0.005,0.9988,0.9867
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.023,0.0008,0.2843,0.6833,0.0366
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0216,0.0007,0.2655,0.7043,0.0418
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0216,0.0007,0.2655,0.7042,0.0418
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0184,-0.0001,0.0589,0.9396,0.4004
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0129,-0.0001,0.0091,0.9965,0.9608
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0128,-0.0001,0.009,0.9966,0.962
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0141,-0.0001,0.0111,0.9927,0.9195
+ArguAna,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0134,-0.0001,0.0091,0.9964,0.9602
+ArguAna,128,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0037,-0.0,0.0493,0.9363,0.5197
+ArguAna,128,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0035,-0.0001,0.0341,0.9643,0.6847
+ArguAna,128,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0035,-0.0,0.0384,0.9538,0.6203
+ArguAna,128,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0036,-0.0001,0.0286,0.9691,0.7286
+ArguAna,128,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0037,-0.0,0.0458,0.9419,0.5498
+ArguAna,128,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0035,-0.0001,0.0341,0.9643,0.6847
+ArguAna,128,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0036,-0.0,0.0391,0.9522,0.6112
+ArguAna,128,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0041,-0.0001,0.0284,0.9705,0.7366
+ArguAna,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.004,0.0,0.0533,0.9318,0.4957
+ArguAna,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0036,0.0,0.0369,0.9609,0.6598
+ArguAna,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0037,0.0,0.041,0.9509,0.6019
+ArguAna,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0036,-0.0,0.0294,0.9687,0.7254
+ArguAna,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0038,0.0,0.0486,0.9391,0.5333
+ArguAna,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0036,0.0,0.0369,0.9609,0.6598
+ArguAna,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0037,0.0,0.042,0.9488,0.5902
+ArguAna,128,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0049,-0.0,0.0385,0.9547,0.6262
+ArguAna,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0197,0.0005,0.1099,0.8303,0.2195
+ArguAna,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0178,0.0003,0.0737,0.8957,0.3571
+ArguAna,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0178,0.0003,0.0737,0.8958,0.3572
+ArguAna,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0155,0.0001,0.0375,0.9603,0.6524
+ArguAna,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0113,0.0,0.01,0.9985,0.9857
+ArguAna,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0113,0.0,0.01,0.9985,0.9856
+ArguAna,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0115,0.0,0.0103,0.9983,0.9835
+ArguAna,128,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0118,0.0,0.01,0.9984,0.9853
+ArguAna,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0145,0.0001,0.2906,0.7473,0.0733
+ArguAna,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0131,-0.0,0.2092,0.8271,0.1337
+ArguAna,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0131,-0.0,0.2092,0.8271,0.1337
+ArguAna,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0163,-0.0001,0.0707,0.9547,0.5459
+ArguAna,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0132,-0.0,0.0138,0.9979,0.9793
+ArguAna,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0132,-0.0,0.0137,0.9979,0.9793
+ArguAna,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0137,-0.0,0.015,0.997,0.9698
+ArguAna,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0137,-0.0,0.0138,0.9978,0.9786
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0151,0.0003,0.1206,0.8069,0.192
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0147,0.0002,0.0867,0.8689,0.2933
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0147,0.0002,0.0867,0.8689,0.2934
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0134,0.0001,0.0409,0.9537,0.612
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0104,-0.0,0.0097,0.9989,0.9891
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0104,-0.0,0.0097,0.9988,0.989
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0106,-0.0,0.0102,0.9983,0.9841
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0112,-0.0,0.0097,0.9988,0.989
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0257,0.0011,0.3059,0.7035,0.0622
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0225,0.0008,0.2654,0.7469,0.0816
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0225,0.0008,0.2654,0.7468,0.0816
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0191,-0.0,0.0786,0.9404,0.4658
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.017,0.0,0.0164,0.9964,0.9645
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.017,0.0,0.0164,0.9964,0.9646
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0177,0.0,0.0182,0.9949,0.9486
+ArguAna,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.018,0.0,0.0165,0.9963,0.9633
+ArguAna,64,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0051,-0.0,0.0638,0.9525,0.6535
+ArguAna,64,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0043,-0.0,0.0358,0.9867,0.886
+ArguAna,64,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0044,-0.0,0.0417,0.9782,0.8229
+ArguAna,64,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0044,-0.0,0.04,0.98,0.8365
+ArguAna,64,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0049,-0.0,0.0599,0.9572,0.6815
+ArguAna,64,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0043,-0.0,0.0358,0.9867,0.886
+ArguAna,64,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0044,-0.0,0.0434,0.9758,0.8063
+ArguAna,64,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0047,-0.0001,0.0249,0.9947,0.9554
+ArguAna,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0059,0.0001,0.0682,0.9497,0.6338
+ArguAna,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0048,-0.0,0.0369,0.9865,0.8838
+ArguAna,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0051,0.0,0.0425,0.9788,0.8257
+ArguAna,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.005,0.0,0.0409,0.9804,0.838
+ArguAna,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0057,0.0001,0.063,0.9559,0.6697
+ArguAna,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0048,-0.0,0.0369,0.9865,0.8838
+ArguAna,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0051,0.0,0.0447,0.9758,0.8045
+ArguAna,64,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0059,-0.0,0.038,0.9834,0.8618
+ArguAna,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0208,0.0006,0.1239,0.8662,0.3441
+ArguAna,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0173,0.0003,0.0508,0.9693,0.7572
+ArguAna,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0173,0.0003,0.0508,0.9694,0.7574
+ArguAna,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0174,0.0003,0.0525,0.9673,0.7436
+ArguAna,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0145,0.0002,0.0189,0.9987,0.9894
+ArguAna,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0145,0.0002,0.0189,0.9987,0.9894
+ArguAna,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0146,0.0002,0.0191,0.9986,0.9887
+ArguAna,64,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0153,0.0002,0.0189,0.9987,0.9893
+ArguAna,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0165,0.0003,0.3262,0.7565,0.1137
+ArguAna,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0132,-0.0,0.1816,0.8882,0.3047
+ArguAna,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0132,-0.0,0.1816,0.8882,0.3047
+ArguAna,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0157,-0.0001,0.1001,0.9529,0.5939
+ArguAna,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0164,-0.0,0.024,0.9979,0.9818
+ArguAna,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0164,-0.0,0.024,0.9979,0.9817
+ArguAna,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0166,-0.0,0.0251,0.9974,0.978
+ArguAna,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0174,-0.0,0.0242,0.9977,0.9806
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0157,0.0004,0.133,0.8511,0.3148
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0151,0.0002,0.0606,0.9569,0.6804
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0151,0.0002,0.0606,0.957,0.6806
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.015,0.0002,0.056,0.9629,0.7167
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0135,0.0001,0.0186,0.9989,0.9912
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0135,0.0001,0.0187,0.9989,0.9912
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0135,0.0001,0.0191,0.9988,0.9899
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.015,0.0001,0.0186,0.9989,0.9911
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0302,0.0015,0.3345,0.7232,0.1022
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0239,0.0009,0.253,0.806,0.1704
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0239,0.0009,0.253,0.806,0.1704
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.019,0.0001,0.1066,0.9407,0.5334
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0211,0.0001,0.0288,0.996,0.9661
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0211,0.0001,0.0288,0.996,0.9661
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0212,0.0001,0.0301,0.9954,0.9601
+ArguAna,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.023,0.0002,0.0289,0.9957,0.9641
+SCIDOCS,512,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0089,0.0001,0.0417,0.8941,0.2431
+SCIDOCS,512,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0086,0.0001,0.0366,0.9073,0.2833
+SCIDOCS,512,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0087,0.0001,0.0381,0.9015,0.2677
+SCIDOCS,512,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0073,0.0001,0.0179,0.9448,0.4909
+SCIDOCS,512,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0081,0.0001,0.0297,0.9189,0.3395
+SCIDOCS,512,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0079,0.0001,0.0253,0.9376,0.4146
+SCIDOCS,512,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0082,0.0001,0.0302,0.9175,0.3339
+SCIDOCS,512,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0103,0.0001,0.0313,0.9171,0.3291
+SCIDOCS,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0059,0.0,0.0413,0.8833,0.2317
+SCIDOCS,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0059,0.0,0.039,0.8894,0.2473
+SCIDOCS,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0059,0.0,0.04,0.8858,0.2393
+SCIDOCS,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0052,0.0,0.0211,0.924,0.4007
+SCIDOCS,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0058,0.0,0.0366,0.8923,0.2605
+SCIDOCS,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0057,0.0,0.0335,0.9051,0.2943
+SCIDOCS,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0058,0.0,0.0368,0.8918,0.2589
+SCIDOCS,512,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0069,0.0,0.0382,0.8925,0.2592
+SCIDOCS,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0387,0.0011,0.1202,0.7112,0.0497
+SCIDOCS,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0379,0.0011,0.116,0.7201,0.0527
+SCIDOCS,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0379,0.0011,0.1161,0.72,0.0527
+SCIDOCS,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0201,0.0003,0.0266,0.9322,0.377
+SCIDOCS,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0091,0.0,0.0036,0.9949,0.9415
+SCIDOCS,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0088,0.0,0.0034,0.9959,0.9535
+SCIDOCS,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0101,0.0,0.0046,0.988,0.8666
+SCIDOCS,512,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0092,0.0,0.0036,0.9948,0.9407
+SCIDOCS,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0439,0.0019,0.1114,0.7571,0.0631
+SCIDOCS,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0433,0.0019,0.1058,0.769,0.0686
+SCIDOCS,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0433,0.0019,0.1059,0.7687,0.0685
+SCIDOCS,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0275,0.0007,0.0274,0.941,0.4123
+SCIDOCS,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0124,0.0001,0.0046,0.9923,0.9111
+SCIDOCS,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0119,0.0001,0.0042,0.9937,0.9279
+SCIDOCS,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0138,0.0001,0.0059,0.9848,0.8312
+SCIDOCS,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0125,0.0001,0.0047,0.9922,0.9094
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0327,0.0007,0.0984,0.7347,0.0619
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0319,0.0007,0.094,0.7457,0.0666
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0319,0.0007,0.094,0.7454,0.0665
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0169,0.0002,0.0242,0.9353,0.4
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0079,-0.0,0.0034,0.9955,0.9481
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0075,-0.0,0.003,0.9972,0.9682
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0089,-0.0,0.0045,0.9876,0.863
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0081,-0.0,0.0034,0.9954,0.9472
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0455,0.002,0.1002,0.7601,0.0672
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0443,0.0019,0.0919,0.7796,0.0773
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0443,0.0019,0.0921,0.7791,0.0771
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0274,0.0008,0.0257,0.94,0.4137
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0125,0.0001,0.0044,0.9914,0.9045
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0119,0.0001,0.0039,0.993,0.9234
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0138,0.0002,0.0055,0.985,0.8378
+SCIDOCS,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0127,0.0001,0.0044,0.9912,0.9023
+SCIDOCS,256,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0089,0.0001,0.0487,0.9186,0.3567
+SCIDOCS,256,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0079,0.0001,0.0339,0.9489,0.5108
+SCIDOCS,256,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0081,0.0001,0.0367,0.9403,0.466
+SCIDOCS,256,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0071,0.0001,0.0213,0.968,0.6717
+SCIDOCS,256,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.008,0.0001,0.035,0.9434,0.4849
+SCIDOCS,256,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0078,0.0001,0.0318,0.953,0.5384
+SCIDOCS,256,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.008,0.0001,0.0362,0.9404,0.4689
+SCIDOCS,256,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0101,0.0001,0.037,0.9413,0.4705
+SCIDOCS,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0059,0.0,0.0469,0.9164,0.358
+SCIDOCS,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0056,0.0,0.0389,0.9336,0.4343
+SCIDOCS,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0057,0.0,0.0416,0.9255,0.4005
+SCIDOCS,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0051,0.0,0.0244,0.9557,0.5895
+SCIDOCS,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0057,0.0,0.0418,0.9253,0.3991
+SCIDOCS,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0056,0.0,0.0389,0.9336,0.4343
+SCIDOCS,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0057,0.0,0.042,0.9246,0.3963
+SCIDOCS,256,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0067,0.0,0.0409,0.9298,0.4198
+SCIDOCS,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0396,0.0012,0.1266,0.751,0.0895
+SCIDOCS,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0368,0.001,0.112,0.7806,0.1086
+SCIDOCS,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0368,0.001,0.112,0.7806,0.1085
+SCIDOCS,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.021,0.0003,0.0333,0.9455,0.4898
+SCIDOCS,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0108,0.0,0.0061,0.9965,0.9646
+SCIDOCS,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0108,0.0,0.0061,0.9965,0.9649
+SCIDOCS,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0115,0.0,0.0071,0.9947,0.9449
+SCIDOCS,256,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.011,0.0,0.0061,0.9964,0.9639
+SCIDOCS,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0432,0.0018,0.1196,0.7887,0.1086
+SCIDOCS,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0412,0.0017,0.1023,0.8229,0.1387
+SCIDOCS,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0412,0.0017,0.1024,0.8228,0.1387
+SCIDOCS,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0279,0.0008,0.0347,0.9537,0.526
+SCIDOCS,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0143,0.0002,0.0075,0.9958,0.955
+SCIDOCS,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0142,0.0002,0.0074,0.9959,0.9558
+SCIDOCS,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0153,0.0002,0.0088,0.9934,0.9275
+SCIDOCS,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0144,0.0002,0.0075,0.9958,0.9546
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0338,0.0008,0.1042,0.7745,0.1102
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0309,0.0007,0.0892,0.8091,0.1394
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0309,0.0007,0.0892,0.809,0.1394
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0184,0.0002,0.0304,0.9495,0.5202
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0097,0.0,0.0058,0.9973,0.9726
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0096,0.0,0.0057,0.9974,0.9731
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0104,0.0,0.0069,0.995,0.947
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0101,0.0,0.0058,0.9972,0.9716
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0458,0.002,0.1078,0.7918,0.1155
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0419,0.0017,0.0839,0.8437,0.1694
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0419,0.0017,0.0839,0.8436,0.1693
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.029,0.0009,0.0327,0.9526,0.5262
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0149,0.0002,0.0072,0.9951,0.9504
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0148,0.0002,0.0071,0.9952,0.9513
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.016,0.0003,0.0084,0.9929,0.9256
+SCIDOCS,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0152,0.0002,0.0072,0.9951,0.9497
+SCIDOCS,128,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0095,0.0001,0.0606,0.9311,0.4646
+SCIDOCS,128,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0075,0.0001,0.0327,0.9749,0.7503
+SCIDOCS,128,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0077,0.0001,0.036,0.9681,0.6985
+SCIDOCS,128,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0073,0.0001,0.0288,0.978,0.7833
+SCIDOCS,128,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0083,0.0001,0.0451,0.9549,0.6007
+SCIDOCS,128,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0075,0.0001,0.0327,0.9749,0.7503
+SCIDOCS,128,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0079,0.0001,0.0385,0.9631,0.6627
+SCIDOCS,128,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0093,0.0001,0.0361,0.9688,0.7033
+SCIDOCS,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0066,0.0,0.0576,0.9335,0.4787
+SCIDOCS,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0056,0.0,0.0404,0.9618,0.6479
+SCIDOCS,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0058,0.0,0.0449,0.9521,0.5879
+SCIDOCS,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0053,0.0,0.0316,0.9707,0.7278
+SCIDOCS,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0062,0.0,0.0518,0.942,0.5254
+SCIDOCS,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0056,0.0,0.0404,0.9618,0.6479
+SCIDOCS,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0059,0.0,0.0461,0.9498,0.574
+SCIDOCS,128,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0065,0.0,0.0408,0.9604,0.6432
+SCIDOCS,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0417,0.0013,0.1374,0.7833,0.1514
+SCIDOCS,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0351,0.0009,0.1032,0.846,0.2296
+SCIDOCS,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0351,0.0009,0.1032,0.846,0.2296
+SCIDOCS,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0238,0.0005,0.0451,0.9498,0.5737
+SCIDOCS,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0138,0.0001,0.0116,0.9966,0.9697
+SCIDOCS,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0138,0.0001,0.0116,0.9966,0.9696
+SCIDOCS,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0142,0.0001,0.0123,0.996,0.9636
+SCIDOCS,128,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0141,0.0001,0.0116,0.9964,0.968
+SCIDOCS,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0443,0.0019,0.1336,0.8079,0.1722
+SCIDOCS,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0399,0.0015,0.0986,0.8705,0.2678
+SCIDOCS,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0399,0.0015,0.0986,0.8705,0.2678
+SCIDOCS,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0304,0.0009,0.0478,0.9549,0.5943
+SCIDOCS,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0173,0.0002,0.0133,0.9957,0.9603
+SCIDOCS,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0173,0.0002,0.0133,0.9957,0.9604
+SCIDOCS,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0181,0.0003,0.0145,0.9947,0.9497
+SCIDOCS,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0176,0.0003,0.0133,0.9956,0.9597
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0358,0.0009,0.1138,0.8078,0.1842
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0295,0.0006,0.0806,0.8762,0.2974
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0295,0.0006,0.0806,0.8762,0.2974
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0215,0.0003,0.0414,0.9544,0.6063
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0127,0.0001,0.0111,0.9972,0.9749
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0127,0.0001,0.0111,0.9972,0.9749
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0132,0.0001,0.012,0.9965,0.967
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0135,0.0001,0.0111,0.997,0.9733
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0478,0.0022,0.1202,0.813,0.1839
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0402,0.0016,0.0743,0.902,0.3561
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0402,0.0016,0.0743,0.902,0.3561
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.033,0.0011,0.0452,0.9543,0.5959
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0188,0.0004,0.0133,0.9951,0.9564
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0188,0.0004,0.0133,0.9951,0.9564
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0197,0.0004,0.0145,0.9942,0.9464
+SCIDOCS,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0197,0.0004,0.0133,0.995,0.9554
+SCIDOCS,64,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0114,0.0002,0.0788,0.939,0.5665
+SCIDOCS,64,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0075,0.0,0.0326,0.9921,0.929
+SCIDOCS,64,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0077,0.0001,0.0357,0.9885,0.8989
+SCIDOCS,64,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.008,0.0001,0.0423,0.9824,0.8474
+SCIDOCS,64,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0096,0.0001,0.0615,0.961,0.6908
+SCIDOCS,64,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0075,0.0,0.0326,0.9921,0.929
+SCIDOCS,64,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.008,0.0001,0.0401,0.9831,0.8552
+SCIDOCS,64,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0087,0.0001,0.0347,0.9898,0.9098
+SCIDOCS,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0093,0.0001,0.0746,0.9432,0.586
+SCIDOCS,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0066,0.0001,0.0443,0.9807,0.8317
+SCIDOCS,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0071,0.0001,0.0502,0.9722,0.7695
+SCIDOCS,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0067,0.0001,0.0446,0.9782,0.8156
+SCIDOCS,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0086,0.0001,0.0682,0.9513,0.631
+SCIDOCS,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0066,0.0001,0.0443,0.9807,0.8317
+SCIDOCS,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0073,0.0001,0.0529,0.9686,0.7446
+SCIDOCS,64,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0069,0.0001,0.0415,0.9826,0.8504
+SCIDOCS,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0447,0.0015,0.1521,0.8177,0.246
+SCIDOCS,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0323,0.0008,0.0869,0.9203,0.4935
+SCIDOCS,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0322,0.0008,0.0869,0.9204,0.4936
+SCIDOCS,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0276,0.0006,0.0626,0.9546,0.6592
+SCIDOCS,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0179,0.0002,0.0219,0.9963,0.9713
+SCIDOCS,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0179,0.0002,0.0219,0.9963,0.9713
+SCIDOCS,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0181,0.0002,0.0225,0.9961,0.9695
+SCIDOCS,64,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0186,0.0002,0.022,0.9958,0.968
+SCIDOCS,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0469,0.0021,0.1518,0.8295,0.2645
+SCIDOCS,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0396,0.0015,0.0928,0.9201,0.491
+SCIDOCS,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0396,0.0015,0.0928,0.9201,0.491
+SCIDOCS,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0352,0.0012,0.0674,0.9542,0.6563
+SCIDOCS,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0226,0.0005,0.0244,0.9935,0.9515
+SCIDOCS,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0226,0.0005,0.0244,0.9935,0.9515
+SCIDOCS,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0232,0.0005,0.0255,0.9931,0.9472
+SCIDOCS,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0233,0.0005,0.0245,0.9934,0.9507
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0386,0.001,0.1274,0.8428,0.2942
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.027,0.0005,0.0649,0.949,0.6316
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.027,0.0005,0.0649,0.9491,0.6316
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0256,0.0005,0.058,0.9593,0.6909
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0171,0.0003,0.0216,0.9964,0.9723
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0171,0.0003,0.0216,0.9964,0.9723
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0174,0.0003,0.0224,0.9961,0.9697
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0188,0.0003,0.0218,0.9961,0.9702
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0512,0.0024,0.1362,0.8375,0.2837
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0393,0.0016,0.0632,0.9558,0.6673
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0393,0.0016,0.0632,0.9558,0.6674
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0394,0.0016,0.0637,0.9551,0.6631
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0261,0.0008,0.0254,0.9936,0.9514
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0261,0.0008,0.0254,0.9936,0.9513
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0267,0.0008,0.0264,0.9932,0.9469
+SCIDOCS,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0275,0.0009,0.0254,0.9933,0.9489
+STSBenchmark,512,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0098,-0.0003,0.0662,0.8566,0.1497
+STSBenchmark,512,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0103,-0.0003,0.062,0.8648,0.1635
+STSBenchmark,512,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.01,-0.0003,0.0635,0.8606,0.1576
+STSBenchmark,512,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.012,-0.0002,0.0301,0.9124,0.3279
+STSBenchmark,512,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0105,-0.0003,0.0578,0.869,0.176
+STSBenchmark,512,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0113,-0.0002,0.0535,0.8821,0.1982
+STSBenchmark,512,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0105,-0.0003,0.058,0.8686,0.1754
+STSBenchmark,512,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.012,-0.0002,0.0603,0.867,0.1703
+STSBenchmark,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0055,-0.0004,0.072,0.8323,0.1366
+STSBenchmark,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0055,-0.0004,0.068,0.8398,0.147
+STSBenchmark,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0055,-0.0004,0.069,0.8365,0.1435
+STSBenchmark,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0081,-0.0003,0.028,0.9009,0.3226
+STSBenchmark,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0059,-0.0003,0.0568,0.8542,0.1776
+STSBenchmark,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0064,-0.0003,0.0519,0.8719,0.2035
+STSBenchmark,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0059,-0.0004,0.0573,0.8529,0.1754
+STSBenchmark,512,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0081,-0.0003,0.0568,0.853,0.1761
+STSBenchmark,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0446,0.0015,0.1555,0.7333,0.0452
+STSBenchmark,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.044,0.0014,0.1476,0.746,0.0496
+STSBenchmark,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0441,0.0014,0.1477,0.7458,0.0495
+STSBenchmark,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0289,0.0004,0.0352,0.9355,0.368
+STSBenchmark,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0151,-0.0001,0.0104,0.9873,0.8379
+STSBenchmark,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0147,-0.0001,0.01,0.988,0.8472
+STSBenchmark,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0162,-0.0001,0.0116,0.9824,0.7832
+STSBenchmark,512,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0151,-0.0001,0.0104,0.9873,0.8377
+STSBenchmark,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0675,0.0044,0.1749,0.6928,0.034
+STSBenchmark,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0666,0.0043,0.1692,0.7023,0.0362
+STSBenchmark,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0666,0.0043,0.1693,0.7021,0.0361
+STSBenchmark,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0396,0.0013,0.0406,0.9207,0.3065
+STSBenchmark,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0177,-0.0001,0.0099,0.9812,0.7789
+STSBenchmark,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0169,-0.0001,0.0093,0.9833,0.803
+STSBenchmark,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0198,0.0,0.0116,0.9699,0.6789
+STSBenchmark,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0178,-0.0,0.0099,0.981,0.7769
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0288,0.0004,0.1871,0.7023,0.0357
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0284,0.0004,0.1784,0.7142,0.0388
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0284,0.0004,0.1785,0.7138,0.0387
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0198,0.0,0.0374,0.9282,0.3419
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0121,-0.0002,0.0083,0.9902,0.8742
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0116,-0.0002,0.0076,0.9922,0.899
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0131,-0.0002,0.0097,0.981,0.7815
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0122,-0.0002,0.0083,0.9902,0.8737
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0652,0.0039,0.1885,0.6574,0.0289
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0643,0.0038,0.183,0.6666,0.0305
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0643,0.0038,0.1831,0.6663,0.0305
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.037,0.001,0.0443,0.9071,0.2629
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0172,-0.0001,0.0096,0.9797,0.7712
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0159,-0.0001,0.0087,0.9835,0.8132
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0195,-0.0,0.0114,0.9658,0.6552
+STSBenchmark,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0175,-0.0001,0.0097,0.9793,0.7676
+STSBenchmark,256,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0075,-0.0003,0.0737,0.8894,0.24
+STSBenchmark,256,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0094,-0.0003,0.0578,0.9158,0.3231
+STSBenchmark,256,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0086,-0.0003,0.0622,0.9053,0.2915
+STSBenchmark,256,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0108,-0.0003,0.0339,0.9456,0.5005
+STSBenchmark,256,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0083,-0.0003,0.0646,0.9021,0.28
+STSBenchmark,256,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0094,-0.0003,0.0578,0.9158,0.3231
+STSBenchmark,256,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0085,-0.0003,0.0628,0.9043,0.2883
+STSBenchmark,256,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0101,-0.0003,0.0633,0.9057,0.2913
+STSBenchmark,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0063,-0.0004,0.0778,0.8783,0.2341
+STSBenchmark,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0059,-0.0004,0.0607,0.9055,0.312
+STSBenchmark,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0059,-0.0004,0.0639,0.8971,0.2902
+STSBenchmark,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0075,-0.0003,0.0306,0.9448,0.5248
+STSBenchmark,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0059,-0.0004,0.0617,0.9001,0.301
+STSBenchmark,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0059,-0.0004,0.058,0.91,0.3277
+STSBenchmark,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0059,-0.0004,0.0626,0.8981,0.2951
+STSBenchmark,256,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0081,-0.0003,0.0616,0.899,0.2988
+STSBenchmark,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0446,0.0015,0.1664,0.7614,0.0781
+STSBenchmark,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0429,0.0013,0.1431,0.7963,0.1009
+STSBenchmark,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0429,0.0013,0.1431,0.7963,0.1009
+STSBenchmark,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0306,0.0005,0.0445,0.9435,0.4626
+STSBenchmark,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.018,-0.0,0.0142,0.9886,0.8748
+STSBenchmark,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.018,-0.0,0.0142,0.9887,0.8754
+STSBenchmark,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0186,-0.0,0.0151,0.9867,0.8533
+STSBenchmark,256,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0181,-0.0,0.0142,0.9886,0.8748
+STSBenchmark,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.067,0.0044,0.1843,0.7235,0.0603
+STSBenchmark,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.064,0.0039,0.1654,0.7541,0.0734
+STSBenchmark,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.064,0.0039,0.1654,0.754,0.0734
+STSBenchmark,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0407,0.0014,0.0495,0.9342,0.4098
+STSBenchmark,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0204,0.0001,0.0131,0.9854,0.8455
+STSBenchmark,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0203,0.0001,0.013,0.9855,0.8471
+STSBenchmark,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0219,0.0001,0.0145,0.9809,0.8004
+STSBenchmark,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0206,0.0001,0.0131,0.9853,0.8451
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0293,0.0004,0.1974,0.7364,0.0636
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.028,0.0003,0.1698,0.7723,0.0822
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.028,0.0003,0.1698,0.7722,0.0821
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0204,0.0,0.046,0.9418,0.4528
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0141,-0.0001,0.0114,0.9931,0.923
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0141,-0.0001,0.0114,0.9932,0.9242
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0146,-0.0001,0.0127,0.9896,0.8854
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0143,-0.0001,0.0114,0.9931,0.9229
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0656,0.0039,0.1968,0.692,0.0525
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0622,0.0035,0.1766,0.7243,0.0636
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0622,0.0035,0.1766,0.7242,0.0636
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0388,0.0011,0.0529,0.9231,0.3644
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0204,0.0,0.0122,0.9839,0.8393
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0203,0.0,0.0121,0.9842,0.8419
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0221,0.0001,0.014,0.9779,0.7817
+STSBenchmark,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0207,0.0,0.0122,0.9839,0.839
+STSBenchmark,128,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0057,-0.0004,0.0882,0.9052,0.3362
+STSBenchmark,128,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0076,-0.0003,0.055,0.9506,0.549
+STSBenchmark,128,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0068,-0.0003,0.0619,0.9379,0.4824
+STSBenchmark,128,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0084,-0.0003,0.0424,0.9615,0.6413
+STSBenchmark,128,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0058,-0.0004,0.0779,0.9181,0.3858
+STSBenchmark,128,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0076,-0.0003,0.055,0.9506,0.549
+STSBenchmark,128,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0066,-0.0003,0.0635,0.9352,0.4691
+STSBenchmark,128,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0078,-0.0003,0.0609,0.9408,0.4971
+STSBenchmark,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0101,-0.0003,0.0904,0.9067,0.3501
+STSBenchmark,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0065,-0.0003,0.0483,0.9594,0.622
+STSBenchmark,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0068,-0.0003,0.0533,0.9499,0.5662
+STSBenchmark,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0067,-0.0003,0.0378,0.9676,0.6986
+STSBenchmark,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0081,-0.0003,0.0728,0.9273,0.4368
+STSBenchmark,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0065,-0.0003,0.0483,0.9594,0.622
+STSBenchmark,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.007,-0.0003,0.0558,0.9456,0.5419
+STSBenchmark,128,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0085,-0.0003,0.0528,0.9496,0.5663
+STSBenchmark,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0439,0.0014,0.1823,0.7847,0.1282
+STSBenchmark,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0401,0.0011,0.1338,0.8517,0.2095
+STSBenchmark,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0401,0.0011,0.1338,0.8517,0.2095
+STSBenchmark,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0313,0.0005,0.0587,0.9489,0.5501
+STSBenchmark,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0202,0.0,0.0188,0.9912,0.9155
+STSBenchmark,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0202,0.0,0.0188,0.9912,0.9155
+STSBenchmark,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0205,0.0,0.0193,0.9904,0.9075
+STSBenchmark,128,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0205,0.0,0.0188,0.9912,0.9155
+STSBenchmark,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0661,0.0042,0.1992,0.7461,0.101
+STSBenchmark,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0589,0.0033,0.1586,0.8082,0.15
+STSBenchmark,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0589,0.0033,0.1586,0.8082,0.15
+STSBenchmark,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0406,0.0013,0.0639,0.9404,0.4982
+STSBenchmark,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0229,0.0001,0.0183,0.9889,0.8949
+STSBenchmark,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0229,0.0001,0.0183,0.9889,0.8949
+STSBenchmark,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0238,0.0002,0.0193,0.987,0.8769
+STSBenchmark,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0232,0.0002,0.0184,0.9888,0.8945
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0302,0.0005,0.2131,0.7659,0.1079
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0269,0.0003,0.1512,0.8404,0.1863
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0269,0.0003,0.1513,0.8403,0.1863
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.021,0.0,0.0604,0.9483,0.544
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0158,-0.0001,0.0163,0.995,0.9513
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0158,-0.0001,0.0163,0.995,0.9513
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0159,-0.0001,0.0171,0.9937,0.939
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0165,-0.0001,0.0163,0.995,0.951
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0658,0.004,0.2098,0.721,0.091
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0578,0.003,0.1637,0.7908,0.1384
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0578,0.003,0.1637,0.7908,0.1384
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0403,0.0012,0.0675,0.9301,0.4534
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.024,0.0002,0.0182,0.9869,0.8827
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.024,0.0002,0.0182,0.9869,0.8828
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0249,0.0002,0.02,0.9844,0.8593
+STSBenchmark,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0246,0.0002,0.0182,0.9868,0.8822
+STSBenchmark,64,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0128,-0.0002,0.1116,0.9128,0.431
+STSBenchmark,64,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0091,-0.0003,0.0539,0.976,0.7855
+STSBenchmark,64,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0093,-0.0003,0.0624,0.965,0.7075
+STSBenchmark,64,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0093,-0.0003,0.0581,0.9692,0.7383
+STSBenchmark,64,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0115,-0.0003,0.1,0.9258,0.4838
+STSBenchmark,64,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0091,-0.0003,0.0539,0.976,0.7855
+STSBenchmark,64,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0094,-0.0003,0.0658,0.9607,0.6796
+STSBenchmark,64,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0092,-0.0003,0.0588,0.9697,0.7415
+STSBenchmark,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0187,-0.0001,0.113,0.9213,0.4605
+STSBenchmark,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0079,-0.0003,0.0362,0.9915,0.9219
+STSBenchmark,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0085,-0.0003,0.0412,0.9863,0.8783
+STSBenchmark,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0098,-0.0003,0.0526,0.9775,0.8021
+STSBenchmark,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0157,-0.0002,0.0935,0.9405,0.5519
+STSBenchmark,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0079,-0.0003,0.0362,0.9915,0.9219
+STSBenchmark,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0092,-0.0003,0.0455,0.9817,0.8404
+STSBenchmark,64,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0097,-0.0003,0.0399,0.9869,0.8841
+STSBenchmark,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0432,0.0014,0.2038,0.8073,0.2011
+STSBenchmark,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.035,0.0008,0.1121,0.9194,0.4583
+STSBenchmark,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.035,0.0008,0.112,0.9195,0.4584
+STSBenchmark,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0313,0.0006,0.0795,0.954,0.6343
+STSBenchmark,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0217,0.0001,0.0266,0.9941,0.9513
+STSBenchmark,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0217,0.0001,0.0266,0.9941,0.9513
+STSBenchmark,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0219,0.0001,0.0273,0.9938,0.949
+STSBenchmark,64,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0226,0.0001,0.0267,0.994,0.9506
+STSBenchmark,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0656,0.0042,0.22,0.766,0.1613
+STSBenchmark,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0506,0.0023,0.1439,0.8727,0.316
+STSBenchmark,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0506,0.0023,0.1439,0.8727,0.3161
+STSBenchmark,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0396,0.0013,0.0855,0.9432,0.5764
+STSBenchmark,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0247,0.0002,0.0265,0.9905,0.9258
+STSBenchmark,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0247,0.0002,0.0265,0.9905,0.9258
+STSBenchmark,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0251,0.0003,0.0274,0.9899,0.9201
+STSBenchmark,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0252,0.0002,0.0265,0.9906,0.9258
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0319,0.0006,0.2354,0.7942,0.1745
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0247,0.0002,0.1125,0.925,0.4737
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0247,0.0002,0.1125,0.925,0.4737
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0225,0.0001,0.0819,0.9544,0.6308
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0168,-0.0001,0.0237,0.9969,0.9744
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0168,-0.0001,0.0237,0.9969,0.9744
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.017,-0.0001,0.0246,0.9966,0.971
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0186,-0.0,0.0237,0.9969,0.9738
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0665,0.0041,0.2284,0.7487,0.1512
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0502,0.0021,0.1374,0.8753,0.3287
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0502,0.0021,0.1374,0.8753,0.3288
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0418,0.0013,0.0889,0.9357,0.5427
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0275,0.0003,0.03,0.9895,0.9174
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0275,0.0003,0.03,0.9895,0.9174
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.028,0.0003,0.0316,0.9885,0.9093
+STSBenchmark,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0292,0.0004,0.03,0.9894,0.9168
+SICK-R,512,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0072,0.0002,0.0818,0.7917,0.0985
+SICK-R,512,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0073,0.0002,0.0797,0.7963,0.1021
+SICK-R,512,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0073,0.0002,0.0802,0.7946,0.1012
+SICK-R,512,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0099,0.0001,0.0319,0.8868,0.278
+SICK-R,512,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0092,0.0001,0.0421,0.8659,0.2158
+SICK-R,512,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0102,0.0001,0.0331,0.9113,0.3114
+SICK-R,512,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0091,0.0001,0.0437,0.8603,0.2052
+SICK-R,512,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0095,0.0001,0.0424,0.8653,0.2145
+SICK-R,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0058,0.0003,0.0833,0.7657,0.0884
+SICK-R,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0056,0.0003,0.0804,0.7726,0.093
+SICK-R,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0056,0.0003,0.0808,0.7707,0.0921
+SICK-R,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0081,0.0001,0.0304,0.882,0.2731
+SICK-R,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0066,0.0001,0.0451,0.8466,0.1866
+SICK-R,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0076,0.0001,0.0386,0.8847,0.2421
+SICK-R,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0064,0.0002,0.0469,0.8389,0.1758
+SICK-R,512,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.007,0.0002,0.0454,0.8459,0.1855
+SICK-R,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0206,0.0005,0.115,0.7193,0.0576
+SICK-R,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0204,0.0004,0.1116,0.7269,0.0605
+SICK-R,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0204,0.0004,0.1116,0.7269,0.0605
+SICK-R,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.018,0.0002,0.0318,0.9252,0.3417
+SICK-R,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0133,0.0001,0.0087,0.9912,0.882
+SICK-R,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0131,0.0001,0.0085,0.9916,0.8882
+SICK-R,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.014,0.0001,0.0096,0.9868,0.8341
+SICK-R,512,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0133,0.0001,0.0087,0.9912,0.882
+SICK-R,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0155,0.0005,0.0738,0.7789,0.0945
+SICK-R,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0153,0.0004,0.0702,0.7892,0.1017
+SICK-R,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0153,0.0004,0.0703,0.789,0.1016
+SICK-R,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0154,0.0002,0.0235,0.9377,0.4203
+SICK-R,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0121,0.0001,0.0081,0.9912,0.8869
+SICK-R,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0118,0.0001,0.0077,0.9925,0.9028
+SICK-R,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0129,0.0001,0.0092,0.9829,0.8027
+SICK-R,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0122,0.0001,0.0081,0.9912,0.8863
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0146,0.0002,0.137,0.6968,0.0484
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0145,0.0002,0.1326,0.7048,0.0509
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0145,0.0002,0.1326,0.7046,0.0508
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0145,0.0001,0.0327,0.9171,0.3156
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0125,0.0001,0.0077,0.9911,0.8852
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.012,0.0001,0.0072,0.9931,0.9092
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0134,0.0001,0.0091,0.9819,0.7927
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0125,0.0001,0.0077,0.9911,0.885
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0205,0.0007,0.0813,0.7707,0.086
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0201,0.0007,0.0786,0.7774,0.0903
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0201,0.0007,0.0786,0.7771,0.0902
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0148,0.0003,0.0222,0.9327,0.3993
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0119,0.0001,0.0072,0.9899,0.8744
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0113,0.0001,0.0066,0.9927,0.9074
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0129,0.0002,0.0085,0.9787,0.767
+SICK-R,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0121,0.0001,0.0072,0.9898,0.8732
+SICK-R,256,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0074,0.0002,0.0866,0.8413,0.1752
+SICK-R,256,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0074,0.0002,0.0761,0.862,0.209
+SICK-R,256,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0074,0.0002,0.0774,0.8577,0.2032
+SICK-R,256,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0097,0.0001,0.0328,0.9391,0.4884
+SICK-R,256,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0089,0.0001,0.0439,0.9186,0.3827
+SICK-R,256,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0094,0.0001,0.0386,0.9376,0.4535
+SICK-R,256,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0087,0.0001,0.0476,0.9073,0.3448
+SICK-R,256,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0093,0.0001,0.0442,0.918,0.3804
+SICK-R,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0062,0.0003,0.087,0.82,0.1615
+SICK-R,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0055,0.0003,0.0732,0.8497,0.2036
+SICK-R,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0056,0.0003,0.0744,0.8449,0.198
+SICK-R,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0079,0.0001,0.0319,0.9343,0.4751
+SICK-R,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0064,0.0002,0.0473,0.9007,0.3324
+SICK-R,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0069,0.0001,0.0438,0.9164,0.3741
+SICK-R,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0061,0.0002,0.0503,0.8895,0.3043
+SICK-R,256,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0068,0.0002,0.0476,0.9001,0.3306
+SICK-R,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0212,0.0005,0.1202,0.7621,0.1046
+SICK-R,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0203,0.0004,0.109,0.7854,0.1216
+SICK-R,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0203,0.0004,0.109,0.7854,0.1216
+SICK-R,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0179,0.0002,0.0385,0.9379,0.4545
+SICK-R,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0152,0.0002,0.0118,0.9932,0.9216
+SICK-R,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0152,0.0002,0.0119,0.9932,0.9215
+SICK-R,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0155,0.0002,0.0125,0.9919,0.9067
+SICK-R,256,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0152,0.0002,0.0118,0.9932,0.9217
+SICK-R,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0155,0.0005,0.0781,0.8193,0.165
+SICK-R,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0147,0.0004,0.0668,0.8489,0.2053
+SICK-R,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0147,0.0004,0.0668,0.8489,0.2052
+SICK-R,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0148,0.0003,0.0279,0.9529,0.5545
+SICK-R,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0134,0.0002,0.0107,0.9944,0.9364
+SICK-R,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0133,0.0002,0.0107,0.9944,0.9372
+SICK-R,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0137,0.0002,0.0116,0.9916,0.9067
+SICK-R,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0135,0.0002,0.0107,0.9944,0.9362
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0151,0.0002,0.1426,0.7411,0.0888
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0147,0.0002,0.1278,0.7664,0.1045
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0147,0.0002,0.1279,0.7663,0.1045
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0149,0.0001,0.0394,0.9337,0.4351
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0144,0.0001,0.0104,0.9942,0.9334
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0144,0.0001,0.0103,0.9942,0.9343
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0149,0.0001,0.0116,0.9909,0.8988
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0146,0.0001,0.0104,0.9942,0.9334
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0217,0.0008,0.0867,0.8129,0.1517
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0204,0.0007,0.0775,0.8333,0.1765
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0204,0.0007,0.0775,0.8332,0.1764
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0157,0.0003,0.0268,0.951,0.5418
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0139,0.0002,0.0095,0.994,0.9325
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0138,0.0002,0.0095,0.9941,0.9341
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0144,0.0002,0.0108,0.9898,0.8898
+SICK-R,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.014,0.0002,0.0095,0.994,0.9324
+SICK-R,128,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0085,0.0003,0.0971,0.8744,0.278
+SICK-R,128,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0079,0.0001,0.0699,0.9192,0.413
+SICK-R,128,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.008,0.0002,0.0715,0.9151,0.3999
+SICK-R,128,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0091,0.0,0.0394,0.9638,0.6674
+SICK-R,128,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0085,0.0001,0.0517,0.9457,0.5461
+SICK-R,128,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0085,0.0001,0.049,0.9521,0.5793
+SICK-R,128,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0085,0.0001,0.0566,0.9346,0.4938
+SICK-R,128,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0089,0.0001,0.0521,0.9452,0.5433
+SICK-R,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0074,0.0004,0.095,0.8623,0.2691
+SICK-R,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0058,0.0002,0.0558,0.9326,0.4893
+SICK-R,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0057,0.0002,0.0574,0.928,0.4721
+SICK-R,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.007,0.0001,0.038,0.9607,0.6568
+SICK-R,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0058,0.0002,0.0545,0.9328,0.4948
+SICK-R,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0059,0.0002,0.0529,0.9377,0.5145
+SICK-R,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0056,0.0002,0.0578,0.9237,0.4595
+SICK-R,128,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0064,0.0002,0.0548,0.9324,0.4929
+SICK-R,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.022,0.0006,0.1286,0.8028,0.1808
+SICK-R,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0198,0.0004,0.1014,0.8526,0.2523
+SICK-R,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0198,0.0004,0.1014,0.8527,0.2523
+SICK-R,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0178,0.0002,0.0488,0.9472,0.5649
+SICK-R,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.017,0.0001,0.0177,0.9947,0.948
+SICK-R,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.017,0.0001,0.0177,0.9947,0.9478
+SICK-R,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0171,0.0001,0.0181,0.9943,0.9432
+SICK-R,128,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0172,0.0001,0.0177,0.9947,0.9479
+SICK-R,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0155,0.0005,0.0854,0.8539,0.2685
+SICK-R,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0132,0.0003,0.0598,0.9104,0.4122
+SICK-R,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0132,0.0003,0.0598,0.9104,0.4122
+SICK-R,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0131,0.0002,0.0353,0.9622,0.6677
+SICK-R,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0136,0.0002,0.0149,0.9966,0.9673
+SICK-R,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0136,0.0002,0.0149,0.9966,0.9673
+SICK-R,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0137,0.0002,0.0157,0.9957,0.958
+SICK-R,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0139,0.0002,0.0149,0.9966,0.9672
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0157,0.0002,0.1516,0.7841,0.1563
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0148,0.0001,0.1155,0.84,0.2269
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0148,0.0001,0.1155,0.84,0.2269
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0151,0.0001,0.0505,0.9437,0.5462
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0163,0.0002,0.0161,0.9955,0.9556
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0163,0.0002,0.0161,0.9955,0.9556
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0164,0.0002,0.0169,0.9944,0.9448
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0168,0.0002,0.016,0.9955,0.9557
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0231,0.0009,0.096,0.8485,0.249
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.02,0.0007,0.0741,0.8899,0.3405
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.02,0.0007,0.0741,0.8899,0.3405
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0162,0.0004,0.0357,0.9609,0.6567
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.015,0.0003,0.0137,0.9962,0.9634
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.015,0.0003,0.0137,0.9962,0.9635
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0152,0.0003,0.0146,0.9948,0.9499
+SICK-R,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0153,0.0003,0.0137,0.9962,0.9634
+SICK-R,64,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0125,0.0005,0.116,0.8956,0.3948
+SICK-R,64,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0113,0.0001,0.0603,0.9672,0.7264
+SICK-R,64,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0113,0.0001,0.0617,0.9649,0.7124
+SICK-R,64,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0114,0.0001,0.0547,0.9725,0.7667
+SICK-R,64,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0113,0.0002,0.0687,0.957,0.6605
+SICK-R,64,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0113,0.0001,0.0603,0.9672,0.7264
+SICK-R,64,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0115,0.0002,0.0673,0.9561,0.6604
+SICK-R,64,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0115,0.0002,0.0618,0.9649,0.7119
+SICK-R,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0104,0.0006,0.1095,0.8933,0.4027
+SICK-R,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0075,0.0002,0.0338,0.9908,0.919
+SICK-R,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0074,0.0002,0.0348,0.9894,0.9074
+SICK-R,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0064,0.0003,0.0509,0.9725,0.7744
+SICK-R,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0067,0.0003,0.0688,0.9503,0.6339
+SICK-R,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0075,0.0002,0.0338,0.9908,0.919
+SICK-R,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0069,0.0002,0.039,0.9829,0.8577
+SICK-R,64,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0079,0.0002,0.0343,0.9898,0.9111
+SICK-R,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0238,0.0007,0.141,0.8438,0.2963
+SICK-R,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0194,0.0003,0.0845,0.9292,0.537
+SICK-R,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0194,0.0003,0.0845,0.9293,0.5371
+SICK-R,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0185,0.0002,0.0641,0.9569,0.6765
+SICK-R,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0181,0.0002,0.0257,0.9959,0.9664
+SICK-R,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0181,0.0002,0.0258,0.9959,0.9663
+SICK-R,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0181,0.0002,0.026,0.9957,0.9648
+SICK-R,64,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0185,0.0002,0.0258,0.9959,0.9664
+SICK-R,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0166,0.0006,0.097,0.8857,0.4067
+SICK-R,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0116,0.0001,0.049,0.9671,0.7484
+SICK-R,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0116,0.0001,0.0489,0.9671,0.7485
+SICK-R,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0116,0.0001,0.0475,0.9692,0.762
+SICK-R,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.013,0.0001,0.0233,0.9972,0.9793
+SICK-R,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.013,0.0001,0.0233,0.9972,0.9792
+SICK-R,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.013,0.0001,0.024,0.9969,0.9764
+SICK-R,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0138,0.0001,0.0234,0.9972,0.9787
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0166,0.0002,0.1652,0.8282,0.2615
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0151,0.0001,0.0875,0.9291,0.5337
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0151,0.0001,0.0875,0.9291,0.5337
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0152,0.0001,0.0669,0.9543,0.6603
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0173,0.0002,0.025,0.9967,0.9719
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0173,0.0002,0.025,0.9967,0.9719
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0172,0.0002,0.0254,0.9963,0.9686
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0184,0.0002,0.025,0.9966,0.9718
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.025,0.0011,0.1103,0.881,0.3805
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0185,0.0006,0.0671,0.9461,0.6207
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0185,0.0006,0.0671,0.9461,0.6208
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0167,0.0005,0.0503,0.9687,0.7545
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0153,0.0003,0.0207,0.9973,0.9795
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0153,0.0003,0.0207,0.9973,0.9795
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0153,0.0003,0.0215,0.9968,0.9754
+SICK-R,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.016,0.0004,0.0207,0.9972,0.9789
+STS22.v2,512,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0038,-0.0025,0.031,0.8334,0.2219
+STS22.v2,512,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0038,-0.0025,0.031,0.8334,0.2219
+STS22.v2,512,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0038,-0.0025,0.031,0.8334,0.2219
+STS22.v2,512,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0039,-0.0025,0.0176,0.8687,0.3264
+STS22.v2,512,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0038,-0.0025,0.0299,0.8361,0.2284
+STS22.v2,512,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0037,-0.0025,0.0293,0.8393,0.234
+STS22.v2,512,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0038,-0.0025,0.0299,0.8361,0.2284
+STS22.v2,512,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0044,-0.0025,0.0301,0.8353,0.2261
+STS22.v2,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0039,-0.0025,0.0387,0.8202,0.196
+STS22.v2,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0039,-0.0025,0.0387,0.8202,0.196
+STS22.v2,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0039,-0.0025,0.0387,0.8202,0.196
+STS22.v2,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0045,-0.0025,0.0214,0.8581,0.2944
+STS22.v2,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.004,-0.0025,0.0365,0.8248,0.2056
+STS22.v2,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.004,-0.0025,0.0353,0.8306,0.2146
+STS22.v2,512,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.004,-0.0025,0.0365,0.8248,0.2056
+STS22.v2,512,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0049,-0.0025,0.0367,0.8252,0.206
+STS22.v2,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0285,-0.0017,0.0928,0.7145,0.0665
+STS22.v2,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0285,-0.0017,0.0928,0.7145,0.0665
+STS22.v2,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0285,-0.0017,0.0928,0.7145,0.0665
+STS22.v2,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0129,-0.0024,0.0264,0.8724,0.292
+STS22.v2,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0051,-0.0025,0.0056,0.9386,0.6328
+STS22.v2,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0022,-0.0025,0.0051,0.9563,0.758
+STS22.v2,512,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0051,-0.0025,0.0056,0.9386,0.6328
+STS22.v2,512,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0052,-0.0025,0.0056,0.9384,0.6317
+STS22.v2,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0229,-0.002,0.07,0.8006,0.1188
+STS22.v2,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0229,-0.002,0.07,0.8006,0.1188
+STS22.v2,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0229,-0.002,0.07,0.8006,0.1188
+STS22.v2,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0128,-0.0024,0.0222,0.8906,0.3519
+STS22.v2,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0106,-0.0024,0.0152,0.9063,0.4317
+STS22.v2,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0058,-0.0025,0.0103,0.9383,0.5982
+STS22.v2,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0106,-0.0024,0.0152,0.9063,0.4317
+STS22.v2,512,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0129,-0.0024,0.0175,0.9011,0.4052
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0171,-0.0023,0.1178,0.6614,0.0479
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0171,-0.0023,0.1178,0.6614,0.0479
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0171,-0.0023,0.1178,0.6614,0.0479
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0117,-0.0024,0.0346,0.8436,0.2195
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0058,-0.0025,0.0063,0.9256,0.5613
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0022,-0.0025,0.0051,0.9563,0.7577
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0058,-0.0025,0.0063,0.9256,0.5613
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0059,-0.0025,0.0063,0.9254,0.5603
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0225,-0.002,0.1208,0.7384,0.0637
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0225,-0.002,0.1208,0.7384,0.0637
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0225,-0.002,0.1208,0.7384,0.0637
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0134,-0.0024,0.0306,0.8823,0.3093
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0068,-0.0025,0.0083,0.937,0.6189
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0021,-0.0025,0.0051,0.9565,0.7593
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0068,-0.0025,0.0083,0.937,0.6189
+STS22.v2,512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0071,-0.0025,0.0084,0.9363,0.614
+STS22.v2,256,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0042,-0.0025,0.032,0.9162,0.4191
+STS22.v2,256,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0042,-0.0025,0.027,0.9317,0.4854
+STS22.v2,256,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0042,-0.0025,0.0286,0.9245,0.4569
+STS22.v2,256,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0044,-0.0025,0.0184,0.9504,0.6022
+STS22.v2,256,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0042,-0.0025,0.0309,0.9189,0.4309
+STS22.v2,256,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0042,-0.0025,0.027,0.9317,0.4854
+STS22.v2,256,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0042,-0.0025,0.0287,0.9244,0.4565
+STS22.v2,256,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.005,-0.0025,0.029,0.9232,0.4503
+STS22.v2,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0042,-0.0025,0.0399,0.9024,0.3721
+STS22.v2,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0044,-0.0025,0.0352,0.9152,0.4174
+STS22.v2,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0044,-0.0025,0.0367,0.9089,0.3974
+STS22.v2,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.005,-0.0025,0.0222,0.9401,0.5488
+STS22.v2,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0043,-0.0025,0.0376,0.907,0.3898
+STS22.v2,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0044,-0.0025,0.0352,0.9152,0.4174
+STS22.v2,256,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0044,-0.0025,0.0367,0.9088,0.397
+STS22.v2,256,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0055,-0.0025,0.0349,0.9137,0.416
+STS22.v2,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0295,-0.0017,0.0942,0.7889,0.1291
+STS22.v2,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0276,-0.0018,0.0849,0.8104,0.15
+STS22.v2,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0277,-0.0018,0.085,0.81,0.1497
+STS22.v2,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0148,-0.0023,0.0279,0.9462,0.5255
+STS22.v2,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.008,-0.0025,0.0068,0.9945,0.9416
+STS22.v2,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0078,-0.0025,0.0066,0.995,0.9475
+STS22.v2,256,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0082,-0.0025,0.0072,0.9928,0.9256
+STS22.v2,256,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0081,-0.0025,0.0069,0.9945,0.9413
+STS22.v2,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0257,-0.0019,0.0733,0.8692,0.2166
+STS22.v2,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0236,-0.002,0.0597,0.8946,0.2784
+STS22.v2,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0238,-0.002,0.0606,0.8919,0.2723
+STS22.v2,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.016,-0.0023,0.0234,0.9599,0.6122
+STS22.v2,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0139,-0.0024,0.0164,0.9736,0.7302
+STS22.v2,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0126,-0.0024,0.0142,0.9822,0.8039
+STS22.v2,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0145,-0.0023,0.0177,0.9687,0.6921
+STS22.v2,256,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0163,-0.0023,0.0185,0.9696,0.6954
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0175,-0.0022,0.119,0.7332,0.094
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0173,-0.0022,0.1123,0.7474,0.1023
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0173,-0.0022,0.1124,0.7469,0.1021
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0127,-0.0024,0.0349,0.9256,0.4242
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0073,-0.0025,0.0066,0.9941,0.938
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0068,-0.0025,0.0061,0.9963,0.9604
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0079,-0.0025,0.0074,0.9892,0.8928
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0074,-0.0025,0.0066,0.9941,0.9379
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0239,-0.002,0.1242,0.8071,0.1203
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0229,-0.002,0.1088,0.8306,0.1461
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0229,-0.002,0.1091,0.8297,0.1454
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0163,-0.0023,0.0327,0.9522,0.5437
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0104,-0.0024,0.01,0.9935,0.9271
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0097,-0.0024,0.0097,0.9945,0.9375
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0112,-0.0024,0.0104,0.9909,0.9008
+STS22.v2,256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0106,-0.0024,0.01,0.9934,0.9262
+STS22.v2,128,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0054,-0.0025,0.0385,0.9522,0.6091
+STS22.v2,128,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0056,-0.0025,0.0208,0.9859,0.8624
+STS22.v2,128,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0056,-0.0025,0.0249,0.9763,0.7831
+STS22.v2,128,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0057,-0.0025,0.0237,0.9782,0.7992
+STS22.v2,128,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0054,-0.0025,0.0374,0.9543,0.6224
+STS22.v2,128,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0056,-0.0025,0.0208,0.9859,0.8624
+STS22.v2,128,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0056,-0.0025,0.0251,0.9758,0.7793
+STS22.v2,128,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0062,-0.0025,0.0257,0.9745,0.7688
+STS22.v2,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0046,-0.0025,0.0459,0.9436,0.5644
+STS22.v2,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0052,-0.0025,0.0282,0.9751,0.7719
+STS22.v2,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0051,-0.0025,0.0325,0.9647,0.7002
+STS22.v2,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0052,-0.0025,0.0271,0.973,0.7628
+STS22.v2,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0046,-0.0025,0.0436,0.9473,0.5859
+STS22.v2,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0052,-0.0025,0.0282,0.9751,0.7719
+STS22.v2,128,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.005,-0.0025,0.0329,0.964,0.6952
+STS22.v2,128,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0064,-0.0025,0.0252,0.9769,0.7927
+STS22.v2,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0334,-0.0014,0.1026,0.8312,0.2174
+STS22.v2,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0267,-0.0018,0.0609,0.9141,0.4126
+STS22.v2,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0267,-0.0018,0.061,0.914,0.4121
+STS22.v2,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0224,-0.002,0.0376,0.9572,0.6312
+STS22.v2,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0153,-0.0023,0.0141,0.9925,0.932
+STS22.v2,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0152,-0.0023,0.0141,0.9925,0.9321
+STS22.v2,128,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0156,-0.0023,0.0144,0.9922,0.9294
+STS22.v2,128,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0156,-0.0023,0.0141,0.9925,0.932
+STS22.v2,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0308,-0.0016,0.0877,0.8877,0.3069
+STS22.v2,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0258,-0.0019,0.0477,0.9473,0.5573
+STS22.v2,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0259,-0.0019,0.0484,0.9459,0.5493
+STS22.v2,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.023,-0.002,0.033,0.9671,0.7007
+STS22.v2,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0209,-0.0021,0.0242,0.9783,0.7994
+STS22.v2,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0207,-0.0021,0.0234,0.9798,0.8121
+STS22.v2,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0215,-0.0021,0.0265,0.9739,0.7625
+STS22.v2,128,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0245,-0.0019,0.0263,0.9757,0.7759
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0187,-0.0022,0.1255,0.786,0.1689
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0183,-0.0022,0.0934,0.8485,0.2511
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0183,-0.0022,0.0935,0.8483,0.2508
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0169,-0.0023,0.044,0.9448,0.5587
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0128,-0.0024,0.0129,0.9944,0.9493
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0128,-0.0024,0.0128,0.9944,0.9497
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0133,-0.0024,0.0136,0.9934,0.9404
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0134,-0.0024,0.0128,0.9944,0.9491
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0266,-0.0018,0.1393,0.8354,0.1904
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0241,-0.002,0.0864,0.9051,0.351
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0241,-0.002,0.0866,0.9048,0.3501
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.022,-0.0021,0.0459,0.9572,0.6205
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0182,-0.0022,0.0156,0.9891,0.9058
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0182,-0.0022,0.0155,0.9892,0.9062
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0187,-0.0022,0.0164,0.9884,0.8982
+STS22.v2,128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.019,-0.0022,0.0156,0.9891,0.9057
+STS22.v2,64,google/embeddinggemma-300m,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0073,-0.0025,0.0519,0.9656,0.731
+STS22.v2,64,google/embeddinggemma-300m,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0081,-0.0025,0.02,0.9987,0.9888
+STS22.v2,64,google/embeddinggemma-300m,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0078,-0.0025,0.0247,0.9954,0.9612
+STS22.v2,64,google/embeddinggemma-300m,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0074,-0.0025,0.0353,0.9858,0.8798
+STS22.v2,64,google/embeddinggemma-300m,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0073,-0.0025,0.0506,0.9672,0.7421
+STS22.v2,64,google/embeddinggemma-300m,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0081,-0.0025,0.02,0.9987,0.9888
+STS22.v2,64,google/embeddinggemma-300m,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0078,-0.0025,0.0252,0.995,0.9573
+STS22.v2,64,google/embeddinggemma-300m,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.008,-0.0025,0.026,0.9943,0.9516
+STS22.v2,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0062,-0.0025,0.0593,0.9626,0.7102
+STS22.v2,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0066,-0.0025,0.0246,0.9969,0.9734
+STS22.v2,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0064,-0.0025,0.0303,0.9917,0.9297
+STS22.v2,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0062,-0.0025,0.0384,0.9847,0.8713
+STS22.v2,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0062,-0.0025,0.0568,0.9655,0.729
+STS22.v2,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0066,-0.0025,0.0246,0.9969,0.9734
+STS22.v2,64,Qwen/Qwen3-Embedding-0.6B,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0064,-0.0025,0.0312,0.9908,0.922
+STS22.v2,64,Qwen/Qwen3-Embedding-0.6B,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0079,-0.0025,0.0223,0.9973,0.977
+STS22.v2,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0374,-0.0011,0.1181,0.8579,0.3286
+STS22.v2,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.026,-0.0019,0.0361,0.9817,0.8533
+STS22.v2,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.026,-0.0019,0.0361,0.9817,0.8533
+STS22.v2,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0288,-0.0017,0.0543,0.9594,0.6966
+STS22.v2,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0234,-0.002,0.0255,0.9914,0.9334
+STS22.v2,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0234,-0.002,0.0255,0.9914,0.9334
+STS22.v2,64,google/gemma-3-1b-pt (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0235,-0.002,0.0259,0.9913,0.932
+STS22.v2,64,google/gemma-3-1b-pt (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0243,-0.002,0.0254,0.9914,0.9333
+STS22.v2,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0319,-0.0015,0.1106,0.8971,0.4024
+STS22.v2,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0254,-0.0019,0.0414,0.978,0.8217
+STS22.v2,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0254,-0.0019,0.0417,0.9776,0.8187
+STS22.v2,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0266,-0.0018,0.0501,0.9694,0.7561
+STS22.v2,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0249,-0.0019,0.0389,0.9802,0.8398
+STS22.v2,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0249,-0.0019,0.0386,0.9806,0.8427
+STS22.v2,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0253,-0.0019,0.0415,0.9768,0.8138
+STS22.v2,64,google/gemma-3-1b-pt (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0295,-0.0017,0.0416,0.9778,0.8205
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0191,-0.0022,0.1377,0.8291,0.2802
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0191,-0.0022,0.0619,0.9502,0.6441
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0191,-0.0022,0.0619,0.9502,0.644
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0191,-0.0022,0.0599,0.953,0.6594
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0175,-0.0022,0.0235,0.9943,0.9563
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0175,-0.0022,0.0235,0.9943,0.9563
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0177,-0.0022,0.0241,0.994,0.9535
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.0188,-0.0022,0.0233,0.9943,0.9562
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.0292,-0.0017,0.1637,0.85,0.2746
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.0254,-0.0019,0.0642,0.9574,0.6808
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.0254,-0.0019,0.0642,0.9573,0.6806
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.0255,-0.0019,0.0662,0.9554,0.6677
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.0238,-0.002,0.0266,0.9867,0.9049
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.0237,-0.002,0.0266,0.9867,0.9049
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.0239,-0.002,0.0275,0.9861,0.9003
+STS22.v2,64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.026,-0.0019,0.0266,0.9866,0.9045

@@ -12,6 +12,8 @@ import torch
 
 from src.config import get_device, logger
 from src.registry import (
+    ABLATION_COMPRESSION_SPECS,
+    ABLATION_FULL_SPECS,
     BASE_MODELS,
     BASE_POOLING_MODES,
     COMPRESSION_LADDER_K,
@@ -25,13 +27,14 @@ from src.registry import (
 from src.transforms import (
     transform_abtt,
     transform_baseline,
-    transform_mc,
+    transform_coast,
+    transform_coast_ablation,
+    transform_coast_full,
+    transform_coast_full_ablation,
     transform_pca,
     transform_prefix,
     transform_r1,
     transform_r2,
-    transform_rand,
-    transform_random_truncation,
     transform_soft_zca,
     transform_spectemp,
     transform_standardization,
@@ -93,12 +96,17 @@ def run_transforms_for_combination(
         "r1": lambda: transform_r1(x1, x2, calib_data),
         "r2": lambda: transform_r2(x1, x2, calib_data),
         "soft_zca": lambda: transform_soft_zca(x1, x2, calib_data, epsilon=1e-4),
+        "coast": lambda: transform_coast_full(x1, x2, calib_data),
         "abtt_1": lambda: transform_abtt(x1, x2, calib_data, d_components=1),
         "abtt_2": lambda: transform_abtt(x1, x2, calib_data, d_components=2),
         "abtt_3": lambda: transform_abtt(x1, x2, calib_data, d_components=3),
-        "rand": lambda: transform_rand(x1, x2),
-        "mc": lambda: transform_mc(x1, x2, calib_data),
     }
+    for ab_name, (orth_f, crowd_f, eps_f) in ABLATION_FULL_SPECS.items():
+        full_transforms[ab_name] = lambda o=orth_f, c=crowd_f, e=eps_f: (
+            transform_coast_full_ablation(
+                x1, x2, calib_data, orth=o, crowd_mode=c, eps_mode=e
+            )
+        )
 
     for method_name, func in full_transforms.items():
         out_dir = get_transformed_cache_dir(
@@ -124,10 +132,6 @@ def run_transforms_for_combination(
 
         comp_transforms: dict[str, Any] = {
             f"prefix_k{k}": lambda: (*transform_prefix(x1, x2, target_dim=k), None),
-            f"random_truncation_k{k}": lambda: (
-                *transform_random_truncation(x1, x2, target_dim=k),
-                None,
-            ),
             f"pca_k{k}": lambda: (
                 *transform_pca(x1, x2, calib_data, target_dim=k),
                 None,
@@ -139,7 +143,14 @@ def run_transforms_for_combination(
             f"spectemp_k{k}": lambda: transform_spectemp(
                 x1, x2, calib_data, target_dim=k
             ),
+            f"coast_k{k}": lambda: transform_coast(x1, x2, calib_data, target_dim=k),
         }
+        for ab_name, (orth_c, crowd_c, eps_m) in ABLATION_COMPRESSION_SPECS.items():
+            comp_transforms[f"{ab_name}_k{k}"] = (
+                lambda o=orth_c, c=crowd_c, e=eps_m, kk=k: transform_coast_ablation(
+                    x1, x2, calib_data, target_dim=kk, orth=o, crowd_mode=c, eps_mode=e
+                )
+            )
 
         for sub_name, func in comp_transforms.items():
             out_dir = get_transformed_cache_dir(
@@ -151,7 +162,7 @@ def run_transforms_for_combination(
             gamma_file = out_dir / "gamma.json"
 
             needs_run = overwrite or not (f1.exists() and f2.exists())
-            if "spectemp" in sub_name:
+            if "spectemp" in sub_name or "coast" in sub_name or "ablation_" in sub_name:
                 needs_run = needs_run or not gamma_file.exists()
 
             if not needs_run:

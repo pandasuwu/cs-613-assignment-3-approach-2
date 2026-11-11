@@ -28,9 +28,11 @@ Full-Dimension Transforms (d to d):
 - r1: Direct empirical mean subtraction (Ren et al., 2025)
 - r2: Mean-subspace projection deflation (Ren et al., 2025)
 - soft_zca: Regularized ZCA whitening (Diera et al., 2024)
+- coast: Crowding-Orthogonal Adaptive Spectral Tempering (proposed)
 - abtt_1, abtt_2, abtt_3: Centered PCA deflation of top 1, 2, or 3 components (Mu and Viswanath, 2018)
 - rand: Random unit direction deflation negative control (Ren et al., 2025)
 - mc: Unnormalized mean centering negative control (Ren et al., 2025)
+- ablation_o{0,1}_c{0,1,2}_e{0,1,2}: Complete 2x3x3 factorial lattice (16 non-redundant vertices) connecting soft_zca (0,0,0) to coast (1,1,1), including unregularized ZCA (e=2) and fixed gamma=0.5 whitening (c=2)
 
 Compression Transforms (d to k for k in 512, 256, 128, 64):
 - prefix: Coordinate prefix slicing (Matryoshka baseline)
@@ -38,6 +40,8 @@ Compression Transforms (d to k for k in 512, 256, 128, 64):
 - pca: Top-k principal component projection (Li et al., 2026)
 - whitening: Truncated Whitening-k variance equalization (Su et al., 2021)
 - spectemp: Adaptive SNR spectral tempering via Kneedle knee detection (Li et al., 2026)
+- coast: Crowding-Orthogonal Adaptive Spectral Tempering for dimensional compression (proposed)
+- ablation_o1_pca and ablation_o{0,1}_c{0..4}_e{0,1,2}: Complete 32-vertex factorial lattice (28 non-redundant vertices per k) connecting pca, spectemp, and whitening to coast
 
 ## Metrics
 
@@ -130,19 +134,19 @@ Pass `--overwrite` to any script to recompute existing cached artifacts or resul
 
 ### Stage 4: Compile Research Tables
 
-Parses all 2,160 atomic results into 49 granular, publication-ready CSV tables in `tables/` using Polars in under 2 seconds:
+Parses all 44,010 atomic metric rows into 56 paper-friendly, non-redundant CSV tables in `tables/` using Polars:
 
 ```bash
-# Generate all 49 tables across the 6 suites
+# Generate all 56 tables across the 6 suites
 uv run scripts/generate_tables.py
 
 # Or generate a specific suite (1..6)
-uv run scripts/generate_tables.py --suite 1  # Full-dimension retrieval (9 tables)
-uv run scripts/generate_tables.py --suite 2  # Full-dimension similarity (6 tables)
-uv run scripts/generate_tables.py --suite 3  # Compression ladder across all metrics (15 tables)
-uv run scripts/generate_tables.py --suite 4  # Intrinsic geometry diagnostics (6 tables)
-uv run scripts/generate_tables.py --suite 5  # Token pooling ablations (2 tables)
-uv run scripts/generate_tables.py --suite 6  # Theoretical analysis tables (11 tables)
+uv run scripts/generate_tables.py --suite 1  # Full-dimension retrieval (9 tables, 11x10 each)
+uv run scripts/generate_tables.py --suite 2  # Full-dimension similarity (6 tables, 11x10 each)
+uv run scripts/generate_tables.py --suite 3  # Compression ladder across all metrics (15 tables, 24x17 each)
+uv run scripts/generate_tables.py --suite 4  # Intrinsic geometry diagnostics (12 tables: 6 full 11x16 + 6 compression 24x17)
+uv run scripts/generate_tables.py --suite 5  # Spectral and crowding parameters (2 tables, 36x16 and 36x18)
+uv run scripts/generate_tables.py --suite 6  # Complete factorial lattice ablations (12 tables, 24x14 and 48x23/20)
 ```
 
 ## Code Quality

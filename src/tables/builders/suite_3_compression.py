@@ -10,6 +10,10 @@ from src.tables.schema import (
     LADDER_K_ORDERED,
     METHODS_COMP_ORDERED,
     MODEL_EMBGEMMA,
+    MODEL_GEMMA_LAST,
+    MODEL_GEMMA_MEAN,
+    MODEL_QWEN_BASE_LAST,
+    MODEL_QWEN_BASE_MEAN,
     MODEL_QWEN_EMB,
     STS_DATASETS,
 )
@@ -75,7 +79,8 @@ def build_single_compression_table(
             scores = dict(zip(sub["model"], sub["value"]))
 
             ded_retentions: list[float] = []
-            base_retentions: list[float] = []
+            base_mean_retentions: list[float] = []
+            base_last_retentions: list[float] = []
 
             for model_col in CANONICAL_MODEL_COLUMNS:
                 score = scores.get(model_col)
@@ -91,14 +96,23 @@ def build_single_compression_table(
                 if retention is not None:
                     if model_col in [MODEL_EMBGEMMA, MODEL_QWEN_EMB]:
                         ded_retentions.append(retention)
-                    else:
-                        base_retentions.append(retention)
+                    elif model_col in [MODEL_GEMMA_MEAN, MODEL_QWEN_BASE_MEAN]:
+                        base_mean_retentions.append(retention)
+                    elif model_col in [MODEL_GEMMA_LAST, MODEL_QWEN_BASE_LAST]:
+                        base_last_retentions.append(retention)
 
             row["mean_dedicated_retention_pct"] = (
                 sum(ded_retentions) / len(ded_retentions) if ded_retentions else None
             )
-            row["mean_base_retention_pct"] = (
-                sum(base_retentions) / len(base_retentions) if base_retentions else None
+            row["mean_base_mean_retention_pct"] = (
+                sum(base_mean_retentions) / len(base_mean_retentions)
+                if base_mean_retentions
+                else None
+            )
+            row["mean_base_last_retention_pct"] = (
+                sum(base_last_retentions) / len(base_last_retentions)
+                if base_last_retentions
+                else None
             )
 
             rows.append(row)

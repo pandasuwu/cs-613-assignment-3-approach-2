@@ -12,12 +12,12 @@ import torch
 from src.config import get_device, logger
 from src.metrics import compute_geometry_metrics
 from src.registry import (
+    ALL_COMPRESSION_METHODS,
+    ALL_FULL_METHODS,
     BASE_MODELS,
     BASE_POOLING_MODES,
     COMPRESSION_LADDER_K,
-    COMPRESSION_METHODS,
     EMBEDDING_MODELS,
-    FULL_METHODS,
     RETRIEVAL_TASKS,
     SIMILARITY_TASKS,
     get_raw_cache_dir,
@@ -50,7 +50,7 @@ def evaluate_geometry_combination(
     is_retrieval = (raw_dir / "corpus.pt").exists()
 
     # 1. Full-Dimension Transforms (including baseline)
-    for method in FULL_METHODS:
+    for method in ALL_FULL_METHODS:
         csv_path = (
             get_result_dir("geometry", task_name, model_id, "full", pooling=pooling)
             / f"{method}.csv"
@@ -89,7 +89,7 @@ def evaluate_geometry_combination(
         )
 
     # 2. Compression Transforms
-    for method in COMPRESSION_METHODS:
+    for method in ALL_COMPRESSION_METHODS:
         for k in COMPRESSION_LADDER_K:
             sub_name = f"{method}_k{k}"
             csv_path = (

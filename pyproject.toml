@@ -30,5 +30,5 @@ ignore = ["E501"]
 
 [tool.ty.src]
 include = ["src/**/*.py", "scripts/**/*.py", "*.py"]
-exclude = ["references/**", "temp/**"]
+exclude = ["references/**", "temp/**", "app/**"]
 

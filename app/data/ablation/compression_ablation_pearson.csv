@@ -1,0 +1,97 @@
+dataset,k,method,variant,google/embeddinggemma-300m,google/embeddinggemma-300m (retention %),Qwen/Qwen3-Embedding-0.6B,Qwen/Qwen3-Embedding-0.6B (retention %),google/gemma-3-1b-pt (mean_pooling),google/gemma-3-1b-pt (mean_pooling) (retention %),google/gemma-3-1b-pt (last_token_pooling),google/gemma-3-1b-pt (last_token_pooling) (retention %),Qwen/Qwen3.5-0.8B-Base (mean_pooling),Qwen/Qwen3.5-0.8B-Base (mean_pooling) (retention %),Qwen/Qwen3.5-0.8B-Base (last_token_pooling),Qwen/Qwen3.5-0.8B-Base (last_token_pooling) (retention %),mean_dedicated_retention_pct,mean_base_mean_retention_pct,mean_base_last_retention_pct
+STSBenchmark,512,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",84.6,100.17,84.98,100.87,48.09,139.66,45.64,163.96,48.39,111.49,37.35,144.67,100.52,125.58,154.31
+STSBenchmark,512,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",84.96,100.59,85.12,101.03,48.91,142.04,46.43,166.81,49.15,113.26,38.11,147.61,100.81,127.65,157.21
+STSBenchmark,512,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",84.79,100.39,85.08,100.98,48.9,142.02,46.42,166.77,49.14,113.23,38.1,147.55,100.68,127.62,157.16
+STSBenchmark,512,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",86.36,102.25,85.48,101.46,60.13,174.63,62.32,223.9,60.39,139.16,56.56,219.08,101.85,156.9,221.49
+STSBenchmark,512,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",85.16,100.82,85.38,101.34,62.21,180.66,64.86,233.01,61.75,142.3,60.32,233.65,101.08,161.48,233.33
+STSBenchmark,512,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",85.6,101.35,85.49,101.47,62.13,180.42,64.56,231.94,61.5,141.71,59.92,232.08,101.41,161.07,232.01
+STSBenchmark,512,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",85.14,100.81,85.37,101.33,62.34,181.05,65.23,234.36,62.02,142.91,60.58,234.63,101.07,161.98,234.5
+STSBenchmark,512,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",85.12,100.78,85.32,101.27,62.2,180.65,64.83,232.92,61.76,142.32,60.34,233.72,101.02,161.49,233.32
+STSBenchmark,256,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",82.82,98.05,84.65,100.47,46.57,135.25,44.0,158.07,47.32,109.04,36.14,139.99,99.26,122.14,149.03
+STSBenchmark,256,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",84.17,99.65,85.27,101.21,48.92,142.08,46.66,167.65,49.71,114.55,38.9,150.65,100.43,128.31,159.15
+STSBenchmark,256,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",83.65,99.05,85.11,101.02,48.92,142.08,46.66,167.62,49.7,114.53,38.89,150.62,100.03,128.3,159.12
+STSBenchmark,256,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",85.19,100.87,85.55,101.54,58.44,169.71,61.4,220.59,59.36,136.79,55.47,214.85,101.21,153.25,217.72
+STSBenchmark,256,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",83.49,98.85,85.18,101.1,61.56,178.79,65.77,236.29,61.69,142.16,60.61,234.75,99.98,160.48,235.52
+STSBenchmark,256,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",84.17,99.65,85.34,101.3,61.57,178.81,65.78,236.32,61.7,142.17,60.61,234.76,100.47,160.49,235.54
+STSBenchmark,256,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",83.6,98.98,85.13,101.05,61.41,178.36,65.5,235.32,61.6,141.94,60.41,233.96,100.01,160.15,234.64
+STSBenchmark,256,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",83.75,99.15,85.1,101.01,61.53,178.7,65.69,236.01,61.66,142.09,60.63,234.81,100.08,160.4,235.41
+STSBenchmark,128,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",78.93,93.45,83.24,98.8,43.48,126.27,40.68,146.15,44.95,103.57,33.94,131.46,96.13,114.92,138.8
+STSBenchmark,128,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",81.86,96.92,84.9,100.77,47.97,139.3,46.17,165.87,49.91,115.0,40.03,155.04,98.84,127.15,160.46
+STSBenchmark,128,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",81.03,95.94,84.66,100.48,47.97,139.3,46.17,165.87,49.91,115.0,40.03,155.03,98.21,127.15,160.45
+STSBenchmark,128,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",82.37,97.53,84.97,100.85,54.66,158.73,57.9,208.0,56.39,129.94,52.61,203.76,99.19,144.34,205.88
+STSBenchmark,128,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",79.78,94.46,84.0,99.7,58.71,170.51,63.74,228.98,59.41,136.89,59.26,229.52,97.08,153.7,229.25
+STSBenchmark,128,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",81.86,96.92,84.9,100.77,58.71,170.51,63.74,228.99,59.41,136.89,59.26,229.54,98.84,153.7,229.26
+STSBenchmark,128,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",80.85,95.73,84.53,100.33,58.51,169.93,63.29,227.37,59.29,136.61,58.81,227.8,98.03,153.27,227.58
+STSBenchmark,128,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",81.3,96.25,84.6,100.42,58.71,170.5,63.72,228.92,59.45,136.98,59.23,229.41,98.34,153.74,229.17
+STSBenchmark,64,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",72.98,86.41,79.63,94.51,39.37,114.35,35.89,128.95,41.62,95.91,30.64,118.68,90.46,105.13,123.82
+STSBenchmark,64,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",77.94,92.28,82.93,98.43,46.73,135.7,45.24,162.54,50.32,115.95,41.76,161.73,95.36,125.82,162.14
+STSBenchmark,64,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",76.96,91.12,82.71,98.17,46.73,135.7,45.24,162.54,50.32,115.95,41.76,161.74,94.64,125.83,162.14
+STSBenchmark,64,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",77.29,91.51,82.37,97.77,49.18,142.84,51.85,186.27,52.18,120.24,47.51,184.0,94.64,131.54,185.13
+STSBenchmark,64,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",73.95,87.56,80.63,95.7,53.33,154.88,58.41,209.86,55.53,127.96,54.36,210.56,91.63,141.42,210.21
+STSBenchmark,64,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",77.94,92.28,82.93,98.43,53.33,154.88,58.41,209.86,55.53,127.96,54.36,210.56,95.36,141.42,210.21
+STSBenchmark,64,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",76.6,90.69,82.49,97.91,53.22,154.55,58.08,208.66,55.44,127.75,54.12,209.61,94.3,141.15,209.14
+STSBenchmark,64,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",77.43,91.68,82.63,98.07,53.26,154.69,58.29,209.42,55.53,127.96,54.42,210.77,94.88,141.32,210.09
+SICK-R,512,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",83.8,100.34,86.74,99.91,55.87,111.8,56.08,118.78,56.59,106.6,55.3,108.75,100.12,109.2,113.77
+SICK-R,512,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",83.87,100.42,86.68,99.84,56.22,112.49,56.24,119.13,57.01,107.39,55.37,108.89,100.13,109.94,114.01
+SICK-R,512,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",83.87,100.41,86.71,99.87,56.22,112.49,56.24,119.13,57.01,107.38,55.37,108.89,100.14,109.94,114.01
+SICK-R,512,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",82.47,98.74,82.41,94.92,60.34,120.74,56.73,120.15,61.43,115.7,54.87,107.9,96.83,118.22,114.03
+SICK-R,512,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",83.46,99.93,84.53,97.36,57.05,114.16,54.07,114.52,57.3,107.93,51.88,102.03,98.64,111.04,108.27
+SICK-R,512,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",81.48,97.55,83.0,95.6,56.87,113.8,53.72,113.79,56.73,106.85,51.29,100.86,96.58,110.33,107.33
+SICK-R,512,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",83.65,100.16,84.84,97.72,57.76,115.57,54.94,116.36,58.34,109.88,52.83,103.9,98.94,112.73,110.13
+SICK-R,512,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",83.46,99.93,84.55,97.39,57.06,114.17,54.06,114.51,57.3,107.94,51.89,102.05,98.66,111.05,108.28
+SICK-R,256,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",83.63,100.13,86.92,100.11,55.45,110.95,56.05,118.71,56.15,105.75,55.35,108.85,100.12,108.35,113.78
+SICK-R,256,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",84.11,100.71,86.65,99.8,56.64,113.32,56.66,120.0,57.59,108.47,55.65,109.43,100.26,110.9,114.72
+SICK-R,256,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",84.08,100.67,86.73,99.89,56.64,113.32,56.66,120.0,57.59,108.47,55.65,109.43,100.28,110.9,114.72
+SICK-R,256,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",82.94,99.31,83.0,95.6,61.2,122.46,57.58,121.96,62.37,117.47,55.75,109.64,97.45,119.97,115.8
+SICK-R,256,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",83.88,100.44,85.04,97.95,59.41,118.88,55.93,118.46,59.54,112.15,53.56,105.33,99.19,115.51,111.89
+SICK-R,256,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",83.12,99.52,84.38,97.19,59.41,118.88,55.9,118.4,59.51,112.09,53.51,105.23,98.35,115.49,111.82
+SICK-R,256,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",84.22,100.84,85.48,98.46,59.65,119.36,56.4,119.47,60.1,113.2,54.18,106.55,99.65,116.28,113.01
+SICK-R,256,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",83.89,100.44,85.06,97.98,59.4,118.85,55.92,118.45,59.53,112.13,53.56,105.32,99.21,115.49,111.89
+SICK-R,128,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",82.55,98.84,86.97,100.17,54.44,108.94,55.76,118.11,55.16,103.89,55.24,108.63,99.51,106.42,113.37
+SICK-R,128,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",84.22,100.84,86.18,99.26,57.32,114.7,57.34,121.45,58.67,110.5,56.1,110.33,100.05,112.6,115.89
+SICK-R,128,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",84.17,100.78,86.33,99.43,57.33,114.71,57.34,121.45,58.67,110.5,56.1,110.33,100.11,112.6,115.89
+SICK-R,128,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",84.0,100.57,84.64,97.48,61.1,122.27,58.34,123.58,62.61,117.93,56.77,111.63,99.03,120.1,117.61
+SICK-R,128,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",84.44,101.1,86.15,99.23,60.3,120.67,57.99,122.82,61.12,115.12,55.64,109.42,100.17,117.89,116.12
+SICK-R,128,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",84.32,100.96,85.97,99.02,60.31,120.68,57.99,122.82,61.12,115.12,55.64,109.42,99.99,117.9,116.12
+SICK-R,128,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",84.52,101.2,86.46,99.58,60.41,120.88,58.15,123.16,61.35,115.56,55.92,109.97,100.39,118.22,116.56
+SICK-R,128,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",84.41,101.06,86.15,99.23,60.28,120.63,57.99,122.83,61.09,115.06,55.64,109.42,100.15,117.84,116.13
+SICK-R,64,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",79.48,95.16,86.2,99.28,52.69,105.43,54.73,115.92,53.6,100.95,54.52,107.22,97.22,103.19,111.57
+SICK-R,64,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",83.66,100.16,84.68,97.53,58.4,116.87,57.93,122.71,60.77,114.47,56.55,111.21,98.85,115.67,116.96
+SICK-R,64,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",83.6,100.1,84.86,97.74,58.41,116.87,57.93,122.71,60.77,114.47,56.55,111.21,98.92,115.67,116.96
+SICK-R,64,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",83.78,100.31,86.23,99.32,59.87,119.81,58.01,122.88,61.99,116.77,57.11,112.3,99.82,118.29,117.59
+SICK-R,64,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",83.32,99.77,86.91,100.1,60.37,120.79,59.01,124.99,61.97,116.72,57.39,112.86,99.93,118.76,118.93
+SICK-R,64,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",83.66,100.16,84.68,97.53,60.37,120.8,59.01,124.99,61.97,116.72,57.39,112.86,98.85,118.76,118.93
+SICK-R,64,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",83.33,99.78,85.48,98.46,60.42,120.9,59.02,125.0,62.07,116.92,57.44,112.96,99.12,118.91,118.98
+SICK-R,64,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",83.56,100.05,84.76,97.63,60.36,120.78,58.97,124.91,61.97,116.72,57.42,112.92,98.84,118.75,118.91
+STS22.v2,512,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",67.19,100.5,69.74,98.83,54.01,111.59,12.97,103.48,53.43,106.85,12.93,92.83,99.66,109.22,98.15
+STS22.v2,512,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",67.19,100.5,69.74,98.83,54.01,111.59,12.97,103.48,53.43,106.85,12.93,92.83,99.66,109.22,98.15
+STS22.v2,512,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",67.19,100.5,69.74,98.83,54.01,111.59,12.97,103.48,53.43,106.85,12.93,92.83,99.66,109.22,98.15
+STS22.v2,512,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",69.07,103.31,70.71,100.21,61.75,127.57,14.17,113.03,62.53,125.04,20.23,145.25,101.76,126.31,129.14
+STS22.v2,512,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",67.34,100.72,69.87,99.01,64.38,133.0,14.14,112.83,65.63,131.25,18.79,134.92,99.87,132.13,123.87
+STS22.v2,512,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",67.44,100.88,69.97,99.16,46.73,96.55,12.49,99.67,41.36,82.7,7.04,50.53,100.02,89.62,75.1
+STS22.v2,512,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",67.34,100.72,69.87,99.01,64.38,133.0,14.14,112.83,65.63,131.25,18.79,134.92,99.87,132.13,123.87
+STS22.v2,512,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",67.18,100.48,69.92,99.08,64.45,133.16,14.18,113.16,65.68,131.34,18.88,135.55,99.78,132.25,124.36
+STS22.v2,256,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",67.27,100.62,69.78,98.89,54.27,112.12,13.65,108.9,53.58,107.14,13.52,97.07,99.75,109.63,102.98
+STS22.v2,256,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",68.13,101.9,70.16,99.42,55.36,114.37,14.22,113.47,54.28,108.55,14.86,106.74,100.66,111.46,110.1
+STS22.v2,256,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",67.74,101.32,69.98,99.17,55.34,114.32,14.2,113.3,54.26,108.51,14.85,106.63,100.24,111.41,109.97
+STS22.v2,256,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",69.21,103.53,70.86,100.42,62.72,129.57,15.66,124.99,63.29,126.58,21.67,155.65,101.98,128.07,140.32
+STS22.v2,256,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",67.42,100.84,69.92,99.08,66.34,137.05,15.89,126.77,66.96,133.9,21.52,154.56,99.96,135.48,140.67
+STS22.v2,256,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",68.13,101.9,70.16,99.42,66.39,137.15,15.7,125.29,66.69,133.38,20.26,145.51,100.66,135.26,135.4
+STS22.v2,256,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",67.73,101.31,69.97,99.16,66.18,136.72,15.91,126.97,66.87,133.72,22.52,161.75,100.24,135.22,144.36
+STS22.v2,256,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",67.57,101.07,70.15,99.41,66.32,137.02,15.85,126.48,66.98,133.95,21.43,153.92,100.24,135.48,140.2
+STS22.v2,128,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",63.88,95.56,67.65,95.87,51.73,106.88,13.34,106.46,52.07,104.14,13.45,96.62,95.71,105.51,101.54
+STS22.v2,128,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",66.18,98.99,68.76,97.44,55.57,114.8,15.15,120.87,55.06,110.1,18.95,136.09,98.22,112.45,128.48
+STS22.v2,128,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",65.47,97.93,68.36,96.88,55.56,114.78,15.12,120.61,55.04,110.08,18.93,135.95,97.4,112.43,128.28
+STS22.v2,128,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",65.61,98.14,68.66,97.3,57.79,119.4,15.77,125.84,60.05,120.08,23.86,171.33,97.72,119.74,148.58
+STS22.v2,128,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",64.02,95.76,67.77,96.04,60.82,125.65,16.14,128.77,64.03,128.04,28.42,204.12,95.9,126.85,166.45
+STS22.v2,128,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",66.18,98.99,68.76,97.44,60.83,125.68,16.17,129.03,64.06,128.11,28.45,204.3,98.22,126.9,166.66
+STS22.v2,128,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",65.44,97.88,68.34,96.84,60.67,125.35,16.04,127.97,63.74,127.47,28.2,202.54,97.36,126.41,165.25
+STS22.v2,128,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",65.24,97.59,68.9,97.64,60.71,125.43,15.94,127.16,64.18,128.34,28.23,202.75,97.62,126.89,164.96
+STS22.v2,64,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",59.84,89.51,64.86,91.92,48.82,100.86,12.29,98.04,49.71,99.41,9.76,70.1,90.72,100.14,84.07
+STS22.v2,64,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",63.5,94.99,66.25,93.88,55.12,113.88,15.81,126.16,55.5,111.0,18.67,134.09,94.43,112.44,130.12
+STS22.v2,64,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",62.69,93.78,65.96,93.48,55.12,113.88,15.79,125.99,55.5,111.0,18.67,134.06,93.63,112.44,130.02
+STS22.v2,64,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",61.53,92.04,65.67,93.06,53.73,111.0,15.35,122.47,55.65,111.3,18.46,132.54,92.55,111.15,127.51
+STS22.v2,64,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",59.97,89.7,64.96,92.06,56.16,116.03,15.94,127.23,58.61,117.21,23.15,166.22,90.88,116.62,146.72
+STS22.v2,64,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",63.5,94.99,66.25,93.88,56.16,116.03,15.97,127.4,58.61,117.21,23.15,166.25,94.43,116.62,146.82
+STS22.v2,64,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",62.62,93.67,65.92,93.42,56.12,115.95,15.76,125.75,58.54,117.07,22.94,164.76,93.54,116.51,145.25
+STS22.v2,64,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",62.6,93.64,66.34,94.01,56.1,115.91,15.72,125.4,58.95,117.89,22.98,165.0,93.83,116.9,145.2

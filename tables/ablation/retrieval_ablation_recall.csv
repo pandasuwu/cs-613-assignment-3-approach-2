@@ -1,0 +1,25 @@
+dataset,method,variant,google/embeddinggemma-300m,Qwen/Qwen3-Embedding-0.6B,google/gemma-3-1b-pt (mean_pooling),google/gemma-3-1b-pt (last_token_pooling),Qwen/Qwen3.5-0.8B-Base (mean_pooling),Qwen/Qwen3.5-0.8B-Base (last_token_pooling),mean_dedicated,mean_base_mean,mean_base_last
+FiQA2018,ablation_o0_c0_e2,"Unregularized ZCA (Sigma, gamma=1, eps=1e-6)",0.6696,0.7188,0.302,0.1728,0.2181,0.0562,0.6942,0.26,0.1145
+FiQA2018,ablation_o0_c0_e1,"Centered + Adaptive eps* (Sigma, gamma=1, eps*)",0.7858,0.7855,0.3487,0.1905,0.2576,0.0647,0.7857,0.3032,0.1276
+FiQA2018,ablation_o0_c1_e0,"Centered + Crowding gamma (Sigma, gamma_crowd, 1e-4)",0.7955,0.8077,0.3663,0.1898,0.2692,0.0644,0.8016,0.3177,0.1271
+FiQA2018,ablation_o0_c1_e1,"w/o Orthogonal Projection (Sigma, gamma_crowd, eps*)",0.7942,0.8058,0.3487,0.1905,0.2576,0.0647,0.8,0.3032,0.1276
+FiQA2018,ablation_o1_c0_e0,"Orthogonal Soft-ZCA (Sigma_perp, gamma=1, 1e-4)",0.7091,0.7397,0.3664,0.1898,0.2669,0.0651,0.7244,0.3166,0.1275
+FiQA2018,ablation_o1_c0_e1,"w/o Crowding Exponent (Sigma_perp, gamma=1, eps*)",0.776,0.7873,0.349,0.1905,0.2536,0.0655,0.7816,0.3013,0.128
+FiQA2018,ablation_o1_c2_e0,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, 1e-4)",0.7787,0.7862,0.3419,0.1772,0.244,0.0494,0.7824,0.293,0.1133
+FiQA2018,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma_crowd, 1e-4)",0.7954,0.8109,0.3664,0.1898,0.2669,0.0651,0.8031,0.3166,0.1275
+ArguAna,ablation_o0_c0_e2,"Unregularized ZCA (Sigma, gamma=1, eps=1e-6)",0.9403,0.9523,0.9353,0.5562,0.9275,0.5092,0.9463,0.9314,0.5327
+ArguAna,ablation_o0_c0_e1,"Centered + Adaptive eps* (Sigma, gamma=1, eps*)",0.9922,0.9929,0.9659,0.638,0.9673,0.5832,0.9925,0.9666,0.6106
+ArguAna,ablation_o0_c1_e0,"Centered + Crowding gamma (Sigma, gamma_crowd, 1e-4)",0.9936,0.995,0.978,0.6394,0.9723,0.5839,0.9943,0.9751,0.6117
+ArguAna,ablation_o0_c1_e1,"w/o Orthogonal Projection (Sigma, gamma_crowd, eps*)",0.9943,0.9943,0.9659,0.638,0.9673,0.5832,0.9943,0.9666,0.6106
+ArguAna,ablation_o1_c0_e0,"Orthogonal Soft-ZCA (Sigma_perp, gamma=1, 1e-4)",0.9758,0.978,0.9787,0.6373,0.9723,0.5839,0.9769,0.9755,0.6106
+ArguAna,ablation_o1_c0_e1,"w/o Crowding Exponent (Sigma_perp, gamma=1, eps*)",0.9936,0.9936,0.9651,0.6394,0.9673,0.5832,0.9936,0.9662,0.6113
+ArguAna,ablation_o1_c2_e0,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, 1e-4)",0.9943,0.9929,0.9723,0.5391,0.9708,0.4865,0.9936,0.9716,0.5128
+ArguAna,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma_crowd, 1e-4)",0.9936,0.9936,0.9787,0.6373,0.9723,0.5839,0.9936,0.9755,0.6106
+SCIDOCS,ablation_o0_c0_e2,"Unregularized ZCA (Sigma, gamma=1, eps=1e-6)",0.2515,0.4236,0.2066,0.0882,0.1926,0.0776,0.3376,0.1996,0.0829
+SCIDOCS,ablation_o0_c0_e1,"Centered + Adaptive eps* (Sigma, gamma=1, eps*)",0.4294,0.5051,0.2393,0.0908,0.2238,0.0746,0.4672,0.2315,0.0827
+SCIDOCS,ablation_o0_c1_e0,"Centered + Crowding gamma (Sigma, gamma_crowd, 1e-4)",0.4459,0.5224,0.2338,0.0914,0.2172,0.0744,0.4841,0.2255,0.0829
+SCIDOCS,ablation_o0_c1_e1,"w/o Orthogonal Projection (Sigma, gamma_crowd, eps*)",0.4438,0.5215,0.2393,0.0908,0.2238,0.0746,0.4826,0.2315,0.0827
+SCIDOCS,ablation_o1_c0_e0,"Orthogonal Soft-ZCA (Sigma_perp, gamma=1, 1e-4)",0.3642,0.4499,0.2356,0.0915,0.2178,0.0742,0.4071,0.2267,0.0829
+SCIDOCS,ablation_o1_c0_e1,"w/o Crowding Exponent (Sigma_perp, gamma=1, eps*)",0.4324,0.51,0.2405,0.0905,0.2246,0.0757,0.4712,0.2325,0.0831
+SCIDOCS,ablation_o1_c2_e0,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, 1e-4)",0.433,0.5046,0.1602,0.0524,0.1419,0.0426,0.4688,0.151,0.0475
+SCIDOCS,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma_crowd, 1e-4)",0.4428,0.52,0.2356,0.0915,0.2178,0.0742,0.4814,0.2267,0.0829

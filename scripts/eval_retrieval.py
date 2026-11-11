@@ -13,12 +13,12 @@ import torch
 from src.config import DEFAULT_BATCH_SIZE_SEARCH, get_device, logger
 from src.metrics import compute_retrieval_metrics
 from src.registry import (
+    ALL_COMPRESSION_METHODS,
+    ALL_FULL_METHODS,
     BASE_MODELS,
     BASE_POOLING_MODES,
     COMPRESSION_LADDER_K,
-    COMPRESSION_METHODS,
     EMBEDDING_MODELS,
-    FULL_METHODS,
     RETRIEVAL_TASKS,
     get_raw_cache_dir,
     get_result_dir,
@@ -86,7 +86,7 @@ def evaluate_retrieval_combination(
     qids, dids, qrels = meta["qids"], meta["dids"], meta["qrels"]
 
     # 1. Full-Dimension Transforms
-    for method in FULL_METHODS:
+    for method in ALL_FULL_METHODS:
         csv_path = (
             get_result_dir("retrieval", task_name, model_id, "full", pooling=pooling)
             / f"{method}.csv"
@@ -125,7 +125,7 @@ def evaluate_retrieval_combination(
         )
 
     # 2. Compression Transforms
-    for method in COMPRESSION_METHODS:
+    for method in ALL_COMPRESSION_METHODS:
         for k in COMPRESSION_LADDER_K:
             sub_name = f"{method}_k{k}"
             csv_path = (

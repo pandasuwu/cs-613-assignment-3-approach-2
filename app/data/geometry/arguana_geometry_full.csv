@@ -1,0 +1,55 @@
+model,method,centroid_norm,average_cosine,mev_top1,nid_spectral_entropy,isoscore
+google/embeddinggemma-300m,baseline,0.4582,0.2084,0.0349,0.8411,0.1679
+google/embeddinggemma-300m,standardization,0.0045,-0.0001,0.0333,0.8424,0.172
+google/embeddinggemma-300m,r1,0.0045,-0.0001,0.035,0.8401,0.1661
+google/embeddinggemma-300m,r2,0.0036,-0.0001,0.0352,0.8407,0.167
+google/embeddinggemma-300m,soft_zca,0.0036,-0.0001,0.0022,0.9827,0.8573
+google/embeddinggemma-300m,coast,0.0037,-0.0001,0.0324,0.847,0.1802
+google/embeddinggemma-300m,abtt_1,0.0048,-0.0001,0.0312,0.8469,0.1839
+google/embeddinggemma-300m,abtt_2,0.0052,-0.0001,0.0232,0.8526,0.2005
+google/embeddinggemma-300m,abtt_3,0.0042,-0.0001,0.0229,0.8559,0.2088
+Qwen/Qwen3-Embedding-0.6B,baseline,0.4703,0.2193,0.0388,0.8,0.1135
+Qwen/Qwen3-Embedding-0.6B,standardization,0.0043,-0.0,0.0344,0.8094,0.1265
+Qwen/Qwen3-Embedding-0.6B,r1,0.0043,-0.0001,0.0391,0.7995,0.1128
+Qwen/Qwen3-Embedding-0.6B,r2,0.0029,-0.0001,0.0392,0.7997,0.1127
+Qwen/Qwen3-Embedding-0.6B,soft_zca,0.0031,-0.0001,0.0021,0.9758,0.7712
+Qwen/Qwen3-Embedding-0.6B,coast,0.0029,-0.0001,0.0355,0.8078,0.1239
+Qwen/Qwen3-Embedding-0.6B,abtt_1,0.0045,-0.0001,0.0334,0.8074,0.1273
+Qwen/Qwen3-Embedding-0.6B,abtt_2,0.0046,-0.0001,0.0273,0.8135,0.1394
+Qwen/Qwen3-Embedding-0.6B,abtt_3,0.0049,-0.0001,0.0242,0.8178,0.1478
+google/gemma-3-1b-pt (mean_pooling),baseline,0.926,0.8569,0.0954,0.6887,0.0342
+google/gemma-3-1b-pt (mean_pooling),standardization,0.0142,0.0002,0.0572,0.759,0.0649
+google/gemma-3-1b-pt (mean_pooling),r1,0.0188,0.0004,0.0924,0.6889,0.0347
+google/gemma-3-1b-pt (mean_pooling),r2,0.0176,0.0003,0.0927,0.6888,0.0347
+google/gemma-3-1b-pt (mean_pooling),soft_zca,0.008,-0.0001,0.0047,0.9277,0.4458
+google/gemma-3-1b-pt (mean_pooling),coast,0.0057,-0.0001,0.0023,0.9736,0.7307
+google/gemma-3-1b-pt (mean_pooling),abtt_1,0.02,0.0003,0.0697,0.7125,0.0451
+google/gemma-3-1b-pt (mean_pooling),abtt_2,0.015,0.0,0.0604,0.728,0.0532
+google/gemma-3-1b-pt (mean_pooling),abtt_3,0.013,-0.0,0.0472,0.7407,0.0611
+google/gemma-3-1b-pt (last_token_pooling),baseline,0.7839,0.6113,0.2358,0.6654,0.0128
+google/gemma-3-1b-pt (last_token_pooling),standardization,0.0119,-0.0,0.1661,0.7287,0.0239
+google/gemma-3-1b-pt (last_token_pooling),r1,0.0163,-0.0,0.2379,0.6607,0.0126
+google/gemma-3-1b-pt (last_token_pooling),r2,0.0141,-0.0001,0.2386,0.6613,0.0125
+google/gemma-3-1b-pt (last_token_pooling),soft_zca,0.0092,-0.0001,0.0047,0.9606,0.629
+google/gemma-3-1b-pt (last_token_pooling),coast,0.0093,-0.0001,0.0051,0.955,0.5921
+google/gemma-3-1b-pt (last_token_pooling),abtt_1,0.0229,0.0,0.0668,0.7639,0.061
+google/gemma-3-1b-pt (last_token_pooling),abtt_2,0.0219,0.0001,0.0422,0.7807,0.0778
+google/gemma-3-1b-pt (last_token_pooling),abtt_3,0.0202,0.0001,0.0412,0.7894,0.0854
+Qwen/Qwen3.5-0.8B-Base (mean_pooling),baseline,0.8992,0.807,0.1086,0.6606,0.0309
+Qwen/Qwen3.5-0.8B-Base (mean_pooling),standardization,0.0142,0.0002,0.0877,0.6946,0.0404
+Qwen/Qwen3.5-0.8B-Base (mean_pooling),r1,0.0158,0.0002,0.1059,0.6615,0.0314
+Qwen/Qwen3.5-0.8B-Base (mean_pooling),r2,0.014,0.0002,0.1062,0.6612,0.0313
+Qwen/Qwen3.5-0.8B-Base (mean_pooling),soft_zca,0.0074,-0.0001,0.0045,0.9291,0.4733
+Qwen/Qwen3.5-0.8B-Base (mean_pooling),coast,0.0059,-0.0001,0.003,0.9572,0.6336
+Qwen/Qwen3.5-0.8B-Base (mean_pooling),abtt_1,0.0158,0.0002,0.0816,0.6874,0.0412
+Qwen/Qwen3.5-0.8B-Base (mean_pooling),abtt_2,0.0146,0.0002,0.0635,0.7051,0.0495
+Qwen/Qwen3.5-0.8B-Base (mean_pooling),abtt_3,0.0144,0.0001,0.0559,0.717,0.0552
+Qwen/Qwen3.5-0.8B-Base (last_token_pooling),baseline,0.8123,0.6583,0.2632,0.6149,0.0108
+Qwen/Qwen3.5-0.8B-Base (last_token_pooling),standardization,0.0218,0.0006,0.1998,0.6619,0.0173
+Qwen/Qwen3.5-0.8B-Base (last_token_pooling),r1,0.0247,0.0008,0.2639,0.6111,0.0107
+Qwen/Qwen3.5-0.8B-Base (last_token_pooling),r2,0.0213,0.0006,0.265,0.612,0.0107
+Qwen/Qwen3.5-0.8B-Base (last_token_pooling),soft_zca,0.011,-0.0001,0.006,0.9502,0.5813
+Qwen/Qwen3.5-0.8B-Base (last_token_pooling),coast,0.0108,-0.0001,0.0062,0.9478,0.5664
+Qwen/Qwen3.5-0.8B-Base (last_token_pooling),abtt_1,0.0291,0.0001,0.1132,0.7177,0.0376
+Qwen/Qwen3.5-0.8B-Base (last_token_pooling),abtt_2,0.0245,0.0002,0.0727,0.751,0.0596
+Qwen/Qwen3.5-0.8B-Base (last_token_pooling),abtt_3,0.0235,0.0003,0.0467,0.7693,0.0765

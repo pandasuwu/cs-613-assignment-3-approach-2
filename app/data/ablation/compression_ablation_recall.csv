@@ -1,0 +1,97 @@
+dataset,k,method,variant,google/embeddinggemma-300m,google/embeddinggemma-300m (retention %),Qwen/Qwen3-Embedding-0.6B,Qwen/Qwen3-Embedding-0.6B (retention %),google/gemma-3-1b-pt (mean_pooling),google/gemma-3-1b-pt (mean_pooling) (retention %),google/gemma-3-1b-pt (last_token_pooling),google/gemma-3-1b-pt (last_token_pooling) (retention %),Qwen/Qwen3.5-0.8B-Base (mean_pooling),Qwen/Qwen3.5-0.8B-Base (mean_pooling) (retention %),Qwen/Qwen3.5-0.8B-Base (last_token_pooling),Qwen/Qwen3.5-0.8B-Base (last_token_pooling) (retention %),mean_dedicated_retention_pct,mean_base_mean_retention_pct,mean_base_last_retention_pct
+FiQA2018,512,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.7948,99.86,0.8117,99.55,0.2242,91.8,0.1098,93.88,0.173,100.79,0.0248,120.64,99.71,96.29,107.26
+FiQA2018,512,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.7957,99.97,0.8086,99.17,0.2316,94.8,0.1133,96.9,0.1719,100.15,0.0251,122.14,99.57,97.47,109.52
+FiQA2018,512,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.7967,100.1,0.8092,99.24,0.2316,94.8,0.1125,96.24,0.1719,100.15,0.0248,120.64,99.67,97.47,108.44
+FiQA2018,512,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.7952,99.91,0.8029,98.48,0.3359,137.49,0.1772,151.56,0.2426,141.3,0.0464,225.51,99.19,139.39,188.53
+FiQA2018,512,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.7967,100.1,0.8083,99.13,0.3291,134.72,0.1946,166.37,0.2425,141.29,0.0641,311.13,99.62,138.0,238.75
+FiQA2018,512,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.7976,100.21,0.8084,99.14,0.3252,133.13,0.1895,162.07,0.237,138.06,0.0642,311.87,99.68,135.59,236.97
+FiQA2018,512,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.7967,100.1,0.8083,99.13,0.3428,140.35,0.1972,168.62,0.2531,147.45,0.0663,322.18,99.62,143.9,245.4
+FiQA2018,512,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.7933,99.67,0.8078,99.08,0.3327,136.2,0.1923,164.42,0.2432,141.67,0.0668,324.24,99.37,138.94,244.33
+FiQA2018,256,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.7902,99.28,0.8055,98.8,0.2055,84.14,0.0982,83.99,0.1644,95.79,0.0247,119.8,99.04,89.96,101.9
+FiQA2018,256,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.7914,99.43,0.8046,98.68,0.2201,90.09,0.1033,88.3,0.1704,99.25,0.0245,118.77,99.06,94.67,103.53
+FiQA2018,256,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.7922,99.53,0.8084,99.15,0.2201,90.09,0.1033,88.3,0.1704,99.25,0.0245,118.77,99.34,94.67,103.53
+FiQA2018,256,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.7896,99.2,0.7998,98.09,0.2985,122.2,0.1692,144.65,0.2236,130.28,0.0424,205.95,98.64,126.24,175.3
+FiQA2018,256,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.7943,99.8,0.8079,99.09,0.3103,127.04,0.1932,165.24,0.235,136.89,0.0678,329.43,99.44,131.97,247.33
+FiQA2018,256,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.7914,99.43,0.8046,98.68,0.3098,126.83,0.1936,165.57,0.2344,136.57,0.0678,329.43,99.06,131.7,247.5
+FiQA2018,256,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.7927,99.59,0.8082,99.12,0.3167,129.64,0.1916,163.8,0.2386,138.99,0.0656,318.63,99.35,134.32,241.22
+FiQA2018,256,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.7898,99.23,0.8037,98.57,0.3139,128.5,0.1958,167.44,0.2302,134.07,0.0684,332.17,98.9,131.29,249.81
+FiQA2018,128,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.766,96.24,0.7971,97.76,0.1781,72.91,0.0799,68.35,0.1478,86.08,0.0198,96.0,97.0,79.5,82.18
+FiQA2018,128,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.7724,97.05,0.791,97.02,0.2074,84.9,0.0912,77.97,0.1676,97.66,0.0209,101.62,97.03,91.28,89.8
+FiQA2018,128,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.772,97.0,0.792,97.13,0.2074,84.9,0.0912,77.97,0.1676,97.66,0.0209,101.62,97.07,91.28,89.8
+FiQA2018,128,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.7719,96.98,0.7924,97.19,0.2414,98.81,0.1119,95.71,0.1912,111.37,0.0279,135.62,97.08,105.09,115.66
+FiQA2018,128,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.7668,96.34,0.7967,97.71,0.255,104.38,0.1331,113.85,0.1919,111.79,0.0515,250.16,97.02,108.08,182.0
+FiQA2018,128,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.7724,97.05,0.791,97.02,0.255,104.38,0.1331,113.85,0.1924,112.09,0.0515,250.16,97.03,108.23,182.0
+FiQA2018,128,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.7722,97.02,0.7952,97.53,0.2499,102.3,0.1336,114.24,0.191,111.27,0.0537,260.77,97.27,106.79,187.51
+FiQA2018,128,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.7629,95.86,0.7971,97.76,0.259,106.03,0.1257,107.46,0.1817,105.82,0.0498,241.67,96.81,105.92,174.56
+FiQA2018,64,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.699,87.82,0.7608,93.31,0.1482,60.66,0.0649,55.53,0.1245,72.5,0.015,72.9,90.56,66.58,64.21
+FiQA2018,64,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.713,89.58,0.759,93.09,0.1723,70.55,0.0745,63.74,0.1441,83.93,0.0173,84.13,91.34,77.24,73.94
+FiQA2018,64,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.7129,89.56,0.7682,94.22,0.1723,70.55,0.0745,63.74,0.1441,83.93,0.0173,84.13,91.89,77.24,73.94
+FiQA2018,64,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.7139,89.7,0.7692,94.34,0.1779,72.83,0.0809,69.17,0.1427,83.11,0.0149,72.58,92.02,77.97,70.87
+FiQA2018,64,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.7052,88.6,0.7681,94.2,0.1729,70.78,0.0876,74.89,0.1511,87.99,0.0269,130.65,91.4,79.39,102.77
+FiQA2018,64,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.713,89.58,0.759,93.09,0.1729,70.78,0.0876,74.89,0.1511,87.99,0.0269,130.65,91.34,79.39,102.77
+FiQA2018,64,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.714,89.71,0.7708,94.53,0.1733,70.94,0.0863,73.83,0.1482,86.33,0.0259,125.66,92.12,78.64,99.74
+FiQA2018,64,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.7018,88.17,0.7569,92.83,0.1755,71.84,0.0841,71.92,0.1443,84.08,0.0227,110.17,90.5,77.96,91.04
+ArguAna,512,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.9936,100.0,0.9936,99.79,0.9303,101.95,0.3947,101.46,0.9296,98.87,0.3663,103.21,99.89,100.41,102.33
+ArguAna,512,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.9936,100.0,0.9936,99.79,0.9353,102.49,0.4011,103.11,0.9317,99.09,0.3677,103.61,99.89,100.79,103.36
+ArguAna,512,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.9936,100.0,0.9936,99.79,0.9353,102.49,0.4011,103.11,0.9317,99.09,0.3677,103.61,99.89,100.79,103.36
+ArguAna,512,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.9943,100.07,0.9936,99.79,0.9737,106.7,0.5448,140.04,0.9751,103.71,0.4886,137.68,99.93,105.2,138.86
+ArguAna,512,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.9936,100.0,0.9936,99.79,0.968,106.08,0.628,161.43,0.9673,102.87,0.591,166.53,99.89,104.48,163.98
+ArguAna,512,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.9936,100.0,0.9936,99.79,0.9666,105.92,0.6223,159.96,0.9602,102.12,0.5775,162.73,99.89,104.02,161.34
+ArguAna,512,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.9936,100.0,0.9936,99.79,0.9723,106.55,0.6337,162.89,0.9694,103.1,0.5861,165.13,99.89,104.82,164.01
+ArguAna,512,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.9943,100.07,0.9943,99.86,0.9673,106.0,0.6294,161.79,0.968,102.95,0.5896,166.13,99.96,104.48,163.96
+ArguAna,256,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.9943,100.07,0.9936,99.79,0.9303,101.95,0.3912,100.55,0.926,98.49,0.3663,103.21,99.93,100.22,101.88
+ArguAna,256,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.9943,100.07,0.9936,99.79,0.9424,103.27,0.409,105.12,0.9381,99.77,0.3698,104.21,99.93,101.52,104.66
+ArguAna,256,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.9943,100.07,0.9936,99.79,0.9424,103.27,0.409,105.12,0.9381,99.77,0.3698,104.21,99.93,101.52,104.66
+ArguAna,256,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.9943,100.07,0.9936,99.79,0.9744,106.78,0.5341,137.29,0.9716,103.33,0.4787,134.87,99.93,105.05,136.08
+ArguAna,256,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.9943,100.07,0.9936,99.79,0.9758,106.94,0.6408,164.72,0.9666,102.8,0.5818,163.93,99.93,104.87,164.32
+ArguAna,256,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.9943,100.07,0.9936,99.79,0.9758,106.94,0.6408,164.72,0.9666,102.8,0.5825,164.13,99.93,104.87,164.42
+ArguAna,256,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.9943,100.07,0.9936,99.79,0.9772,107.09,0.6351,163.25,0.9694,103.1,0.5789,163.13,99.93,105.1,163.19
+ArguAna,256,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.9943,100.07,0.9943,99.86,0.978,107.17,0.6401,164.53,0.9666,102.8,0.5839,164.53,99.96,104.98,164.53
+ArguAna,128,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.9943,100.07,0.9929,99.71,0.9182,100.62,0.3734,95.98,0.9154,97.35,0.3549,100.0,99.89,98.99,97.99
+ArguAna,128,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.9943,100.07,0.9936,99.79,0.9523,104.36,0.4033,103.66,0.9452,100.53,0.3627,102.2,99.93,102.45,102.93
+ArguAna,128,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.9943,100.07,0.9936,99.79,0.9523,104.36,0.4033,103.66,0.9452,100.53,0.3627,102.2,99.93,102.45,102.93
+ArguAna,128,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.9943,100.07,0.9936,99.79,0.9694,106.24,0.4858,124.86,0.968,102.95,0.4353,122.65,99.93,104.59,123.75
+ArguAna,128,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.9943,100.07,0.9929,99.71,0.9772,107.09,0.5861,150.64,0.9651,102.65,0.5405,152.3,99.89,104.87,151.47
+ArguAna,128,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.9943,100.07,0.9936,99.79,0.9772,107.09,0.5861,150.64,0.9651,102.65,0.5413,152.5,99.93,104.87,151.57
+ArguAna,128,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.9943,100.07,0.9936,99.79,0.9772,107.09,0.5818,149.54,0.9666,102.8,0.5334,150.3,99.93,104.95,149.92
+ArguAna,128,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.9936,100.0,0.9929,99.71,0.9765,107.01,0.5882,151.19,0.9659,102.72,0.5405,152.3,99.86,104.87,151.75
+ArguAna,64,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.9893,99.57,0.9922,99.64,0.8912,97.66,0.34,87.39,0.8954,95.23,0.335,94.39,99.61,96.45,90.89
+ArguAna,64,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.9915,99.79,0.99,99.43,0.9467,103.74,0.3869,99.45,0.9459,100.61,0.3457,97.39,99.61,102.17,98.42
+ArguAna,64,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.9908,99.71,0.9908,99.5,0.9467,103.74,0.3869,99.45,0.9459,100.61,0.3457,97.39,99.61,102.17,98.42
+ArguAna,64,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.9908,99.71,0.9908,99.5,0.9467,103.74,0.4168,107.13,0.9509,101.13,0.3905,110.02,99.61,102.44,108.57
+ArguAna,64,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.9893,99.57,0.9922,99.64,0.9531,104.44,0.49,125.96,0.9552,101.59,0.4495,126.65,99.61,103.02,126.31
+ArguAna,64,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.9915,99.79,0.99,99.43,0.9531,104.44,0.49,125.96,0.9552,101.59,0.4495,126.65,99.61,103.02,126.31
+ArguAna,64,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.9908,99.71,0.9915,99.57,0.9531,104.44,0.4865,125.05,0.9552,101.59,0.4438,125.05,99.64,103.02,125.05
+ArguAna,64,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.99,99.64,0.9908,99.5,0.9523,104.36,0.4922,126.51,0.958,101.89,0.4438,125.05,99.57,103.13,125.78
+SCIDOCS,512,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.4395,103.9,0.5189,98.05,0.0968,87.35,0.0303,82.79,0.0969,83.18,0.0249,92.05,100.97,85.27,87.42
+SCIDOCS,512,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.4412,104.31,0.5189,98.04,0.0982,88.66,0.0303,82.79,0.0971,83.4,0.0251,92.79,101.18,86.03,87.79
+SCIDOCS,512,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.4418,104.46,0.5199,98.24,0.0982,88.66,0.0303,82.79,0.0971,83.4,0.0251,92.79,101.35,86.03,87.79
+SCIDOCS,512,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.4407,104.19,0.5191,98.09,0.1574,142.03,0.0459,125.5,0.1346,115.6,0.0399,147.5,101.14,128.81,136.5
+SCIDOCS,512,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.4415,104.37,0.5193,98.12,0.2223,200.59,0.0796,217.44,0.2059,176.75,0.0699,258.29,101.24,188.67,237.86
+SCIDOCS,512,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.4426,104.65,0.5187,98.02,0.2205,199.05,0.0803,219.49,0.2051,176.13,0.0713,263.46,101.33,187.59,241.48
+SCIDOCS,512,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.4406,104.18,0.5191,98.08,0.2241,202.26,0.0746,203.78,0.1979,169.92,0.0658,243.19,101.13,186.09,223.48
+SCIDOCS,512,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.4432,104.79,0.5207,98.38,0.223,201.31,0.0794,216.89,0.2054,176.36,0.0689,254.78,101.59,188.83,235.83
+SCIDOCS,256,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.4295,101.55,0.5164,97.58,0.0927,83.65,0.0295,80.46,0.091,78.16,0.0247,91.31,99.57,80.91,85.89
+SCIDOCS,256,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.4375,103.44,0.5156,97.42,0.0956,86.27,0.0294,80.33,0.0917,78.76,0.0255,94.27,100.43,82.51,87.3
+SCIDOCS,256,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.4366,103.22,0.5164,97.58,0.0956,86.27,0.0294,80.33,0.0917,78.76,0.0255,94.27,100.4,82.51,87.3
+SCIDOCS,256,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.4333,102.44,0.5165,97.6,0.1235,111.49,0.0379,103.42,0.1061,91.08,0.0332,122.74,100.02,101.29,113.08
+SCIDOCS,256,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.4368,103.27,0.5162,97.54,0.1964,177.26,0.0647,176.87,0.1651,141.79,0.0574,212.32,100.4,159.52,194.59
+SCIDOCS,256,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.4371,103.33,0.5156,97.42,0.1966,177.44,0.0645,176.32,0.1659,142.47,0.0578,213.8,100.38,159.95,195.06
+SCIDOCS,256,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.4361,103.09,0.516,97.5,0.1892,170.77,0.0603,164.71,0.1542,132.38,0.0532,196.67,100.3,151.58,180.69
+SCIDOCS,256,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.438,103.54,0.518,97.88,0.1946,175.59,0.0642,175.5,0.1649,141.61,0.0576,213.06,100.71,158.6,194.28
+SCIDOCS,128,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.4077,96.39,0.5018,94.81,0.0854,77.06,0.0293,79.92,0.0876,75.24,0.0241,89.09,95.6,76.15,84.51
+SCIDOCS,128,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.4166,98.49,0.5048,95.39,0.0896,80.91,0.03,81.97,0.0848,72.8,0.0259,95.75,96.94,76.85,88.86
+SCIDOCS,128,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.4154,98.2,0.5044,95.31,0.0896,80.91,0.03,81.97,0.0848,72.8,0.0259,95.75,96.76,76.85,88.86
+SCIDOCS,128,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.4158,98.3,0.5054,95.49,0.0955,86.22,0.0332,90.71,0.0859,73.78,0.0287,106.1,96.89,80.0,98.41
+SCIDOCS,128,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.4127,97.58,0.5027,94.99,0.1305,117.76,0.0469,128.23,0.1122,96.36,0.0411,151.76,96.28,107.06,139.99
+SCIDOCS,128,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.4166,98.49,0.5048,95.39,0.1303,117.58,0.0469,128.23,0.1124,96.54,0.0411,151.76,96.94,107.06,139.99
+SCIDOCS,128,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.4137,97.81,0.5034,95.13,0.1259,113.61,0.0448,122.49,0.1037,89.02,0.0408,150.83,96.47,101.32,136.66
+SCIDOCS,128,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.4192,99.1,0.5064,95.69,0.1285,116.0,0.0463,126.46,0.1127,96.75,0.0414,153.05,97.39,106.38,139.75
+SCIDOCS,64,ablation_o1_pca,"Orthogonal PCA (Sigma_perp, gamma=0, eps=0)",0.3666,86.66,0.4797,90.63,0.0752,67.87,0.0278,75.96,0.079,67.83,0.0243,89.65,88.65,67.85,82.8
+SCIDOCS,64,ablation_o1_c0_e0,"Orthogonal SpecTemp (Sigma_perp, gamma_SNR, 1e-6)",0.368,87.01,0.4824,91.16,0.0751,67.78,0.0274,74.86,0.0674,57.9,0.025,92.61,89.08,62.84,83.73
+SCIDOCS,64,ablation_o1_c0_e2,"w/o Crowding Floor (Sigma_perp, gamma_SNR, eps*(k))",0.3684,87.1,0.4802,90.73,0.0751,67.78,0.0274,74.86,0.0674,57.9,0.025,92.61,88.92,62.84,83.73
+SCIDOCS,64,ablation_o1_c4_e2,"Fixed Exponent gamma=0.5 (Sigma_perp, 0.5, eps*(k))",0.37,87.47,0.4806,90.81,0.0733,66.2,0.027,73.77,0.0655,56.24,0.025,92.61,89.14,61.22,83.19
+SCIDOCS,64,ablation_o1_c2_e2,"w/o SNR Schedule (Sigma_perp, gamma_crowd, eps*(k))",0.371,87.71,0.4791,90.52,0.074,66.79,0.0314,85.79,0.06,51.52,0.0306,112.94,89.12,59.15,99.37
+SCIDOCS,64,ablation_o1_c1_e0,"w/o Adaptive Regularizer (Sigma_perp, gamma*(k), 1e-6)",0.368,87.01,0.4824,91.16,0.074,66.79,0.0314,85.79,0.06,51.52,0.0306,112.94,89.08,59.15,99.37
+SCIDOCS,64,ablation_o1_c1_e1,"w/o Rank Scaling tau(k)^2 (Sigma_perp, gamma*(k), eps*(d))",0.3702,87.51,0.4808,90.85,0.0732,66.02,0.0306,83.61,0.0602,51.69,0.0297,109.98,89.18,58.85,96.79
+SCIDOCS,64,ablation_o0_c1_e2,"w/o Orthogonal Projection (Sigma, gamma*(k), eps*(k))",0.3638,86.0,0.4772,90.17,0.0735,66.29,0.0312,85.11,0.0594,51.0,0.0301,111.28,88.08,58.65,98.19

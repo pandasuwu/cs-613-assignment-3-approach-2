@@ -1,0 +1,121 @@
+k,model,method,centroid_norm,average_cosine,mev_top1,nid_spectral_entropy,isoscore
+512,google/embeddinggemma-300m,prefix,0.5267,0.276,0.0635,0.8525,0.1573
+512,google/embeddinggemma-300m,pca,0.0114,-0.0003,0.0695,0.8537,0.1435
+512,google/embeddinggemma-300m,whitening,0.0104,-0.0002,0.0081,0.9936,0.9105
+512,google/embeddinggemma-300m,spectemp,0.0119,-0.0002,0.0643,0.8634,0.1591
+512,google/embeddinggemma-300m,coast,0.0105,-0.0003,0.0578,0.869,0.176
+512,Qwen/Qwen3-Embedding-0.6B,prefix,0.5194,0.2682,0.0775,0.798,0.1159
+512,Qwen/Qwen3-Embedding-0.6B,pca,0.0077,-0.0003,0.0715,0.8313,0.1363
+512,Qwen/Qwen3-Embedding-0.6B,whitening,0.0094,-0.0003,0.0081,0.9947,0.9247
+512,Qwen/Qwen3-Embedding-0.6B,spectemp,0.0078,-0.0003,0.0675,0.8389,0.1467
+512,Qwen/Qwen3-Embedding-0.6B,coast,0.0059,-0.0003,0.0568,0.8542,0.1776
+512,google/gemma-3-1b-pt (mean_pooling),prefix,0.9156,0.8383,0.1675,0.7084,0.0382
+512,google/gemma-3-1b-pt (mean_pooling),pca,0.0482,0.0018,0.1568,0.731,0.0445
+512,google/gemma-3-1b-pt (mean_pooling),whitening,0.0148,-0.0001,0.01,0.988,0.8472
+512,google/gemma-3-1b-pt (mean_pooling),spectemp,0.0473,0.0017,0.1467,0.7471,0.05
+512,google/gemma-3-1b-pt (mean_pooling),coast,0.0151,-0.0001,0.0104,0.9873,0.8379
+512,google/gemma-3-1b-pt (last_token_pooling),prefix,0.77,0.5911,0.2031,0.6646,0.0271
+512,google/gemma-3-1b-pt (last_token_pooling),pca,0.0742,0.0053,0.1866,0.6836,0.0312
+512,google/gemma-3-1b-pt (last_token_pooling),whitening,0.0169,-0.0001,0.0093,0.9832,0.8029
+512,google/gemma-3-1b-pt (last_token_pooling),spectemp,0.0727,0.0051,0.1773,0.6985,0.0344
+512,google/gemma-3-1b-pt (last_token_pooling),coast,0.0177,-0.0001,0.0099,0.9812,0.7789
+512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),prefix,0.8379,0.702,0.1977,0.6726,0.032
+512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),pca,0.0322,0.0006,0.1859,0.7013,0.0357
+512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),whitening,0.0117,-0.0002,0.0076,0.9922,0.899
+512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),spectemp,0.0317,0.0006,0.1772,0.7133,0.0388
+512,Qwen/Qwen3.5-0.8B-Base (mean_pooling),coast,0.0121,-0.0002,0.0083,0.9902,0.8742
+512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),prefix,0.7898,0.6222,0.2338,0.6256,0.0226
+512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),pca,0.076,0.0053,0.19,0.6502,0.0276
+512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),whitening,0.016,-0.0001,0.0087,0.9835,0.8131
+512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),spectemp,0.0747,0.0051,0.184,0.6601,0.0293
+512,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),coast,0.0172,-0.0001,0.0096,0.9797,0.7712
+256,google/embeddinggemma-300m,prefix,0.5787,0.3336,0.0676,0.8878,0.2603
+256,google/embeddinggemma-300m,pca,0.0089,-0.0003,0.0777,0.8862,0.2299
+256,google/embeddinggemma-300m,whitening,0.0105,-0.0002,0.01,0.9962,0.9553
+256,google/embeddinggemma-300m,spectemp,0.011,-0.0003,0.0584,0.917,0.3257
+256,google/embeddinggemma-300m,coast,0.0086,-0.0003,0.0622,0.9053,0.2915
+256,Qwen/Qwen3-Embedding-0.6B,prefix,0.5265,0.2752,0.0895,0.8288,0.1795
+256,Qwen/Qwen3-Embedding-0.6B,pca,0.0082,-0.0003,0.0772,0.8774,0.2337
+256,Qwen/Qwen3-Embedding-0.6B,whitening,0.0097,-0.0003,0.0103,0.9967,0.9605
+256,Qwen/Qwen3-Embedding-0.6B,spectemp,0.0081,-0.0003,0.0603,0.9049,0.3114
+256,Qwen/Qwen3-Embedding-0.6B,coast,0.0059,-0.0004,0.0617,0.9001,0.301
+256,google/gemma-3-1b-pt (mean_pooling),prefix,0.9274,0.8601,0.2096,0.726,0.0537
+256,google/gemma-3-1b-pt (mean_pooling),pca,0.0485,0.0018,0.1677,0.759,0.0769
+256,google/gemma-3-1b-pt (mean_pooling),whitening,0.0181,-0.0,0.0142,0.9887,0.8753
+256,google/gemma-3-1b-pt (mean_pooling),spectemp,0.0459,0.0016,0.1381,0.8035,0.1067
+256,google/gemma-3-1b-pt (mean_pooling),coast,0.018,-0.0,0.0142,0.9886,0.8748
+256,google/gemma-3-1b-pt (last_token_pooling),prefix,0.8345,0.694,0.2349,0.7049,0.048
+256,google/gemma-3-1b-pt (last_token_pooling),pca,0.074,0.0053,0.1966,0.7138,0.0555
+256,google/gemma-3-1b-pt (last_token_pooling),whitening,0.0205,0.0001,0.013,0.9855,0.8469
+256,google/gemma-3-1b-pt (last_token_pooling),spectemp,0.0686,0.0045,0.1655,0.7616,0.0757
+256,google/gemma-3-1b-pt (last_token_pooling),coast,0.0204,0.0001,0.0131,0.9854,0.8455
+256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),prefix,0.8245,0.6795,0.2069,0.69,0.0553
+256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),pca,0.0329,0.0006,0.1961,0.7355,0.0636
+256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),whitening,0.0143,-0.0001,0.0114,0.9932,0.9241
+256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),spectemp,0.0313,0.0005,0.1684,0.7719,0.0824
+256,Qwen/Qwen3.5-0.8B-Base (mean_pooling),coast,0.0141,-0.0001,0.0114,0.9931,0.923
+256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),prefix,0.7957,0.6321,0.2495,0.6458,0.0394
+256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),pca,0.0767,0.0054,0.1983,0.6846,0.0503
+256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),whitening,0.0205,0.0,0.0121,0.9842,0.8418
+256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),spectemp,0.072,0.0047,0.1764,0.7197,0.0618
+256,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),coast,0.0204,0.0,0.0122,0.9839,0.8393
+128,google/embeddinggemma-300m,prefix,0.6402,0.4084,0.0758,0.9175,0.4005
+128,google/embeddinggemma-300m,pca,0.0058,-0.0004,0.0936,0.9015,0.3216
+128,google/embeddinggemma-300m,whitening,0.0102,-0.0003,0.0133,0.9983,0.9821
+128,google/embeddinggemma-300m,spectemp,0.0088,-0.0003,0.0536,0.954,0.5698
+128,google/embeddinggemma-300m,coast,0.0068,-0.0003,0.0619,0.9379,0.4824
+128,Qwen/Qwen3-Embedding-0.6B,prefix,0.5254,0.2739,0.1006,0.8658,0.2847
+128,Qwen/Qwen3-Embedding-0.6B,pca,0.0108,-0.0003,0.0896,0.9058,0.3498
+128,Qwen/Qwen3-Embedding-0.6B,whitening,0.009,-0.0003,0.0131,0.9986,0.9855
+128,Qwen/Qwen3-Embedding-0.6B,spectemp,0.0083,-0.0003,0.0478,0.9593,0.623
+128,Qwen/Qwen3-Embedding-0.6B,coast,0.0068,-0.0003,0.0533,0.9499,0.5662
+128,google/gemma-3-1b-pt (mean_pooling),prefix,0.5516,0.3044,0.1558,0.8351,0.179
+128,google/gemma-3-1b-pt (mean_pooling),pca,0.048,0.0018,0.1836,0.7823,0.1263
+128,google/gemma-3-1b-pt (mean_pooling),whitening,0.0205,0.0,0.0188,0.9912,0.9155
+128,google/gemma-3-1b-pt (mean_pooling),spectemp,0.0422,0.0013,0.1229,0.8661,0.2366
+128,google/gemma-3-1b-pt (mean_pooling),coast,0.0202,0.0,0.0188,0.9912,0.9155
+128,google/gemma-3-1b-pt (last_token_pooling),prefix,0.5447,0.297,0.1682,0.7931,0.1375
+128,google/gemma-3-1b-pt (last_token_pooling),pca,0.0732,0.0052,0.2125,0.7359,0.0932
+128,google/gemma-3-1b-pt (last_token_pooling),whitening,0.0232,0.0002,0.0184,0.9888,0.8946
+128,google/gemma-3-1b-pt (last_token_pooling),spectemp,0.0609,0.0035,0.1466,0.8312,0.1749
+128,google/gemma-3-1b-pt (last_token_pooling),coast,0.0229,0.0001,0.0183,0.9889,0.8949
+128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),prefix,0.8338,0.6948,0.2275,0.7084,0.0883
+128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),pca,0.0339,0.0007,0.2116,0.7653,0.1081
+128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),whitening,0.0165,-0.0001,0.0163,0.995,0.951
+128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),spectemp,0.0302,0.0005,0.1498,0.8405,0.1873
+128,Qwen/Qwen3.5-0.8B-Base (mean_pooling),coast,0.0158,-0.0001,0.0163,0.995,0.9513
+128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),prefix,0.7301,0.5318,0.2376,0.6844,0.0789
+128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),pca,0.0773,0.0055,0.2114,0.7137,0.0875
+128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),whitening,0.0246,0.0002,0.0182,0.9869,0.8824
+128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),spectemp,0.0662,0.0039,0.1612,0.7899,0.1377
+128,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),coast,0.024,0.0002,0.0182,0.9869,0.8827
+64,google/embeddinggemma-300m,prefix,0.5926,0.3494,0.0677,0.9502,0.628
+64,google/embeddinggemma-300m,pca,0.0121,-0.0003,0.1193,0.9084,0.4117
+64,google/embeddinggemma-300m,whitening,0.011,-0.0003,0.0219,0.9987,0.9889
+64,google/embeddinggemma-300m,spectemp,0.0094,-0.0003,0.0501,0.9804,0.8213
+64,google/embeddinggemma-300m,coast,0.0093,-0.0003,0.0624,0.965,0.7075
+64,Qwen/Qwen3-Embedding-0.6B,prefix,0.5201,0.2692,0.1139,0.8919,0.4129
+64,Qwen/Qwen3-Embedding-0.6B,pca,0.0181,-0.0001,0.1117,0.9205,0.4609
+64,Qwen/Qwen3-Embedding-0.6B,whitening,0.0084,-0.0003,0.0187,0.9994,0.9953
+64,Qwen/Qwen3-Embedding-0.6B,spectemp,0.0091,-0.0003,0.0349,0.9921,0.9281
+64,Qwen/Qwen3-Embedding-0.6B,coast,0.0085,-0.0003,0.0412,0.9863,0.8783
+64,google/gemma-3-1b-pt (mean_pooling),prefix,0.6172,0.3819,0.1803,0.867,0.284
+64,google/gemma-3-1b-pt (mean_pooling),pca,0.0477,0.0018,0.2053,0.8048,0.1984
+64,google/gemma-3-1b-pt (mean_pooling),whitening,0.0226,0.0001,0.0267,0.994,0.9505
+64,google/gemma-3-1b-pt (mean_pooling),spectemp,0.0355,0.0008,0.0931,0.9397,0.5526
+64,google/gemma-3-1b-pt (mean_pooling),coast,0.0217,0.0001,0.0266,0.9941,0.9513
+64,google/gemma-3-1b-pt (last_token_pooling),prefix,0.5828,0.3409,0.1455,0.8453,0.2731
+64,google/gemma-3-1b-pt (last_token_pooling),pca,0.0731,0.0052,0.2344,0.7554,0.1498
+64,google/gemma-3-1b-pt (last_token_pooling),whitening,0.0252,0.0002,0.0265,0.9906,0.9258
+64,google/gemma-3-1b-pt (last_token_pooling),spectemp,0.0485,0.002,0.1144,0.9121,0.4311
+64,google/gemma-3-1b-pt (last_token_pooling),coast,0.0247,0.0002,0.0265,0.9905,0.9258
+64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),prefix,0.8663,0.7497,0.2695,0.7203,0.1327
+64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),pca,0.0357,0.0009,0.2336,0.7939,0.175
+64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),whitening,0.0186,-0.0,0.0237,0.9969,0.9738
+64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),spectemp,0.0277,0.0003,0.1102,0.9266,0.4812
+64,Qwen/Qwen3.5-0.8B-Base (mean_pooling),coast,0.0168,-0.0001,0.0237,0.9969,0.9744
+64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),prefix,0.7493,0.5597,0.2953,0.6805,0.1086
+64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),pca,0.0787,0.0057,0.23,0.7419,0.146
+64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),whitening,0.0292,0.0004,0.03,0.9894,0.9168
+64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),spectemp,0.0559,0.0026,0.1296,0.8819,0.3457
+64,Qwen/Qwen3.5-0.8B-Base (last_token_pooling),coast,0.0275,0.0003,0.03,0.9895,0.9174

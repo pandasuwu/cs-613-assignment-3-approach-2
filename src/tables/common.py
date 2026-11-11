@@ -61,10 +61,11 @@ def add_tier_summary_columns(df: pl.DataFrame) -> pl.DataFrame:
 
 
 def order_full_methods(df: pl.DataFrame, method_col: str = "method") -> pl.DataFrame:
-    """Sort DataFrame rows according to the canonical full-dimension method sequence."""
+    """Filter and sort DataFrame rows according to the canonical full-dimension method sequence."""
     order_map = {m: i for i, m in enumerate(METHODS_FULL_ORDERED)}
     return (
-        df.with_columns(
+        df.filter(pl.col(method_col).is_in(METHODS_FULL_ORDERED))
+        .with_columns(
             pl.col(method_col)
             .replace_strict(order_map, default=999, return_dtype=pl.Int32)
             .alias("__order")

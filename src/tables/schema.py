@@ -49,11 +49,10 @@ METHODS_FULL_ORDERED: list[str] = [
     "r1",
     "r2",
     "soft_zca",
+    "coast",
     "abtt_1",
     "abtt_2",
     "abtt_3",
-    "rand",
-    "mc",
 ]
 
 METHODS_COMP_ORDERED: list[str] = [
@@ -61,7 +60,29 @@ METHODS_COMP_ORDERED: list[str] = [
     "pca",
     "whitening",
     "spectemp",
-    "random_truncation",
+    "coast",
+]
+
+METHODS_ABLATION_FULL_ORDERED: list[str] = [
+    "ablation_o0_c0_e2",
+    "ablation_o0_c0_e1",
+    "ablation_o0_c1_e0",
+    "ablation_o0_c1_e1",
+    "ablation_o1_c0_e0",
+    "ablation_o1_c0_e1",
+    "ablation_o1_c2_e0",
+    "ablation_o1_c1_e0",
+]
+
+METHODS_ABLATION_COMP_ORDERED: list[str] = [
+    "ablation_o1_pca",
+    "ablation_o1_c0_e0",
+    "ablation_o1_c0_e2",
+    "ablation_o1_c4_e2",
+    "ablation_o1_c2_e2",
+    "ablation_o1_c1_e0",
+    "ablation_o1_c1_e1",
+    "ablation_o0_c1_e2",
 ]
 
 LADDER_K_ORDERED: list[int] = [512, 256, 128, 64]

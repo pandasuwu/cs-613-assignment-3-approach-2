@@ -1,18 +1,20 @@
 from src.transforms.common import compute_mean_and_cov, l2_normalize
 from src.transforms.compression import (
+    compute_orthogonal_spectrum_and_coast_params,
+    transform_coast,
+    transform_coast_ablation,
     transform_pca,
     transform_prefix,
-    transform_random_truncation,
     transform_spectemp,
     transform_whitening,
 )
 from src.transforms.full import (
     transform_abtt,
     transform_baseline,
-    transform_mc,
+    transform_coast_full,
+    transform_coast_full_ablation,
     transform_r1,
     transform_r2,
-    transform_rand,
     transform_soft_zca,
     transform_standardization,
 )
@@ -26,13 +28,15 @@ __all__ = [
     "transform_r1",
     "transform_r2",
     "transform_soft_zca",
+    "transform_coast_full",
+    "transform_coast_full_ablation",
     "transform_abtt",
-    "transform_rand",
-    "transform_mc",
     # Compression
     "transform_prefix",
-    "transform_random_truncation",
     "transform_pca",
     "transform_whitening",
     "transform_spectemp",
+    "transform_coast",
+    "transform_coast_ablation",
+    "compute_orthogonal_spectrum_and_coast_params",
 ]
